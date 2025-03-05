@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fffaf0;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff6600;
+}
+
+p {
+    font-size: 18px;
+}
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ffcc80;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
