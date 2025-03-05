@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maklumat Klinik</title>
+    <title>Maklumat Klinik Dr. Meow</title>  
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff7e6;
             margin: 0;
             padding: 0;
             text-align: center;
+            color: #4A2C2A;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #FF6F61;
             padding: 20px;
         }
         .clinic-logo {
-            width: 150px;
+            width: 180px;
         }
         .contact-info, .social-media {
             background: white;
@@ -36,7 +37,7 @@
             margin: 10px 0;
         }
         a {
-            color: #4CAF50;
+            color: #FF6F61;
             text-decoration: none;
             font-weight: bold;
         }
@@ -47,22 +48,22 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo Catoonies Veterinary Clinic" class="clinic-logo">
+        <img src="logo.png" alt="Logo Klinik Dr. Meow" class="clinic-logo">
     </header>
     
     <section class="contact-info">
         <h2>Hubungi Kami</h2>
-        <p><strong>Alamat:</strong> Catoonies Veterinary Clinic, Pontian, Johor</p>
+        <p><strong>Alamat:</strong> No.47, Jalan Emas 2, Pusat Perniagaan Kota Emas, 82000 Pontian, Johor</p>
         <p><strong>WhatsApp:</strong> <a href="https://wa.me/60182624047" target="_blank">018-2624047</a></p>
-        <p><strong>Google Maps:</strong> <a href="https://goo.gl/maps/example" target="_blank">Klik untuk lokasi</a></p>
+        <p><strong>Google Maps:</strong> <a href="https://maps.app.goo.gl/DSTRuiZfGLjjqQMG6" target="_blank">Klik untuk lokasi</a></p>
     </section>
     
     <section class="social-media">
         <h2>Ikuti Kami</h2>
         <ul>
-            <li><a href="https://www.tiktok.com/@catooniesvet" target="_blank">TikTok</a></li>
-            <li><a href="https://www.facebook.com/catooniesvet" target="_blank">Facebook</a></li>
-            <li><a href="https://blog.catooniesvet.com" target="_blank">Blog Dr. Meow</a></li>
+            <li><a href="https://www.tiktok.com/@catooniesvetpontian" target="_blank">TikTok</a></li>
+            <li><a href="https://www.facebook.com/CatooniesVetPontian" target="_blank">Facebook</a></li>
+            <li><a href="https://www.youtube.com/@catooniesveterinaryclinic5610" target="_blank">YouTube</a></li>
         </ul>
     </section>
 </body>
