@@ -3,298 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klinik Dr. Meow</title>
+    <title>Catoonies Veterinary Clinic</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f3f3f3;
+            background-color: #f9f9f9;
             color: #333;
         }
-
         header {
-            background-color: #a83279;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header img {
-            width: 150px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #d35400;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            text-transform: uppercase;
-            transition: color 0.3s ease-in-out;
-        }
-
-        nav a:hover {
-            color: #f1c40f;
-        }
-
-        .container {
+            background-color: #ff6600;
             padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
         }
-
-        .section {
-            margin: 20px auto;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background: #ff8533;
+        }
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 800px;
             background: white;
-            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            max-width: 1100px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-
-        .gallery {
+        form {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
+            flex-direction: column;
         }
-
-        .gallery img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
+        label, input, textarea, select, button {
+            margin: 5px 0;
         }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        .testimonial {
-            font-style: italic;
-            background: #ffe0e0;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        .articles {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .article {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .booking-form input,
-        .booking-form select,
-        .booking-form button {
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .booking-form button {
-            background-color: #d35400;
+        button {
+            background-color: #ff6600;
             color: white;
-            font-size: 16px;
+            padding: 10px;
+            border: none;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            border-radius: 5px;
         }
-
-        .booking-form button:hover {
-            background-color: #e67e22;
-        }
-
-        .contact-info {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-info a {
-            color: #d35400;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Media Queries for responsiveness */
-        @media only screen and (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 20px;
-            }
-
-            nav a {
-                margin: 10px 0;
-            }
-
-            .gallery {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .gallery img {
-                max-width: 90%;
-            }
-
-            .articles {
-                grid-template-columns: 1fr;
-            }
-
-            .booking-form input,
-            .booking-form select,
-            .booking-form button {
-                max-width: 100%;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            header img {
-                width: 120px;
-            }
-
-            nav a {
-                font-size: 16px;
-            }
-
-            .section {
-                padding: 15px;
-            }
-
-            .testimonial {
-                font-size: 14px;
-            }
+        footer {
+            text-align: center;
+            background: #ff6600;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo Klinik Dr. Meow">
-    </header>
-    <nav>
-        <a href="#home">Utama</a>
-        <a href="#services">Perkhidmatan</a>
-        <a href="#gallery">Galeri</a>
-        <a href="#booking">Tempahan</a>
-        <a href="#testimonials">Testimoni</a>
-        <a href="#articles">Artikel</a>
-        <a href="#contact">Hubungi</a>
-    </nav>
-    
-    <div class="container">
-        <section id="home" class="section">
-            <h2>Selamat Datang ke Klinik Dr. Meow</h2>
-            <p>Penjagaan terbaik untuk kucing kesayangan anda!</p>
-        </section>
-        
-        <section id="services" class="section">
-            <h2>Perkhidmatan Kami</h2>
+        <h1>🐾 Catoonies Veterinary Clinic 🐾</h1>
+        <nav>
             <ul>
-                <li>Rawatan Kucing</li>
-                <li>Vaksinasi</li>
-                <li>Grooming & Boarding</li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#services">Perkhidmatan</a></li>
+                <li><a href="#diseases">Penyakit Kucing</a></li>
+                <li><a href="#contact">Hubungi Kami</a></li>
+                <li><a href="#register">Pendaftaran</a></li>
             </ul>
-        </section>
-        
-        <section id="gallery" class="section">
-            <h2>Galeri</h2>
-            <div class="gallery">
-                <img src="cat1.jpg" alt="Kucing 1">
-                <img src="cat2.jpg" alt="Kucing 2">
-                <img src="clinic.jpg" alt="Klinik Dr. Meow">
-            </div>
-        </section>
-        
-        <section id="testimonials" class="section">
-            <h2>Testimoni Pelanggan</h2>
-            <p class="testimonial">"Klinik terbaik untuk kucing saya! Dr. Meow sangat profesional." - Aminah</p>
-            <p class="testimonial">"Kucing saya sihat dan ceria selepas vaksin di sini." - Siti</p>
-        </section>
-        
-        <section id="articles" class="section">
-            <h2>Artikel Penjagaan Kucing</h2>
-            <div class="articles">
-                <div class="article">
-                    <h3>Tips Memandikan Kucing</h3>
-                    <p>Jangan gunakan air terlalu sejuk atau panas. Gunakan produk yang sesuai untuk kucing.</p>
-                </div>
-                <div class="article">
-                    <h3>Makanan Sihat untuk Kucing</h3>
-                    <p>Pastikan diet kucing seimbang dengan protein tinggi dan makanan yang sesuai dengan umur mereka.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="booking" class="section">
-            <h2>Tempahan Online</h2>
-            <div class="booking-form">
-                <form action="#" method="post">
-                    <label for="name">Nama:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="service">Perkhidmatan:</label>
-                    <select id="service" name="service">
-                        <option value="vaksin">Vaksin</option>
-                        <option value="grooming">Grooming</option>
-                        <option value="boarding">Boarding</option>
-                    </select>
-                    <button type="submit">Tempah Sekarang</button>
-                </form>
-            </div>
-        </section>
-        
-        <section id="contact" class="section">
-            <h2>Hubungi Kami</h2>
-            <div class="contact-info">
-                <p>WhatsApp: <a href="https://wa.me/60123456789" target="_blank">60123456789</a></p>
-                <p>Alamat: Pontian, Johor</p>
-                <p>Email: <a href="mailto:contact@drmeow.com">contact@drmeow.com</a></p>
-                <div id="map"></div>
-            </div>
-        </section>
-    </div>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Selamat datang ke Catoonies Veterinary Clinic! Kami komited untuk memberikan rawatan terbaik kepada kucing kesayangan anda.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Perkhidmatan Kami</h2>
+        <ul>
+            <li>Rawatan Kesihatan Kucing</li>
+            <li>Vaksinasi & Pembedahan</li>
+            <li>Grooming & Boarding</li>
+            <li>Rawatan Kecemasan</li>
+        </ul>
+    </section>
+    
+    <section id="diseases">
+        <h2>Penyakit Kucing</h2>
+        <p>Pelajari lebih lanjut tentang penyakit yang boleh menjejaskan kucing anda dan cara merawatnya.</p>
+    </section>
+    
+    <section id="register">
+        <h2>Pendaftaran Pemilik & Kucing</h2>
+        <form>
+            <label for="name">Nama Penuh:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="ic">No. IC:</label>
+            <input type="text" id="ic" name="ic" required>
+            
+            <label for="phone">No. HP:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="address">Alamat Penuh:</label>
+            <textarea id="address" name="address" required></textarea>
+            
+            <label for="cat_name">Nama Kucing:</label>
+            <input type="text" id="cat_name" name="cat_name" required>
+            
+            <label for="vaccine_status">Status Vaksin (Muat naik gambar buku vaksin):</label>
+            <input type="file" id="vaccine_status" name="vaccine_status" accept="image/*">
+            
+            <label for="cat_type">Jenis Kucing:</label>
+            <select id="cat_type" name="cat_type">
+                <option value="sangkar">Sangkar</option>
+                <option value="bebas">Bebas</option>
+            </select>
+            
+            <button type="submit">Hantar</button>
+        </form>
+    </section>
+    
+    <section id="contact">
+        <h2>Hubungi Kami</h2>
+        <p>📍 <strong>Alamat:</strong> Catoonies Veterinary Clinic, Pontian, Johor</p>
+        <p>📞 <strong>WhatsApp:</strong> <a href="https://wa.me/60182624047">018-2624047</a></p>
+        <p>📘 <strong>Facebook:</strong> <a href="#">Catoonies Veterinary Clinic</a></p>
+        <p>🎥 <strong>Tiktok:</strong> <a href="#">@catooniesvet</a></p>
+    </section>
     
     <footer>
-        &copy; 2025 Klinik Dr. Meow - Semua Hak Cipta Terpelihara.
+        <p>&copy; 2025 Catoonies Veterinary Clinic. Semua Hakcipta Terpelihara.</p>
     </footer>
-    <script>
-        function initMap() {
-            var clinicLocation = { lat: 1.4770, lng: 103.3972 }; // Update with actual coordinates
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: clinicLocation
-            });
-            var marker = new google.maps.Marker({
-                position: clinicLocation,
-                map: map,
-                title: 'Klinik Dr. Meow'
-            });
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
 </body>
 </html>

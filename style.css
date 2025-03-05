@@ -1,177 +1,147 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f3f3f3;
-    color: #333;
-}
-
-header {
-    background-color: #a83279;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header img {
-    width: 150px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #d35400;
-    padding: 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    text-transform: uppercase;
-    transition: color 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: #f1c40f;
-}
-
-.container {
-    padding: 20px;
-}
-
-.section {
-    margin: 20px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    max-width: 1100px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-.testimonial {
-    font-style: italic;
-    background: #ffe0e0;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.articles {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.article {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.booking-form input,
-.booking-form select,
-.booking-form button {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 400px;
-}
-
-.booking-form button {
-    background-color: #d35400;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.booking-form button:hover {
-    background-color: #e67e22;
-}
-
-.contact-info {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info a {
-    color: #d35400;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-/* Media Queries for responsiveness */
-@media only screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 20px;
-    }
-    nav a {
-        margin: 10px 0;
-    }
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-    .gallery img {
-        max-width: 90%;
-    }
-    .articles {
-        grid-template-columns: 1fr;
-    }
-    .booking-form input,
-    .booking-form select,
-    .booking-form button {
-        max-width: 100%;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    header img {
-        width: 120px;
-    }
-    nav a {
-        font-size: 16px;
-    }
-    .section {
-        padding: 15px;
-    }
-    .testimonial {
-        font-size: 14px;
-    }
-}
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catoonies Veterinary Clinic</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff6600;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background: #ff8533;
+        }
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input, textarea, select, button {
+            margin: 5px 0;
+        }
+        button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            background: #ff6600;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐾 Catoonies Veterinary Clinic 🐾</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#services">Perkhidmatan</a></li>
+                <li><a href="#diseases">Penyakit Kucing</a></li>
+                <li><a href="#contact">Hubungi Kami</a></li>
+                <li><a href="#register">Pendaftaran</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Selamat datang ke Catoonies Veterinary Clinic! Kami komited untuk memberikan rawatan terbaik kepada kucing kesayangan anda.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Perkhidmatan Kami</h2>
+        <ul>
+            <li>Rawatan Kesihatan Kucing</li>
+            <li>Vaksinasi & Pembedahan</li>
+            <li>Grooming & Boarding</li>
+            <li>Rawatan Kecemasan</li>
+        </ul>
+    </section>
+    
+    <section id="diseases">
+        <h2>Penyakit Kucing</h2>
+        <p>Pelajari lebih lanjut tentang penyakit yang boleh menjejaskan kucing anda dan cara merawatnya.</p>
+    </section>
+    
+    <section id="register">
+        <h2>Pendaftaran Pemilik & Kucing</h2>
+        <form>
+            <label for="name">Nama Penuh:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="ic">No. IC:</label>
+            <input type="text" id="ic" name="ic" required>
+            
+            <label for="phone">No. HP:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="address">Alamat Penuh:</label>
+            <textarea id="address" name="address" required></textarea>
+            
+            <label for="cat_name">Nama Kucing:</label>
+            <input type="text" id="cat_name" name="cat_name" required>
+            
+            <label for="vaccine_status">Status Vaksin (Muat naik gambar buku vaksin):</label>
+            <input type="file" id="vaccine_status" name="vaccine_status" accept="image/*">
+            
+            <label for="cat_type">Jenis Kucing:</label>
+            <select id="cat_type" name="cat_type">
+                <option value="sangkar">Sangkar</option>
+                <option value="bebas">Bebas</option>
+            </select>
+            
+            <button type="submit">Hantar</button>
+        </form>
+    </section>
+    
+    <section id="contact">
+        <h2>Hubungi Kami</h2>
+        <p>📍 <strong>Alamat:</strong> Catoonies Veterinary Clinic, Pontian, Johor</p>
+        <p>📞 <strong>WhatsApp:</strong> <a href="https://wa.me/60182624047">018-2624047</a></p>
+        <p>📘 <strong>Facebook:</strong> <a href="#">Catoonies Veterinary Clinic</a></p>
+        <p>🎥 <strong>Tiktok:</strong> <a href="#">@catooniesvet</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Catoonies Veterinary Clinic. Semua Hakcipta Terpelihara.</p>
+    </footer>
+</body>
+</html>
