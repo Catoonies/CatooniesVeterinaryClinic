@@ -68,3 +68,94 @@
     </section>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temujanji Klinik Dr. Meow</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Borang Temujanji</h2>
+        <form id="appointmentForm">
+            <input type="text" id="nama" placeholder="Nama Penuh" required>
+            <input type="text" id="ic" placeholder="No. IC" required>
+            <input type="text" id="telefon" placeholder="No. Telefon" required>
+            <input type="text" id="alamat" placeholder="Alamat Penuh" required>
+            <input type="text" id="nama_kucing" placeholder="Nama Kucing" required>
+            <select id="status_vaksin">
+                <option value="Lengkap">Vaksin Lengkap</option>
+                <option value="Belum Lengkap">Belum Lengkap</option>
+            </select>
+            <select id="jenis_kucing">
+                <option value="Sangkar">Sangkar</option>
+                <option value="Bebas">Bebas</option>
+            </select>
+            <button type="button" onclick="hantarWhatsApp()">Hantar ke WhatsApp</button>
+        </form>
+    </div>
+
+    <script>
+        function hantarWhatsApp() {
+            let nama = document.getElementById("nama").value;
+            let ic = document.getElementById("ic").value;
+            let telefon = document.getElementById("telefon").value;
+            let alamat = document.getElementById("alamat").value;
+            let nama_kucing = document.getElementById("nama_kucing").value;
+            let status_vaksin = document.getElementById("status_vaksin").value;
+            let jenis_kucing = document.getElementById("jenis_kucing").value;
+            
+            let mesej = `Temujanji Klinik Dr. Meow%0A%0A` +
+                        `Nama: ${nama}%0A` +
+                        `No. IC: ${ic}%0A` +
+                        `No. Telefon: ${telefon}%0A` +
+                        `Alamat: ${alamat}%0A` +
+                        `Nama Kucing: ${nama_kucing}%0A` +
+                        `Status Vaksin: ${status_vaksin}%0A` +
+                        `Jenis Kucing: ${jenis_kucing}`;
+            
+            let url = `https://wa.me/60182624047?text=${mesej}`;
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>
