@@ -1,115 +1,63 @@
-/* Reset gaya default */
-* {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF8E7;
+    color: #5A3E2B;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
-/* Gaya untuk badan laman web */
-body {
-    background-color: #fdf6e3; /* Warna latar lembut */
-    color: #333;
+header {
+    background-color: #A6192E;
     text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.logo {
+    width: 150px;
+}
+
+nav {
+    background-color: #5A3E2B;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
     padding: 20px;
 }
 
-/* Tajuk utama */
-h1 {
-    color: #ff9800;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+h2 {
+    color: #A6192E;
 }
 
-/* Logo */
-.logo {
-    width: 150px;
-    height: auto;
-    margin-bottom: 20px;
+.service {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Butang */
-.button {
-    display: inline-block;
-    background-color: #ff9800;
+footer {
+    background-color: #5A3E2B;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: 0.3s;
+    text-align: center;
+    padding: 10px;
 }
-
-.button:hover {
-    background-color: #e68900;
-}
-<!DOCTYPE html>
-<html lang="ms">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klinik Dr. Meow - Pautan Rasmi</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #FFF5E1;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .logo {
-            width: 100px;
-            border-radius: 50%;
-        }
-        h1 {
-            color: #FF8000;
-        }
-        .btn {
-            display: block;
-            margin: 10px auto;
-            padding: 15px;
-            width: 80%;
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .whatsapp { background: #25D366; }
-        .tiktok { background: #000000; }
-        .facebook { background: #3b5998; }
-        .youtube { background: #FF0000; }
-        .blog { background: #FFA500; }
-        .penyakit { background: #8A2BE2; }
-        .servis { background: #FF4500; }
-        .btn:hover {
-            opacity: 0.8;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="logo.png" alt="Logo Klinik Dr. Meow" class="logo">
-        <h1>Klinik Dr. Meow</h1>
-        <p>Rawatan terbaik untuk kucing kesayangan anda! 🐾</p>
-        
-        <a href="https://wa.me/60182624047" class="btn whatsapp">📱 WhatsApp Kami</a>
-        <a href="https://www.tiktok.com/@catooniesvetpontian" class="btn tiktok">🎵 TikTok Rasmi</a>
-        <a href="https://www.facebook.com/CatooniesVetPontian" class="btn facebook">📘 Facebook Rasmi</a>
-        <a href="https://www.youtube.com/@catooniesveterinaryclinic5610" class="btn youtube">🎥 YouTube</a>
-        <a href="https://blog.klinikdrmeow.com" class="btn blog">📖 Blog Khas Bersama Dr. Rashidah</a>
-        <a href="penyakit.html" class="btn penyakit">⚕️ Jenis Penyakit Kucing</a>
-        <a href="perkhidmatan.html" class="btn servis">🛠️ Senarai Perkhidmatan</a>
-    </div>
-</body>
-</html>
