@@ -3,145 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catoonies Veterinary Clinic</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Maklumat Klinik</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            text-align: center;
         }
         header {
-            background-color: #ff6600;
+            background-color: #4CAF50;
             padding: 20px;
-            text-align: center;
-            color: white;
-            font-size: 24px;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-            background: #ff8533;
+        .clinic-logo {
+            width: 150px;
         }
-        nav ul li {
-            display: inline;
-            margin: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-        section {
-            padding: 20px;
-            margin: 10px auto;
-            max-width: 800px;
+        .contact-info, .social-media {
             background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        form {
-            display: flex;
-            flex-direction: column;
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
-        label, input, textarea, select, button {
-            margin: 5px 0;
+        ul li {
+            margin: 10px 0;
         }
-        button {
-            background-color: #ff6600;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
         }
-        footer {
-            text-align: center;
-            background: #ff6600;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>🐾 Catoonies Veterinary Clinic 🐾</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Tentang Kami</a></li>
-                <li><a href="#services">Perkhidmatan</a></li>
-                <li><a href="#diseases">Penyakit Kucing</a></li>
-                <li><a href="#contact">Hubungi Kami</a></li>
-                <li><a href="#register">Pendaftaran</a></li>
-            </ul>
-        </nav>
+        <img src="logo.png" alt="Logo Catoonies Veterinary Clinic" class="clinic-logo">
     </header>
     
-    <section id="about">
-        <h2>Tentang Kami</h2>
-        <p>Selamat datang ke Catoonies Veterinary Clinic! Kami komited untuk memberikan rawatan terbaik kepada kucing kesayangan anda.</p>
+    <section class="contact-info">
+        <h2>Hubungi Kami</h2>
+        <p><strong>Alamat:</strong> Catoonies Veterinary Clinic, Pontian, Johor</p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/60182624047" target="_blank">018-2624047</a></p>
+        <p><strong>Google Maps:</strong> <a href="https://goo.gl/maps/example" target="_blank">Klik untuk lokasi</a></p>
     </section>
     
-    <section id="services">
-        <h2>Perkhidmatan Kami</h2>
+    <section class="social-media">
+        <h2>Ikuti Kami</h2>
         <ul>
-            <li>Rawatan Kesihatan Kucing</li>
-            <li>Vaksinasi & Pembedahan</li>
-            <li>Grooming & Boarding</li>
-            <li>Rawatan Kecemasan</li>
+            <li><a href="https://www.tiktok.com/@catooniesvet" target="_blank">TikTok</a></li>
+            <li><a href="https://www.facebook.com/catooniesvet" target="_blank">Facebook</a></li>
+            <li><a href="https://blog.catooniesvet.com" target="_blank">Blog Dr. Meow</a></li>
         </ul>
     </section>
-    
-    <section id="diseases">
-        <h2>Penyakit Kucing</h2>
-        <p>Pelajari lebih lanjut tentang penyakit yang boleh menjejaskan kucing anda dan cara merawatnya.</p>
-    </section>
-    
-    <section id="register">
-        <h2>Pendaftaran Pemilik & Kucing</h2>
-        <form>
-            <label for="name">Nama Penuh:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="ic">No. IC:</label>
-            <input type="text" id="ic" name="ic" required>
-            
-            <label for="phone">No. HP:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="address">Alamat Penuh:</label>
-            <textarea id="address" name="address" required></textarea>
-            
-            <label for="cat_name">Nama Kucing:</label>
-            <input type="text" id="cat_name" name="cat_name" required>
-            
-            <label for="vaccine_status">Status Vaksin (Muat naik gambar buku vaksin):</label>
-            <input type="file" id="vaccine_status" name="vaccine_status" accept="image/*">
-            
-            <label for="cat_type">Jenis Kucing:</label>
-            <select id="cat_type" name="cat_type">
-                <option value="sangkar">Sangkar</option>
-                <option value="bebas">Bebas</option>
-            </select>
-            
-            <button type="submit">Hantar</button>
-        </form>
-    </section>
-    
-    <section id="contact">
-        <h2>Hubungi Kami</h2>
-        <p>📍 <strong>Alamat:</strong> Catoonies Veterinary Clinic, Pontian, Johor</p>
-        <p>📞 <strong>WhatsApp:</strong> <a href="https://wa.me/60182624047">018-2624047</a></p>
-        <p>📘 <strong>Facebook:</strong> <a href="#">Catoonies Veterinary Clinic</a></p>
-        <p>🎥 <strong>Tiktok:</strong> <a href="#">@catooniesvet</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Catoonies Veterinary Clinic. Semua Hakcipta Terpelihara.</p>
-    </footer>
 </body>
 </html>
