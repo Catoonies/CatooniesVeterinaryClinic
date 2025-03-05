@@ -1,100 +1,52 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* Warna tema */
-:root {
-    --primary-color: #4CAF50; /* Hijau pastel */
-    --secondary-color: #87CEEB; /* Biru lembut */
-    --background-color: #F9F9F9;
-    --text-color: #333;
-    --accent-color: #FFB400;
-}
-
-/* Reset dan gaya asas */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    background-color: #FFF8E1;
+    color: #5D4037;
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Gaya header */
 header {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #FFCCBC;
     padding: 20px;
-    text-align: center;
+    border-radius: 0 0 20px 20px;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background: var(--secondary-color);
-    padding: 10px;
+h1 {
+    font-size: 28px;
+    color: #D84315;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
+.contact-info {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background: #FFECB3;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Bahagian utama */
-.hero {
-    text-align: center;
-    padding: 50px;
-    background: var(--secondary-color);
-    color: white;
+.contact-info h2 {
+    color: #BF360C;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-}
-
-/* Butang */
-.button {
-    display: inline-block;
-    background: var(--accent-color);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+.contact-info a {
+    color: #FF5722;
     font-weight: bold;
-    transition: 0.3s;
+    text-decoration: none;
 }
 
-.button:hover {
-    background: var(--primary-color);
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
-/* Susun atur grid untuk perkhidmatan */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px;
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #FFE0B2;
+    font-size: 14px;
+    border-radius: 20px 20px 0 0;
 }
 
-.service-item {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
 
-.service-item h3 {
-    color: var(--primary-color);
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .services {
-        grid-template-columns: 1fr;
-    }
-}
