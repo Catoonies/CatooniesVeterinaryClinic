@@ -1,52 +1,45 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #FFF8E7;
-    text-align: center;
+/* Reset gaya default */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-h1 {
-    color: #FF6600;
-    font-size: 28px;
-    margin-top: 20px;
-}
-
-p {
-    color: #555;
-    font-size: 18px;
-}
-
-button {
-    background-color: #28A745;
-    color: white;
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
+/* Gaya untuk badan laman web */
+body {
+    background-color: #fdf6e3; /* Warna latar lembut */
+    color: #333;
+    text-align: center;
     padding: 20px;
 }
 
-.service {
-    background-color: #FFC57E;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
+/* Tajuk utama */
+h1 {
+    color: #ff9800;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-.service:hover {
-    background-color: #FFA64D;
+/* Logo */
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Butang */
+.button {
+    display: inline-block;
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #e68900;
 }
