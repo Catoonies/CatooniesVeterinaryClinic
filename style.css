@@ -139,3 +139,42 @@
     </footer>
 </body>
 </html>
+body {
+    background-color: #000; /* Warna hitam */
+    color: #fff; /* Tulisan putih */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #ff4c68; /* Warna butang merah jambu */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff1e4d;
+}
