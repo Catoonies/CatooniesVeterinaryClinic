@@ -1,118 +1,100 @@
-/* Tema Klinik Dr. Meow - Warna Menarik & Mesra Pelanggan */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Warna tema */
 :root {
-    --primary-color: #3498db; /* Biru Cerah - Kepercayaan */
-    --secondary-color: #f1c40f; /* Kuning Keemasan - Keceriaan */
-    --background-color: #ffffff; /* Putih - Keseimbangan */
-    --text-color: #333333; /* Hitam Lembut - Mudah Dibaca */
-    --highlight-color: #e74c3c; /* Merah - Untuk Elemen Penting */
+    --primary-color: #4CAF50; /* Hijau pastel */
+    --secondary-color: #87CEEB; /* Biru lembut */
+    --background-color: #F9F9F9;
+    --text-color: #333;
+    --accent-color: #FFB400;
 }
 
+/* Reset dan gaya asas */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
+/* Gaya header */
 header {
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
     padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    text-align: center;
 }
 
-h1, h2, h3 {
-    color: var(--primary-color);
-}
-
-button {
+nav {
+    display: flex;
+    justify-content: center;
     background: var(--secondary-color);
-    color: var(--text-color);
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    cursor: pointer;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+}
+
+/* Bahagian utama */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: var(--secondary-color);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+/* Butang */
+.button {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
     border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-button:hover {
-    background: var(--highlight-color);
-    color: white;
-}
-
-footer {
+.button:hover {
     background: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
+/* Susun atur grid untuk perkhidmatan */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
 }
 
-.container {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
+.service-item {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    text-align: center;
-    background-color: #ffcc00;
-    padding: 15px;
-    border-radius: 10px 10px 0 0;
-}
-
-h1 {
-    margin: 0;
-    color: #333;
-}
-
-.info {
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.info p {
-    font-size: 16px;
-    margin: 10px 0;
+.service-item h3 {
+    color: var(--primary-color);
 }
 
-.info a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+/* Responsif */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .services {
+        grid-template-columns: 1fr;
+    }
 }
-
-.info a:hover {
-    text-decoration: underline;
-}
-
-page 1
-
