@@ -1,37 +1,52 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #FFF8E7;
     text-align: center;
-    background-color: #fffaf0;
-    color: #333;
-    padding: 20px;
-}
-
-h1 {
-    color: #ff6600;
-}
-
-p {
-    font-size: 18px;
-}
-.btn-whatsapp {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-}
-ul {
-    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-li {
-    background: #ffcc80;
-    margin: 10px;
-    padding: 10px;
+h1 {
+    color: #FF6600;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+}
+
+button {
+    background-color: #28A745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.service {
+    background-color: #FFC57E;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
     font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.service:hover {
+    background-color: #FFA64D;
 }
