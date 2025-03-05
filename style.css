@@ -69,77 +69,59 @@
 </body>
 </html>
 
-<<!DOCTYPE html>
-<html lang="ms">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borang Temujanji - Klinik Dr. Meow</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h2>Borang Temujanji Klinik Dr. Meow</h2>
-        <form id="appointmentForm">
-            <label for="name">Nama Penuh Pemilik:</label>
-            <input type="text" id="name" name="name" required>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
-            <label for="ic">No. IC:</label>
-            <input type="text" id="ic" name="ic" required>
+.container {
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
-            <label for="phone">No. Telefon:</label>
-            <input type="tel" id="phone" name="phone" required>
+h2 {
+    color: #4CAF50;
+}
 
-            <label for="address">Alamat Penuh:</label>
-            <textarea id="address" name="address" required></textarea>
+p {
+    color: #555;
+}
 
-            <label for="pet_name">Nama Kucing:</label>
-            <input type="text" id="pet_name" name="pet_name" required>
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
 
-            <label for="vaccine_status">Status Vaksin (Terlampirkan Gambar Buku Vaksin):</label>
-            <input type="file" id="vaccine_status" name="vaccine_status" accept="image/*" required>
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
-            <label for="cat_type">Jenis Kucing:</label>
-            <select id="cat_type" name="cat_type" required>
-                <option value="Sangkar">Sangkar</option>
-                <option value="Bebas">Bebas</option>
-            </select>
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
-            <label for="appointment_reason">Tujuan Temujanji:</label>
-            <select id="appointment_reason" name="appointment_reason" required>
-                <option value="Pemeriksaan & Rawatan">Pemeriksaan & Rawatan</option>
-                <option value="Vaksinasi">Vaksinasi</option>
-                <option value="Boarding">Boarding</option>
-                <option value="Grooming">Grooming</option>
-                <option value="Wad">Wad</option>
-            </select>
-
-            <button type="button" onclick="sendToWhatsApp()">Hantar Temujanji</button>
-        </form>
-    </div>
-
-    <script>
-        function sendToWhatsApp() {
-            var name = document.getElementById("name").value;
-            var ic = document.getElementById("ic").value;
-            var phone = document.getElementById("phone").value;
-            var address = document.getElementById("address").value;
-            var petName = document.getElementById("pet_name").value;
-            var catType = document.getElementById("cat_type").value;
-            var appointmentReason = document.getElementById("appointment_reason").value;
-
-            var message = `Temujanji Baru!%0A%0A` +
-                `Nama Pemilik: ${name}%0A` +
-                `No. IC: ${ic}%0A` +
-                `No. Telefon: ${phone}%0A` +
-                `Alamat: ${address}%0A%0A` +
-                `Nama Kucing: ${petName}%0A` +
-                `Jenis Kucing: ${catType}%0A` +
-                `Tujuan Temujanji: ${appointmentReason}`;
-            
-            var whatsappUrl = `https://wa.me/60182624047?text=${message}`;
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
-</body>
-</html>
+button:hover {
+    background-color: #45a049;
+}

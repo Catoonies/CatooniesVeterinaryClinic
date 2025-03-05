@@ -74,72 +74,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borang Temujanji - Klinik Dr. Meow</title>
+    <title>Borang Temujanji | Klinik Dr. Meow</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
-        <h2>Borang Temujanji Klinik Dr. Meow</h2>
+        <h2>Temujanji Klinik Dr. Meow</h2>
+        <p>Sila isi semua maklumat di bawah untuk membuat temujanji.</p>
+
         <form id="appointmentForm">
             <label for="name">Nama Penuh Pemilik:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" required>
 
-            <label for="ic">No. IC:</label>
-            <input type="text" id="ic" name="ic" required>
+            <label for="ic">No. Kad Pengenalan:</label>
+            <input type="text" id="ic" required>
 
             <label for="phone">No. Telefon:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" required>
 
             <label for="address">Alamat Penuh:</label>
-            <textarea id="address" name="address" required></textarea>
+            <textarea id="address" required></textarea>
 
-            <label for="pet_name">Nama Kucing:</label>
-            <input type="text" id="pet_name" name="pet_name" required>
+            <label for="catName">Nama Kucing:</label>
+            <input type="text" id="catName" required>
 
-            <label for="vaccine_status">Status Vaksin (Terlampirkan Gambar Buku Vaksin):</label>
-            <input type="file" id="vaccine_status" name="vaccine_status" accept="image/*" required>
+            <label for="vaccine">Status Vaksin (Gambar Buku Vaksin):</label>
+            <input type="file" id="vaccine" accept="image/*" required>
 
-            <label for="cat_type">Jenis Kucing:</label>
-            <select id="cat_type" name="cat_type" required>
-                <option value="Sangkar">Sangkar</option>
-                <option value="Bebas">Bebas</option>
-            </select>
-
-            <label for="appointment_reason">Tujuan Temujanji:</label>
-            <select id="appointment_reason" name="appointment_reason" required>
-                <option value="Pemeriksaan & Rawatan">Pemeriksaan & Rawatan</option>
-                <option value="Vaksinasi">Vaksinasi</option>
-                <option value="Boarding">Boarding</option>
-                <option value="Grooming">Grooming</option>
-                <option value="Wad">Wad</option>
-            </select>
-
-            <button type="button" onclick="sendToWhatsApp()">Hantar Temujanji</button>
-        </form>
-    </div>
-
-    <script>
-        function sendToWhatsApp() {
-            var name = document.getElementById("name").value;
-            var ic = document.getElementById("ic").value;
-            var phone = document.getElementById("phone").value;
-            var address = document.getElementById("address").value;
-            var petName = document.getElementById("pet_name").value;
-            var catType = document.getElementById("cat_type").value;
-            var appointmentReason = document.getElementById("appointment_reason").value;
-
-            var message = `Temujanji Baru!%0A%0A` +
-                `Nama Pemilik: ${name}%0A` +
-                `No. IC: ${ic}%0A` +
-                `No. Telefon: ${phone}%0A` +
-                `Alamat: ${address}%0A%0A` +
-                `Nama Kucing: ${petName}%0A` +
-                `Jenis Kucing: ${catType}%0A` +
-                `Tujuan Temujanji: ${appointmentReason}`;
-            
-            var whatsappUrl = `https://wa.me/60182624047?text=${message}`;
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
-</body>
-</html>
+            <label for="livingType">Jenis Persekitaran Kucing:</label>
+            <select id="livingType" required>
+                <option value="" disabled selected>Pilih satu</option>
+          
