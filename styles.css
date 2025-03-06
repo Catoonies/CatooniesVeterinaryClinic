@@ -1,0 +1,17 @@
+css
+CopyEdit
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+}section {
+    padding: 20px;
+}footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+}
