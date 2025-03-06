@@ -1,38 +1,30 @@
-/* Warna utama berdasarkan logo */
-:root {
-    --primary-color: #A30D31; /* Merah gelap dari logo */
-    --secondary-color: #000000; /* Hitam dari logo */
-    --background-color: #FFFFFF; /* Putih dari logo */
-}
-
-/* Ubah warna header */
-header {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-}
-
-/* Ubah warna footer */
-footer {
-    background-color: var(--secondary-color);
-    color: var(--background-color);
-}
-
-/* Ubah warna latar belakang utama */
-body {
-    background-color: var(--background-color);
-    color: var(--secondary-color);
-}
-
-/* Ubah warna butang */
-button, .btn {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover, .btn:hover {
-    background-color: #8A0B28; /* Warna lebih gelap untuk efek hover */
-}
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinik Dr. Meow</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang ke Klinik Dr. Meow</h1>
+        <p>Perkhidmatan terbaik untuk haiwan kesayangan anda</p>
+    </header>
+    
+    <section class="services">
+        <h2>Perkhidmatan Kami</h2>
+        <ul>
+            <li>Pemeriksaan Kesihatan</li>
+            <li>Vaksinasi</li>
+            <li>Pembedahan</li>
+            <li>Grooming</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>📞 Hubungi kami: <a href="tel:0123456789">012-3456789</a> | 📧 <a href="mailto:klinikdrmeow@example.com">klinikdrmeow@example.com</a></p>
+    </footer>
+</body>
+</html>
