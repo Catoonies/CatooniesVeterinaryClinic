@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catoonies Veterinary Clinic</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkhidmatan Klinik Dr. Meow</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="header-content">
-      <h1>Catoonies Veterinary Clinic</h1>
-      <p>Penjagaan Terbaik untuk Kucing Kesayangan Anda di Pontian!</p>
-      <a href="appointment.html" class="btn">Buat Temujanji Sekarang</a>
-      <a href="services.html" class="btn secondary">Lihat Perkhidmatan Kami</a>
-    </div>
-  </header>
-
-  <section id="about">
-    <div class="container">
-      <h2>Kenali Catoonies Veterinary Clinic</h2>
-      <div class="about-content">
-        <img src="clinic.jpg" alt="Klinik Kami">
-        <p>Kami adalah klinik haiwan khusus untuk kucing di Pontian, Johor.</p>
-      </div>
-      <a href="#about" class="btn">Tentang Kami</a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>Hubungi Kami: 018-2624047 | ctoniesvet@gmail.com</p>
-      <p>Alamat: <a href="https://maps.app.goo.gl/eq7p8Yu67MxYHmkS8" target="_blank">Google Maps</a></p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <header>
+        <h1>Selamat Datang ke Klinik Dr. Meow</h1>
+        <p>Pilih perkhidmatan yang anda perlukan:</p>
+    </header>
+    <section id="services">
+        <button onclick="tunjukPerkhidmatan('Pemeriksaan & Rawatan')">Pemeriksaan & Rawatan</button>
+        <button onclick="tunjukPerkhidmatan('Vaksinasi')">Vaksinasi</button>
+        <button onclick="tunjukPerkhidmatan('Pembedahan Kecil')">Pembedahan Kecil</button>
+        <button onclick="tunjukPerkhidmatan('Rawatan Kecemasan')">Rawatan Kecemasan</button>
+        <button onclick="tunjukPerkhidmatan('Penjagaan Gigi Haiwan')">Penjagaan Gigi Haiwan</button>
+        <button onclick="tunjukPerkhidmatan('Perkhidmatan Groomer')">Perkhidmatan Groomer</button>
+        <button onclick="tunjukPerkhidmatan('Perkhidmatan Boarding')">Perkhidmatan Boarding</button>
+        <button onclick="tunjukPerkhidmatan('Perkhidmatan Wad')">Perkhidmatan Wad</button>
+        <button onclick="tunjukPerkhidmatan('Pemandulan Kucing')">Pemandulan Kucing</button>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
