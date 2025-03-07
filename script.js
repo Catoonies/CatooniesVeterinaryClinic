@@ -1,2 +1,3 @@
-
-console.log("Selamat datang ke Klinik Haiwan!");
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Website Catoonies Veterinary Clinic sedia!");
+});
