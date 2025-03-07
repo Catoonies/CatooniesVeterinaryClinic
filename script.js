@@ -1,3 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("Website Catoonies Veterinary Clinic sedia!");
-});
+function tunjukPerkhidmatan(perkhidmatan) {
+    alert("Anda memilih perkhidmatan: " + perkhidmatan);
+}
