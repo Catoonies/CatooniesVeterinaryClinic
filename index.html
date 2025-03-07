@@ -1,48 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catoonies Veterinary Clinic</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Laman Utama - Catoonies Vet</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Catoonies Veterinary Clinic</h1>
+        <h1>Catoonies Veterinary Clinic</h1>
         <nav>
             <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#appointment">Book Appointment</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Perkhidmatan</a></li>
+                <li><a href="#">Tempahan</a></li>
+                <li><a href="#">Kedai</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Galeri</a></li>
+                <li><a href="#">Hubungi Kami</a></li>
+                <li><a href="#">FAQ</a></li>
             </ul>
         </nav>
     </header>
     
+    <section id="hero">
+        <h2>Selamat Datang ke Catoonies Vet</h2>
+        <p>Klinik khusus untuk kesihatan kucing kesayangan anda.</p>
+    </section>
+    
     <section id="services">
-        <h2>Our Services</h2>
-        <p>We offer a variety of veterinary services for your beloved cats.</p>
+        <h2>Pilih Servis</h2>
+        <button onclick="showForm('pemeriksaan')">Pemeriksaan</button>
+        <button onclick="showForm('pemandulan')">Pemandulan</button>
+        <button onclick="showForm('vaksinasi')">Vaksinasi</button>
+        <button onclick="showForm('grooming')">Grooming</button>
+        <button onclick="showForm('boarding')">Boarding</button>
+        <button onclick="showForm('wad')">Wad</button>
+        <button onclick="showForm('xray')">X-ray</button>
+        <button onclick="showForm('ultrasound')">Ultrasound</button>
+        <button onclick="showForm('darah')">Pemeriksaan Darah</button>
     </section>
     
-    <section id="appointment">
-        <h2>Book an Appointment</h2>
+    <section id="booking-form" style="display:none;">
+        <h2>Maklumat Pemilik</h2>
         <form id="appointmentForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <label>Nama Pemilik:</label>
+            <input type="text" id="ownerName" required>
             
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <label>No. IC:</label>
+            <input type="text" id="ownerIC" required>
             
-            <label for="date">Preferred Date:</label>
-            <input type="date" id="date" name="date" required>
+            <label>Alamat:</label>
+            <input type="text" id="ownerAddress" required>
             
-            <button type="submit">Submit</button>
+            <label>No. H/P:</label>
+            <input type="text" id="ownerPhone" required>
+            
+            <label>Email:</label>
+            <input type="email" id="ownerEmail" required>
+            
+            <h2>Maklumat Kucing</h2>
+            <label>Nama Kucing:</label>
+            <input type="text" id="catName" required>
+            
+            <label>Umur:</label>
+            <input type="text" id="catAge" required>
+            
+            <label>Jenis Baka:</label>
+            <input type="text" id="catBreed" required>
+            
+            <label>Tarikh Nak Datang:</label>
+            <input type="date" id="appointmentDate" required>
+            
+            <h2>Tujuan Pemeriksaan</h2>
+            <select id="appointmentReason">
+                <option value="vaksin">Vaksin</option>
+                <option value="grooming">Grooming</option>
+                <option value="boarding">Boarding</option>
+                <option value="sakit">Sakit</option>
+            </select>
+            
+            <h2>Status Rawatan</h2>
+            <label><input type="radio" name="treatmentStatus" value="pemantauan"> Dalam Pemantauan</label>
+            <label><input type="radio" name="treatmentStatus" value="tiada"> Tiada Rawatan</label>
+            
+            <button type="button" onclick="sendToWhatsApp()">Hantar ke WhatsApp</button>
         </form>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Phone: 018-2624047</p>
-        <p>Address: No.47, Jalan Emas 2, Pusat Perniagaan Kota Emas, 82000 Pontian, Johor</p>
     </section>
     
     <script src="script.js"></script>
