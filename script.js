@@ -1,30 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Laman web telah dimuatkan");
+// script.js
+function showForm(service) {
+    document.getElementById('booking-form').style.display = 'block';
+}
 
-    // Navigasi menu toggle untuk mudah alih
-    const menuToggle = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
+function sendToWhatsApp() {
+    let ownerName = document.getElementById('ownerName').value;
+    let ownerIC = document.getElementById('ownerIC').value;
+    let ownerAddress = document.getElementById('ownerAddress').value;
+    let ownerPhone = document.getElementById('ownerPhone').value;
+    let ownerEmail = document.getElementById('ownerEmail').value;
+    
+    let catName = document.getElementById('catName').value;
+    let catAge = document.getElementById('catAge').value;
+    let catBreed = document.getElementById('catBreed').value;
+    let appointmentDate = document.getElementById('appointmentDate').value;
+    let appointmentReason = document.getElementById('appointmentReason').value;
+    
+    let treatmentStatus = document.querySelector('input[name="treatmentStatus"]:checked');
+    treatmentStatus = treatmentStatus ? treatmentStatus.value : 'Tidak dinyatakan';
+    
+    let message = `*Tempahan Klinik Catoonies Vet*
+👩‍⚕️ Nama Pemilik: ${ownerName}
+🆔 No. IC: ${ownerIC}
+🏡 Alamat: ${ownerAddress}
+📱 No. H/P: ${ownerPhone}
+📧 Email: ${ownerEmail}
 
-    if (menuToggle) {
-        menuToggle.addEventListener("click", function () {
-            navMenu.classList.toggle("active");
-        });
-    }
-
-    // Fungsi untuk sistem tempahan (contoh asas)
-    const bookingForm = document.getElementById("booking-form");
-    if (bookingForm) {
-        bookingForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-            alert("Tempahan anda telah diterima! Kami akan hubungi anda segera.");
-        });
-    }
-
-    // Hantar notifikasi WhatsApp (contoh)
-    const whatsappButton = document.getElementById("whatsapp-button");
-    if (whatsappButton) {
-        whatsappButton.addEventListener("click", function () {
-            window.open("https://wa.me/60182624047?text=Hai%20saya%20ingin%20membuat%20tempahan", "_blank");
-        });
-    }
-});
+🐱 Nama Kucing: ${catName}
+🎂 Umur: ${catAge}
+🐾 Jenis Baka: ${catBreed}
+🗓️ Tarikh Nak Datang: ${appointmentDate}
+🩺 Tujuan Pemeriksaan: ${appointmentReason}
+📌 Status Rawatan: ${treatmentStatus}`;
+    
+    let whatsappUrl = `https://api.whatsapp.com/send?phone=60182624047&text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+}
