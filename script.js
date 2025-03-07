@@ -1,38 +1,30 @@
-// script.js
+/* script.js */
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceButtons = document.querySelectorAll('.button');
+    serviceButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const serviceName = this.textContent;
+            showForm(serviceName);
+        });
+    });
+});
+
 function showForm(service) {
-    document.getElementById('booking-form').style.display = 'block';
+    document.getElementById('form-container').classList.remove('hidden');
+    document.getElementById('selected-service').value = service;
 }
 
-function sendToWhatsApp() {
-    let ownerName = document.getElementById('ownerName').value;
-    let ownerIC = document.getElementById('ownerIC').value;
-    let ownerAddress = document.getElementById('ownerAddress').value;
-    let ownerPhone = document.getElementById('ownerPhone').value;
-    let ownerEmail = document.getElementById('ownerEmail').value;
+document.getElementById('booking-form').addEventListener('submit', function(event) {
+    event.preventDefault();
     
-    let catName = document.getElementById('catName').value;
-    let catAge = document.getElementById('catAge').value;
-    let catBreed = document.getElementById('catBreed').value;
-    let appointmentDate = document.getElementById('appointmentDate').value;
-    let appointmentReason = document.getElementById('appointmentReason').value;
-    
-    let treatmentStatus = document.querySelector('input[name="treatmentStatus"]:checked');
-    treatmentStatus = treatmentStatus ? treatmentStatus.value : 'Tidak dinyatakan';
-    
-    let message = `*Tempahan Klinik Catoonies Vet*
-👩‍⚕️ Nama Pemilik: ${ownerName}
-🆔 No. IC: ${ownerIC}
-🏡 Alamat: ${ownerAddress}
-📱 No. H/P: ${ownerPhone}
-📧 Email: ${ownerEmail}
+    const ownerName = document.getElementById('owner-name').value;
+    const ownerIC = document.getElementById('owner-ic').value;
+    const ownerPhone = document.getElementById('owner-phone').value;
+    const petName = document.getElementById('pet-name').value;
+    const serviceType = document.getElementById('selected-service').value;
 
-🐱 Nama Kucing: ${catName}
-🎂 Umur: ${catAge}
-🐾 Jenis Baka: ${catBreed}
-🗓️ Tarikh Nak Datang: ${appointmentDate}
-🩺 Tujuan Pemeriksaan: ${appointmentReason}
-📌 Status Rawatan: ${treatmentStatus}`;
+    const message = `Nama Pemilik: ${ownerName}%0ANo. IC: ${ownerIC}%0ANo. H/P: ${ownerPhone}%0ANama Kucing: ${petName}%0AServis: ${serviceType}`;
     
-    let whatsappUrl = `https://api.whatsapp.com/send?phone=60182624047&text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-}
+    const whatsappURL = `https://wa.me/60182624047?text=${message}`;
+    window.open(whatsappURL, '_blank');
+});
