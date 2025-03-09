@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Halaman 13 - Kucing Sudah Vaksin Tahunan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 80%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .content-container p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .button-container {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .button-container button {
+            padding: 1rem;
+            background-color: #FFD700;
+            border: none;
+            color: #000;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #f7d300;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .back-button a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1.1rem;
+            background-color: #000;
+            padding: 0.5rem 1rem;
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+        }
+
+        .back-button a:hover {
+            background-color: #FFD700;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Kucing Sudah Vaksin Tahunan 🐱💉</h1>
+    </header>
+
+    <!-- Content Section -->
+    <section class="content-container">
+        <p>Selamat! Kucing anda sudah menerima vaksin tahunan untuk memastikan kesihatan mereka terjaga. Kini, anda boleh membuat pilihan untuk perkhidmatan seterusnya bagi memastikan kucing anda sentiasa sihat dan dilayan dengan baik.</p>
+
+        <!-- Button Choices -->
+        <div class="button-container">
+            <button onclick="window.location.href='halaman5.html'">Boarding (Tempat Penginapan Kucing)</button>
+            <button onclick="window.location.href='halaman5.html'">Grooming (Perkhidmatan Grooming)</button>
+            <button onclick="window.location.href='halaman5.html'">Pemandulan (Neutering)</button>
+        </div>
+
+        <!-- Back to Main Page -->
+        <div class="back-button">
+            <a href="halaman1.html">Kembali ke Halaman Utama</a>
+        </div>
+    </section>
+
+</body>
+</html>

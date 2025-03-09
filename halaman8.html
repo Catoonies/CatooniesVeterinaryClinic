@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Halaman 8 - Harga & Syarat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .section-title {
+            color: #FFD700;
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .content a {
+            color: #FFD700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            display: inline-block;
+            background-color: #000;
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+        }
+
+        .content a:hover {
+            background-color: #FFD700;
+            color: #000;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        .button-section {
+            margin-top: 1rem;
+        }
+
+        .details {
+            display: none;
+            background-color: #222;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>🐾 Harga & Syarat 🐾</h1>
+        <p>Meow~! 😻 Ketahui harga perkhidmatan kami dan syarat-syarat untuk pelanggan tetap!</p>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content">
+        <h2 class="section-title">Perkhidmatan Kami</h2>
+
+        <!-- Pemeriksaan -->
+        <div class="button-section">
+            <button onclick="document.getElementById('rawatan-details').style.display='block'">1. Pemeriksaan</button>
+            <div id="rawatan-details" class="details">
+                <p><b>a) Rawatan:</b> RM30.00 / kucing</p>
+                <p><b>b) Grooming:</b> RM10.00 / kucing</p>
+                <p><b>Pelanggan Tetap:</b> Discount 20% - 50% (Mengikut terma & syarat)</p>
+                <a href="halaman9.html">Pelanggan Tetap</a>
+            </div>
+        </div>
+
+        <!-- Vaksinasi -->
+        <div class="button-section">
+            <button onclick="document.getElementById('vaksinasi-details').style.display='block'">2. Vaksinasi</button>
+            <div id="vaksinasi-details" class="details">
+                <p><b>Pelanggan Baru (Termasuk kos pemeriksaan):</b></p>
+                <p>a) Booster Pertama: RM65.00 / kucing</p>
+                <p>b) Booster Kedua: RM55.00 / kucing</p>
+                <p>c) Booster Ketiga: RM55.00 / kucing</p>
+                <p>d) Booster Tahunan: RM55.00 / kucing</p>
+                <p><b>Pelanggan Tetap:</b> Discount 20% - 50% (Mengikut terma & syarat)</p>
+                <a href="halaman9.html">Pelanggan Tetap</a>
+            </div>
+        </div>
+
+        <!-- Pemandulan -->
+        <div class="button-section">
+            <button onclick="document.getElementById('pemandulan-details').style.display='block'">3. Pemandulan</button>
+            <div id="pemandulan-details" class="details">
+                <p><b>Jantan:</b> RM120.00 / jantan</p>
+                <p><b>Betina:</b> RM160.00 / betina</p>
+                <p><b>Pelanggan Tetap:</b> Discount 20% - 50% (Mengikut terma & syarat)</p>
+                <a href="halaman9.html">Pelanggan Tetap</a>
+            </div>
+        </div>
+
+        <!-- Grooming -->
+        <div class="button-section">
+            <button onclick="document.getElementById('grooming-details').style.display='block'">4. Grooming</button>
+            <div id="grooming-details" class="details">
+                <p><b>a) Domestik:</b> RM50.00 - RM100.00</p>
+                <p><b>b) Berbaka:</b> RM60.00 - RM150.00</p>
+                <p><b>Pelanggan Tetap:</b> Discount 20% - 50% (Mengikut terma & syarat)</p>
+                <a href="halaman9.html">Pelanggan Tetap</a>
+            </div>
+        </div>
+
+        <!-- Boarding -->
+        <div class="button-section">
+            <button onclick="document.getElementById('boarding-details').style.display='block'">5. Boarding</button>
+            <div id="boarding-details" class="details">
+                <p><b>a) Sangkar Kecil:</b> RM35.00 (1 ekor sahaja)</p>
+                <p><b>b) Sangkar Besar:</b> RM60.00 (1-3 ekor bergantung kepada berat)</p>
+                <p><b>Pelanggan Tetap:</b> Discount 20% - 50% (Mengikut terma & syarat)</p>
+                <a href="halaman9.html">Pelanggan Tetap</a>
+            </div>
+        </div>
+
+        <!-- Main Page Button -->
+        <div>
+            <a href="halaman1.html">Halaman Utama</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Catoonies Veterinary Clinic. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
