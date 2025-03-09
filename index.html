@@ -1,48 +1,73 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catoonies Veterinary Clinic</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Klinik Dr. Meow</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F5F2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #E3D5CA;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin: 40px 0;
+        }
+        h2 {
+            color: #7A5C58;
+        }
+        .btn {
+            display: inline-block;
+            background: #A67C68;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .btn:hover {
+            background: #8B5E4C;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Catoonies Veterinary Clinic Logo" class="logo">
-        <h1>🐾 Selamat Datang ke Catoonies Veterinary Clinic! 🐾</h1>
-    </header>
-    
-    <section class="intro">
-        <p>Meow~! 😻 Anda mencari tempat terbaik untuk si bulus kesayangan? Kami sedia memberikan penjagaan penuh kasih sayang untuk kucing anda!</p>
-        <a href="#services" class="btn">Lihat Servis Kami</a>
-<div class="services">
-    <ul>
-        <li><span class="icon">💉</span> <span class="title">Pemeriksaan & Rawatan</span></li>
-        <li><span class="icon">🏥</span> <span class="title">Vaksinasi</span></li>
-        <li><span class="icon">✂</span> <span class="title">Pemandulan jantan & betina</span></li>
-        <li><span class="icon">✨</span> <span class="title">Grooming & Boarding</span></li>
-        <li><span class="icon">🚑</span> <span class="title">Rawatan kecemasan</span></li>
-        <li><span class="icon">🦷</span> <span class="title">Penjagaan gigi & kesihatan menyeluruh</span></li>
-    </ul>
-</div>
-
-        <p>📍 Lokasi: No.47, Jalan Emas 2, Pusat Perniagaan Kota Emas, 82000 Pontian, Johor</p>
-        <p>Lokasi (Google Maps): <a href="https://maps.app.goo.gl/eq7p8Yu67MxYHmkS8" target="_blank">Klik di sini</a></p>
-        <p>📞 Hubungi Kami: <a href="https://wa.me/60182624047">WhatsApp 018-2624047</a></p>
-        <p>🌐 Ikuti Kami:</p>
-        <ul>
-            <li><a href="https://www.facebook.com/CatooniesVetPontian" target="_blank">Facebook</a></li>
-            <li><a href="https://www.youtube.com/@catooniesveterinaryclinic5610" target="_blank">YouTube</a></li>
-            <li><a href="https://www.tiktok.com/@catooniesvetpontian" target="_blank">TikTok</a></li>
-        </ul>
-        <p>Email: <a href="mailto:catooniesveterinaryclinic@gmail.com">catooniesveterinaryclinic@gmail.com</a></p>
-        <p>🐾 Catoonies – Kasih Sayang untuk Si Meow Kesayangan Anda! 😻💕</p>
-        
-        <div class="button-container">
-            <button onclick="goToPage(2)">Pemeriksaan</button>
-            <button onclick="goToPage(12)">Pertanyaan</button>
+    <header>Klinik Dr. Meow</header>
+    <div class="container">
+        <div class="section">
+            <h2>Selamat Datang ke Klinik Dr. Meow</h2>
+            <p>Rawatan terbaik untuk Cik Meow dengan penuh kasih sayang.</p>
+            <a href="#about" class="btn">Ketahui Lebih Lanjut</a>
         </div>
-    </main>
-    <script src="script.js"></script>
+        <div class="section" id="about">
+            <h2>Tentang Kami</h2>
+            <p>Klinik Dr. Meow menyediakan perkhidmatan rawatan veterinar profesional untuk kucing kesayangan anda.</p>
+        </div>
+        <div class="section">
+            <h2>Servis Kami</h2>
+            <p>✅ Pemeriksaan Kesihatan | ✅ Vaksinasi | ✅ Grooming | ✅ Boarding</p>
+        </div>
+        <div class="section">
+            <h2>Hubungi Kami</h2>
+            <p>📍 Pontian, Johor | 📞 WhatsApp: 012-3456789</p>
+            <a href="https://wa.me/0123456789" class="btn">WhatsApp Kami</a>
+        </div>
+    </div>
 </body>
 </html>
