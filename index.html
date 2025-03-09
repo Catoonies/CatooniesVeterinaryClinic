@@ -41,3 +41,1005 @@
     <script src="script.js"></script>
 </body>
 </html>
+1
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahap Kesihatan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tahap Kesihatan</h1>
+    </header>
+
+    <p>Sila pilih tahap kesihatan kucing anda:</p>
+
+    <div class="button-container">
+        <button onclick="goToPage(3)">Sihat</button>
+        <button onclick="goToPage(4)">Tidak Sihat</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+2
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kucing Sihat</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Kucing Sihat</h1>
+    </header>
+    <p>Sila pilih pilihan yang sesuai:</p>
+    <div class="button-container">
+        <button onclick="goToPage(5)"
+3
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kucing Tidak Sihat</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Kucing Tidak Sihat</h1>
+    </header>
+    <p>S
+4
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borang Tempahan & Persetujuan Rawatan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Borang Tempahan & Persetujuan Rawatan</h1>
+    </header>
+
+    <form id="appointmentForm">
+        <h2>Maklumat Pemilik</h2>
+        <label>Nama Pemilik:</label>
+        <input type="text" id="namaPemilik" required>
+
+        <label>No. Kad Pengenalan:</label>
+        <input type="text" id="icPemilik" required>
+
+        <label>Alamat:</label>
+        <textarea id="alamatPemilik" required></textarea>
+
+        <label>No. Telefon:</label>
+        <input type="text" id="telefonPemilik" required>
+
+        <label>Emel:</label>
+        <input type="email" id="emelPemilik" required>
+
+        <h2>Maklumat Kucing</h2>
+        <label>Nama Kucing:</label>
+        <input type="text" id="namaKucing" required>
+
+        <label>Umur:</label>
+        <input type="text" id="umurKucing" required>
+
+        <label>Baka:</label>
+        <input type="text" id="bakaKucing" required>
+
+        <label>Berat (kg):</label>
+        <input type="text" id="beratKucing" required>
+
+        <h2>Temujanji & Rawatan</h2>
+        <label>Tarikh Temujanji:</label>
+        <input type="date" id="tarikhTemujanji" required>
+
+        <label>Tujuan Pemeriksaan:</label>
+        <select id="tujuanRawatan">
+            <option value="Vaksin">Vaksin</option>
+            <option value="Grooming">Grooming</option>
+            <option value="Boarding">Boarding</option>
+            <option value="Sakit">Sakit - Nyatakan gejala</option>
+        </select>
+
+        <label>Status Rawatan:</label>
+        <input type="text" id="statusRawatan" placeholder="Dalam Pemantauan: Nama & Tarikh / Tiada Rawatan">
+
+        <h2>Persetujuan</h2>
+        <p>
+            Saya bersetuju untuk meneruskan rawatan/pemandulan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur seperti yang dinasihatkan oleh Catoonies Veterinary Clinic.
+        </p>
+
+        <button type="button" onclick="hantarKeWhatsApp()">Hantar</button>
+    </form>
+</body>
+</html>
+5
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Catoonies Veterinary Clinic</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Tentang Kami</h1>
+    </header>
+
+    <section class="content">
+        <p>Selamat datang ke Catoonies Veterinary Clinic! Kami komited untuk memberikan penjagaan terbaik untuk kucing kesayangan anda.</p>
+    </section>
+
+    <div class="button-container">
+        <button onclick="bukaPeta()">📍 Lokasi</button>
+        <button onclick="navigateTo('halaman12.html')">🩺 Penyakit</button>
+        <button onclick="navigateTo('cara_rawatan.html')">🏡 Cara Rawatan Di Rumah</button>
+        <button onclick="navigateTo('halaman11.html')">🏠 Halaman Utama</button>
+        <button onclick="navigateTo('halaman8.html')">💰 Harga & Syarat</button>
+    </div>
+</body>
+</html>
+6
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Referral Centre</h1>
+        <p>Meow~ 😺 Untuk kes 😻💖 Cik Meow kesayangan ini, kami syorkan dirujuk ke Referral Centre kerana:</p>
+        
+        <ul>
+            <li>🐾 <strong>Rawatan Lanjutan & Kepakaran</strong> – rujukan ada kelengkapan dan kepakaran khusus yang lebih sesuai untuk kes ini.</li>
+            <li>🏥 <strong>Mesin & Teknologi Lengkap</strong> – Sesetengah ujian dan rawatan hanya tersedia di pusat rujukan.</li>
+            <li>💊 <strong>Kesihatan 😻💖 Cik Meow Jadi Keutamaan!</strong> – Jika memerlukan rawatan segera dan lebih intensif, kami mahu pastikan mereka dapat rawatan terbaik.</li>
+        </ul>
+
+        <h2>Referral Centre:</h2>
+        <p>📍 Vet Partners - Nusa Bestari Medical Centre</p>
+        <p>🏠 16, Jalan Jati 1, Taman Nusa Bestari Jaya, 81300 Johor Bahru, Johor</p>
+        <a href="https://maps.app.goo.gl/QfLoKVSKkmRu7e5N8" target="_blank">Lihat Lokasi</a>
+
+        <p>😻💖 Cik Meow mesti dapat rawatan terbaik! 🐾💕 Jangan risau, Momo dan pasukan Catoonies Veterinary Clinic sentiasa ada untuk bantu~ 😽✨</p>
+        
+        <h3>Kos Penghantaran ke Referral Centre 🏥🐾</h3>
+        <button id="toggleCostBtn">📢 Tekan untuk lihat kos</button>
+        <div id="cost-info" class="hidden">
+            <p>Jika pemilik ingin pihak Catoonies Veterinary Clinic membantu membawa haiwan ke Referral Centre, syarat berikut perlu dipatuhi:</p>
+            <ul>
+                <li>💰 Deposit diperlukan: RM500.00</li>
+                <li>💰 Anggaran kos rawatan: RM500.00 – RM1,500.00 (tidak termasuk kos pembedahan di sana, jika diperlukan)</li>
+            </ul>
+            <p><strong>⚠️ Nota:</strong> Kos akhir bergantung kepada rawatan yang diperlukan di Referral Centre.</p>
+        </div>
+
+        <div class="buttons">
+            <button onclick="location.href='halaman1.html'">Halaman Utama</button>
+            <button onclick="location.href='halaman5.html'">Catoonies Veterinary Clinic Bawa</button>
+            <p class="info">📝 Ingin Catoonies Veterinary Clinic bawakan ke Referral Centre</p>
+        </div>
+    </div>
+</body>
+</html>
+7
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harga & Syarat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Harga & Syarat</h1>
+    
+    <div class="section">
+        <button onclick="toggleDetails('pemeriksaan')">Pemeriksaan</button>
+        <div id="pemeriksaan" class="details">
+            <p>Rawatan: RM30.00 / kucing</p>
+            <p>Grooming: RM10.00 / kucing</p>
+            <button onclick="navigateTo('halaman9.html')">Pelanggan Tetap</button>
+        </div>
+    </div>
+    
+    <div class="section">
+        <button onclick="toggleDetails('vaksinasi')">Vaksinasi</button>
+        <div id="vaksinasi" class="details">
+            <p>Booster Pertama: RM65.00 / kucing</p>
+            <p>Booster Kedua: RM55.00 / kucing</p>
+            <p>Booster Ketiga: RM55.00 / kucing</p>
+            <p>Booster Tahunan: RM55.00 / kucing</p>
+            <button onclick="navigateTo('halaman9.html')">Pelanggan Tetap</button>
+        </div>
+    </div>
+    
+    <div class="section">
+        <button onclick="toggleDetails('pemandulan')">Pemandulan</button>
+        <div id="pemandulan" class="details">
+            <p>Jantan: RM120.00</p>
+            <p>Betina: RM160.00</p>
+            <button onclick="navigateTo('halaman9.html')">Pelanggan Tetap</button>
+        </div>
+    </div>
+    
+    <div class="section">
+        <button onclick="toggleDetails('grooming')">Grooming</button>
+        <div id="grooming" class="details">
+            <p>Domestik: RM50.00 - RM100.00</p>
+            <p>Berbaka: RM60.00 - RM150.00</p>
+            <button onclick="navigateTo('halaman9.html')">Pelanggan Tetap</button>
+        </div>
+    </div>
+    
+    <div class="section">
+        <button onclick="toggleDetails('boarding')">Boarding</button>
+        <div id="boarding" class="details">
+            <p>Sangkar Kecil: RM35.00</p>
+            <p>Sangkar Besar: RM60.00</p>
+            <button onclick="navigateTo('halaman9.html')">Pelanggan Tetap</button>
+        </div>
+    </div>
+    
+    <button onclick="navigateTo('halaman1.html')">Halaman Utama</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+8
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelanggan Tetap - Catoonies Veterinary Clinic</title>
+    <link rel="stylesheet" href="halaman9.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💌 Berminat untuk Menjadi Pelanggan Tetap Kami? 🏥🐾</h1>
+        <p>🎉 Dapatkan rawatan eksklusif & keistimewaan khas sebagai pelanggan tetap di Catoonies Veterinary Clinic! ✨🐱</p>
+        
+        <button class="toggle-btn" data-target="syarat">📜 Lihat Syarat Pelanggan Tetap</button>
+        <div id="syarat" class="hidden">
+            <ul>
+                <li>✅ Minimum 1 kali sebulan ke klinik</li>
+                <li>✅ Hadir mengikut temujanji</li>
+                <li>✅ Mengikuti jadual rawatan Dr. Meow</li>
+                <li>✅ Semua rawatan dilakukan di Catoonies Veterinary Clinic</li>
+                <li>✅ Vaksinasi & pemandulan mesti dilakukan di sini</li>
+                <li>✅ Grooming & Boarding hanya di Catoonies Veterinary Clinic</li>
+            </ul>
+        </div>
+        
+        <button onclick="location.href='borang_pendaftaran.html'">📝 Daftar Pelanggan Tetap</button>
+        <button onclick="location.href='halaman1.html'">🏠 Halaman Utama</button>
+    </div>
+    <script src="halaman9.js"></script>
+</body>
+</html>
+9
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borang Pendaftaran Pelanggan Tetap</title>
+    <link rel="stylesheet" href="halaman10.css">
+</head>
+<body>
+    <div class="container">
+        <h2>😻✨ Saya nak jadi pelanggan tetap di Catoonies Veterinary Clinic! ✨🐾</h2>
+        <form id="registrationForm">
+            <label for="namaPemilik">Nama Pemilik:</label>
+            <input type="text" id="namaPemilik" name="namaPemilik" required>
+
+            <label for="ic">No. Kad Pengenalan:</label>
+            <input type="text" id="ic" name="ic" required>
+
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required>
+
+            <label for="telefon">No. Telefon:</label>
+            <input type="text" id="telefon" name="telefon" required>
+
+            <label for="emel">Emel:</label>
+            <input type="email" id="emel" name="emel" required>
+
+            <h3>MAKLUMAT KUCING</h3>
+            <label for="namaKucing">Nama Kucing:</label>
+            <input type="text" id="namaKucing" name="namaKucing" required>
+
+            <label for="umur">Umur:</label>
+            <input type="text" id="umur" name="umur" required>
+
+            <label for="baka">Baka:</label>
+            <input type="text" id="baka" name="baka" required>
+
+            <label for="berat">Berat:</label>
+            <input type="text" id="berat" name="berat" required>
+
+            <button type="button" id="hantar">Hantar</button>
+        </form>
+        <button onclick="window.location.href='halaman1.html'">Halaman Utama</button>
+    </div>
+    <script src="halaman10.js"></script>
+</body>
+</html>
+10
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senarai Penyakit Kucing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📌 Senarai Penyakit Kucing</h1>
+        <p>Pilih penyakit untuk melihat maklumat lanjut:</p>
+
+        <ul class="disease-list">
+            <li><a href="selesema.html">🤧 Selesema Kucing</a></li>
+            <li><a href="cacingan.html">🪱 Cacingan</a></li>
+            <li><a href="kurap.html">🦠 Kurap Kucing</a></li>
+            <li><a href="gingivitis.html">🦷 Gingivitis & Penyakit Gigi</a></li>
+            <li><a href="flutd.html">🚽 FLUTD (Masalah Saluran Kencing)</a></li>
+            <li><a href="demam.html">🌡️ Demam Panas</a></li>
+            <li><a href="hama.html">👂 Jangkitan Hama Telinga</a></li>
+            <li><a href="fpv.html">💀 Feline Parvovirus (FPV)</a></li>
+        </ul>
+
+        <button onclick="goToPenutup()">Halaman Penutup</button>
+    </div>
+
+    <script>
+        function goToPenutup() {
+            window.location.href = "penutup.html";
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Rawatan di Rumah</title>
+    <link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selesema Kucing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📌 Senarai Penyakit Kucing, Kesan Jika Tidak Dirawat, Rawatan Veterinar & Cara Rawatan di Rumah 📌</h1>
+        
+        <div class="penyakit">
+            <h2>1️⃣ Selesema Kucing 🤧 (Feline Upper Respiratory Infection)</h2>
+            <button onclick="toggleInfo()">Tunjukkan Penerangan</button>
+            <div id="info" class="hidden">
+                <p>😿 <strong>Tanda-tanda:</strong> Bersin, hidung & mata berair, sukar bernafas, hilang selera makan.</p>
+                <p>⚠️ <strong>Kesan jika tidak dirawat:</strong> Boleh menyebabkan pneumonia & dehidrasi!</p>
+                <h3>🏡 Rawatan di Rumah:</h3>
+                <ul>
+                    <li>✅ Gunakan humidifier atau wap air panas di bilik tertutup untuk bantu pernafasan</li>
+                    <li>✅ Lap mata & hidung dengan kain lembap suam</li>
+                    <li>✅ Beri makanan basah & air suam untuk elak dehidrasi</li>
+                    <li>✅ Jauhkan dari kucing lain untuk elak jangkitan</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cacingan pada Kucing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐾 Cacingan 🪱 (Worm Infestation)</h1>
+        <button class="toggle-btn" onclick="toggleInfo()">Lihat Penerangan</button>
+        <div id="info" class="hidden">
+            <h2>😾 Tanda-tanda:</h2>
+            <p>Perut buncit, najis berdarah, muntah, bulu kusam.</p>
+            <h2>⚠️ Kesan jika tidak dirawat:</h2>
+            <p>Boleh sebabkan anemia & badan jadi lemah!</p>
+            <h2>🏡 Rawatan di Rumah:</h2>
+            <ul>
+                <li>✅ Bersihkan bekas najis setiap hari untuk elak penyebaran telur cacing</li>
+                <li>✅ Cuci tangan selepas pegang kucing untuk elak jangkitan pada manusia</li>
+                <li>✅ Beri diet berkhasiat untuk pulihkan badan kucing</li>
+            </ul>
+        </div>
+        <button onclick="window.location.href='index.html'">🏠 Halaman Utama</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurap Kucing (Ringworm)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐾 Kurap Kucing 🦠 (Ringworm / Jangkitan Kulat)</h1>
+        <button class="toggle-btn" onclick="toggleInfo()">Lihat Penerangan</button>
+        <div id="info" class="hidden">
+            <h2>🐱‍👤 Tanda-tanda:</h2>
+            <p>Bulu gugur bertompok, kulit bersisik, gatal melampau.</p>
+            <h2>⚠️ Kesan jika tidak dirawat:</h2>
+            <p>Boleh merebak ke seluruh badan & menjangkiti manusia!</p>
+            <h2>🏡 Rawatan di Rumah:</h2>
+            <ul>
+                <li>✅ Bersihkan tempat tidur kucing setiap hari</li>
+                <li>✅ Elakkan berkongsi berus/sikat antara kucing yang sihat & sakit</li>
+                <li>✅ Gunakan sarung tangan semasa rawat kucing untuk elak jangkitan pada manusia</li>
+            </ul>
+        </div>
+        <button onclick="window.location.href='index.html'">🏠 Halaman Utama</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gingivitis & Penyakit Gigi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🦷 Gingivitis & Penyakit Gigi (Radang Gusi & Periodontal Disease)</h1>
+        <button class="toggle-btn" onclick="toggleInfo()">Lihat Penerangan</button>
+        <div id="info" class="hidden">
+            <h2>🐾 Tanda-tanda:</h2>
+            <p>Nafas berbau busuk, gusi bengkak, gigi longgar.</p>
+            <h2>⚠️ Kesan jika tidak dirawat:</h2>
+            <p>Jangkitan boleh merebak ke jantung & buah pinggang!</p>
+            <h2>🏡 Rawatan di Rumah:</h2>
+            <ul>
+                <li>✅ Lap gusi dengan kain lembap untuk buang plak ringan</li>
+                <li>✅ Gunakan gel atau spray gigi untuk kurangkan bakteria</li>
+                <li>✅ Beri makanan khas untuk kesihatan gigi</li>
+            </ul>
+        </div>
+        <button onclick="window.location.href='index.html'">🏠 Halaman Utama</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUTD - Masalah Saluran Kencing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚽 FLUTD (Masalah Saluran Kencing - Batu Karang, Jangkitan Kencing)</h1>
+        <button class="toggle-btn" onclick="toggleInfo()">Lihat Penerangan</button>
+        <div id="info" class="hidden">
+            <h2>🐾 Tanda-tanda:</h2>
+            <p>Susah kencing, kencing berdarah, menjilat alat kelamin berulang kali.</p>
+            <h2>⚠️ Kesan jika tidak dirawat:</h2>
+            <p>Boleh sebabkan pundi kencing tersumbat & kematian dalam 24-48 jam!</p>
+            
+            <h2>🩺 Rawatan di Klinik:</h2>
+            <ul>
+                <li>✅ 💦 Pemeriksaan air kencing & X-ray</li>
+                <li>✅ 💉 Suntikan antibiotik & anti-radang</li>
+                <li>✅ 🚑 Kateter urin untuk buang air kencing tersumbat</li>
+            </ul>
+
+            <h2>🏡 Rawatan di Rumah:</h2>
+            <ul>
+                <li>✅ Pastikan kucing minum air banyak dengan letak lebih banyak bekas air</li>
+                <li>✅ Beri makanan khas urinary diet (makanan wet food lebih baik)</li>
+                <li>✅ Kurangkan tekanan/stress kerana ia boleh sebabkan FLUTD bertambah teruk</li>
+            </ul>
+        </div>
+        <button onclick="window.location.href='index.html'">🏠 Halaman Utama</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demam Panas - Rawatan Kucing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌡️ Demam Panas (Fever / Pyrexia)</h1>
+        <button class="toggle-btn" onclick="toggleInfo()">Lihat Penerangan</button>
+        <div id="info" class="hidden">
+            <h2>😿 Tanda-tanda:</h2>
+            <p>Badan panas, kurang aktif, kurang selera makan.</p>
+            <h2>⚠️ Kesan jika tidak dirawat:</h2>
+            <p>Boleh merosakkan organ dalaman!</p>
+            
+            <h2>🩺 Rawatan di Klinik:</h2>
+            <ul>
+                <li>✅ ❄️ Suntikan penurun suhu</li>
+                <li>✅ 💊 Ubat antibiotik jika ada jangkitan</li>
+                <li>✅ 💦 Cecair IV (drip) jika dehidrasi</li>
+            </ul>
+
+            <h2>🏡 Rawatan di Rumah:</h2>
+            <ul>
+                <li>✅ Lap badan kucing dengan kain basah suam (jangan guna air sejuk)</li>
+                <li>✅ Pastikan kucing berehat di tempat selesa & tidak panas</li>
+                <li>✅ Berikan makanan basah untuk bantu pulihkan tenaga</li>
+            </ul>
+        </div>
+        <button onclick="window.location.href='index.html'">🏠 Halaman Utama</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jangkitan Hama Telinga - Rawatan Kucing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>👂 Jangkitan Hama Telinga (Ear Mites)</h1>
+        <button class="toggle-btn" onclick="toggleInfo()">Lihat Penerangan</button>
+        <div id="info" class="hidden">
+            <h2>🐱‍👤 Tanda-tanda:</h2>
+            <p>Gatal melampau, telinga berkerak hitam, menggeleng kepala.</p>
+            <h2>⚠️ Kesan jika tidak dirawat:</h2>
+            <p>Boleh sebabkan pekak kekal!</p>
+            
+            <h2>🩺 Rawatan di Klinik:</h2>
+            <ul>
+                <li>✅ 🧼 Pembersihan telinga profesional</li>
+                <li>✅ 💧 Ubat titis telinga khas</li>
+                <li>✅ 💊 Suntikan atau ubat oral anti-parasit</li>
+            </ul>
+
+            <h2>🏡 Rawatan di Rumah:</h2>
+            <ul>
+                <li>✅ Bersihkan telinga dengan kapas lembut (jangan guna cotton bud dalam telinga)</li>
+                <li>✅ Asingkan kucing yang dijangkiti untuk elak jangkitan kepada kucing lain</li>
+            </ul>
+        </div>
+        <button onclick="window.location.href='index.html'">🏠 Halaman Utama</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feline Parvovirus (FPV) - Virus Kucing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💀 Feline Parvovirus (FPV) / ‘Virus Kucing’</h1>
+        <button class="toggle-btn" onclick="toggleInfo()">Lihat Penerangan</button>
+        <div id="info" class="hidden">
+            <h2>😿 Tanda-tanda:</h2>
+            <p>Muntah, cirit-birit berdarah, demam tinggi.</p>
+
+            <h2>⚠️ Kesan jika tidak dirawat:</h2>
+            <p>Penyakit boleh membawa maut dalam beberapa hari!</p>
+
+            <h2>🩺 Rawatan di Klinik:</h2>
+            <ul>
+                <li>✅ 🏥 Rawatan intensif di wad</li>
+                <li>✅ 💦 Cecair IV (drip)</li>
+                <li>✅ 💊 Ubat anti-muntah & anti-cirit</li>
+            </ul>
+
+            <h2>🏡 Rawatan di Rumah:</h2>
+            <p>🚫 Tidak ada rawatan rumah yang berkesan! Segera bawa ke klinik!</p>
+        </div>
+
+        <div class="button-group">
+            <input type="radio" id="appointment" name="option" onclick="redirectToPage(5)">
+            <label for="appointment">📅 Buat Temujanji</label>
+            
+            <input type="radio" id="home" name="option" onclick="redirectToPage(1)">
+            <label for="home">🏠 Halaman Utama</label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penutup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Terima Kasih!</h1>
+        <p>Terima kasih kerana menggunakan laman ini untuk mengetahui lebih lanjut tentang kesihatan kucing anda.</p>
+        <p>Jika kucing anda menunjukkan tanda-tanda penyakit, sila bawa ke klinik veterinar untuk rawatan segera!</p>
+
+        <button onclick="goToHome()">Kembali ke Halaman Utama</button>
+    </div>
+
+    <script>
+        function goToHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
+11
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penyakit & Rawatan Veterinar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Penyakit Biasa pada Kucing & Rawatan Dr. Meow 🏥🐾</h1>
+        <button class="btn" onclick="tunjukPenerangan()">Lihat Penerangan</button>
+        <div id="penerangan" class="hidden">
+            <h2>Flu Kucing</h2>
+            <p>Flu kucing disebabkan oleh virus dan boleh menyebabkan hidung berair, bersin, serta keletihan. Rawatan termasuk rehat, hidrasi, dan kadang-kadang antibiotik jika ada jangkitan sekunder.</p>
+            <h2>Cacingan</h2>
+            <p>Jangkitan cacing boleh menyebabkan kucing kurus walaupun makan banyak. Rawatan adalah dengan ubat cacing secara berkala.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selsema Kucing (URI)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Selsema Kucing 🤧🐾 (Feline Upper Respiratory Infection - URI)</h1>
+        <button class="btn" onclick="tunjukPenerangan()">Lihat Penerangan</button>
+        <div id="penerangan" class="hidden">
+            <h2>Tanda-tanda</h2>
+            <ul>
+                <li>Bersin 🤧</li>
+                <li>Hidung berair</li>
+                <li>Demam 🤒</li>
+                <li>Mata berair 👀</li>
+                <li>Hilang selera makan</li>
+            </ul>
+            <h2>Rawatan di Catoonies Vet</h2>
+            <ul>
+                <li>✅ Pemeriksaan klinikal oleh Dr. Meow 🩺</li>
+                <li>✅ Ubat antiviral & antibiotik 💊</li>
+                <li>✅ Nebulizer & terapi wap 🌫️</li>
+                <li>✅ Suplemen & makanan khas untuk pemulihan 🍲</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakit Mulut Kucing (FCV)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sakit Mulut Kucing 🤕🐾 (Feline Calicivirus - FCV)</h1>
+        <button class="btn" onclick="tunjukPenerangan()">Lihat Penerangan</button>
+        <div id="penerangan" class="hidden">
+            <h2>Tanda-tanda</h2>
+            <ul>
+                <li>Ulser dalam mulut 😖</li>
+                <li>Hidung berair 🤧</li>
+                <li>Kesukaran makan 🍽️</li>
+                <li>Demam 🐾</li>
+            </ul>
+            <h2>Rawatan di Catoonies Vet</h2>
+            <ul>
+                <li>✅ Rawatan luka dalam mulut & suplemen 🦷</li>
+                <li>✅ Ubat penahan sakit & anti-radang 💊</li>
+                <li>✅ Cecair IV jika dehidrasi 💦</li>
+                <li>✅ Vaksinasi sebagai pencegahan 💉</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurap Kucing (Ringworm)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kurap Kucing 🦠🐾 (Ringworm - Dermatophytosis)</h1>
+        <button class="btn" onclick="tunjukPenerangan()">Lihat Penerangan</button>
+        <div id="penerangan" class="hidden">
+            <h2>Tanda-tanda</h2>
+            <ul>
+                <li>Keguguran bulu berbentuk bulat 🔴</li>
+                <li>Kulit bersisik 🧊</li>
+                <li>Gatal melampau 😾</li>
+            </ul>
+            <h2>Rawatan di Catoonies Vet</h2>
+            <ul>
+                <li>✅ Ujian Wood’s Lamp untuk pengesahan 🔬</li>
+                <li>✅ Syampu antikulat & ubat sapu 🛁</li>
+                <li>✅ Ubat oral seperti itraconazole 💊</li>
+                <li>✅ Disinfeksi persekitaran dengan panduan dari Dr. Meow 🧼</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUTD - Jangkitan Saluran Kencing</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>4. Jangkitan Saluran Kencing 🚽🐾</h2>
+        <p>(Feline Lower Urinary Tract Disease - FLUTD)</p>
+        <button id="toggleBtn">Lihat Penerangan</button>
+        <div id="infoBox" class="hidden">
+            <h3>🔹 Tanda:</h3>
+            <ul>
+                <li>Susah kencing 🚽</li>
+                <li>Kencing berdarah 🩸</li>
+                <li>Menjilat alat sulit berlebihan 🤕</li>
+            </ul>
+            <h3>🔹 Rawatan di Catoonies Vet:</h3>
+            <ul>
+                <li>✅ Pemeriksaan air kencing & ujian darah 🔬</li>
+                <li>✅ Diet khas (urinary care food tersedia di klinik!) 🥩</li>
+                <li>✅ Antibiotik & ubat anti-radang 💊</li>
+                <li>✅ Pembedahan jika ada batu karang besar (dirujuk ke hospital veterinar) 🏥</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kutu & Hama - Fleas & Mites</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>5. Kutu & Hama 🐜🐾</h2>
+        <p>(Fleas & Mites)</p>
+        <button id="toggleBtn">Lihat Penerangan</button>
+        <div id="infoBox" class="hidden">
+            <h3>🔹 Tanda:</h3>
+            <ul>
+                <li>Gatal melampau 😾</li>
+                <li>Keguguran bulu 🦴</li>
+                <li>Kotoran hitam dalam telinga 👂</li>
+            </ul>
+            <h3>🔹 Rawatan di Catoonies Vet:</h3>
+            <ul>
+                <li>✅ Ubat kutu (spot-on, tablet atau suntikan) 💉</li>
+                <li>✅ Syampu khas anti-kutu (boleh didapati di klinik) 🛁</li>
+                <li>✅ Pembersihan rumah & tempat tidur kucing 🧹</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIP - Feline Infectious Peritonitis</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>6. FIP 😿🦠</h2>
+        <p>(Feline Infectious Peritonitis)</p>
+        <button id="toggleBtn">Lihat Penerangan</button>
+        <div id="
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leukemia Kucing - FeLV</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>7. Leukemia Kucing 🩸😿</h2>
+        <p>(Feline Leukemia Virus - FeLV)</p>
+        <button id="toggleBtn">Lihat Penerangan</button>
+        <div id="infoBox" class="hidden">
+            <h3>🔹 Tanda:</h3>
+            <ul>
+                <li>Anemia (gusi pucat) 🩸</li>
+                <li>Luka lambat sembuh 🦠</li>
+                <li>Kucing mudah sakit 😿</li>
+            </ul>
+            <h3>🔹 Rawatan di Catoonies Vet:</h3>
+            <ul>
+                <li>✅ Ujian FeLV/FIV untuk pengesahan 🔬</li>
+                <li>✅ Rawatan sokongan & suplemen imuniti 💊</li>
+                <li>✅ Vaksinasi untuk pencegahan 💉</li>
+                <li>✅ Panduan penjagaan khas daripada Dr. Meow 📖</li>
+            </ul>
+        </div>
+    </div>
+</body>
+12
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabies - Penyakit Anjing Gila</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>8. Rabies 🦇😨</h2>
+        <p>(Penyakit Anjing Gila)</p>
+        <button id="toggleBtn">Lihat Penerangan</button>
+        <div id="infoBox" class="hidden">
+            <h3>🔹 Tanda:</h3>
+            <ul>
+                <li>Perubahan tingkah laku 😾</li>
+                <li>Sawan 🧠</li>
+                <li>Takut air 💦</li>
+            </ul>
+            <h3>🔹 Rawatan di Catoonies Vet:</h3>
+            <ul>
+                <li>✅ Vaksinasi rabies tersedia di klinik! 💉</li>
+                <li>✅ Rawatan kecemasan untuk gigitan haiwan liar 🚑</li>
+                <li>✅ Nasihat untuk keselamatan & kawalan rabies 📢</li>
+            </ul>
+
+            <h3>Pilihan:</h3>
+            <label><input type="radio" name="pilihan" value="Vaksinasi"> Vaksinasi Rabies</label><br>
+            <label><input type="radio" name="pilihan" value="Rawatan"> Rawatan Kecemasan</label><br>
+            <label><input type="radio" name="pilihan" value="Nasihat"> Nasihat & Kawalan</label><br>
+        </div>
+        
+        <button id="homeBtn">Halaman Utama</button>
+    </div>
+</body>
+13
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kucing Sudah Vaksin Tahunan</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Kucing Sudah Vaksin Tahunan</h2>
+        <p>Sila pilih salah satu perkhidmatan:</p>
+
+        <label><input type="radio" name="pilihan" value="Boarding"> Boarding</label><br>
+        <label><input type="radio" name="pilihan" value="Grooming"> Grooming</label><br>
+        <label><input type="radio" name="pilihan" value="Pemandulan"> Pemandulan</label><br>
+
+        <button id="confirmBtn">Pergi ke Halaman 5</button>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rawatan Pertama</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Meow~ 🐾</h2>
+        <p id="message">
+            Si comel ini masih dalam jagaan dan pemantauan rawatan pertama. 
+            Untuk memastikan dia mendapat penjagaan terbaik, kami syorkan rawatan susulan diteruskan di sana. 
+            Terima kasih kerana mempercayai Catoonies dalam menjaga si gebu kesayangan anda!  
+            <br><strong>Purr~fect care sentiasa untuknya! 💕🐾</strong>
+        </p>
+
+        <button id="homeBtn">Halaman Utama</button>
+    </div>
+</body>
+</html>
+14
+
+        
+
+        
