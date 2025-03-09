@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Halaman 5 - Maklumat Pelanggan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .section-title {
+            color: #FFD700;
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-container label {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .form-container input {
+            margin-bottom: 15px;
+            padding: 8px;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .form-container textarea {
+            margin-bottom: 15px;
+            padding: 8px;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+            height: 100px;
+        }
+
+        .form-container button {
+            background-color: #FFD700;
+            color: #000;
+            font-size: 1.2rem;
+            border: none;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-container button:hover {
+            background-color: #333;
+            color: #FFD700;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>🐾 Borang Tempahan & Persetujuan Rawatan 🐾</h1>
+        <p>Meow~! 😻 Sila isi borang di bawah untuk meneruskan rawatan atau pemandulan kucing anda.</p>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content">
+        <h2 class="section-title">Maklumat Pemilik & Kucing</h2>
+
+        <!-- Form -->
+        <div class="form-container">
+            <form action="https://wa.me/60182624047?text=Maklumat%20Pelanggan%20untuk%20Catoonies%20Veterinary%20Clinic" method="get" target="_blank">
+                
+                <!-- Pemilik Information -->
+                <label for="owner-name">Nama Pemilik</label>
+                <input type="text" id="owner-name" name="owner-name" placeholder="Nama penuh" required>
+
+                <label for="ic-number">No. Kad Pengenalan</label>
+                <input type="text" id="ic-number" name="ic-number" placeholder="No. Kad Pengenalan" required>
+
+                <label for="address">Alamat</label>
+                <input type="text" id="address" name="address" placeholder="Alamat rumah" required>
+
+                <label for="phone">No. Telefon</label>
+                <input type="tel" id="phone" name="phone" placeholder="Nombor telefon" required>
+
+                <label for="email">Emel</label>
+                <input type="email" id="email" name="email" placeholder="Alamat emel" required>
+
+                <!-- Kucing Information -->
+                <label for="cat-name">Nama Kucing</label>
+                <input type="text" id="cat-name" name="cat-name" placeholder="Nama kucing" required>
+
+                <label for="age">Umur Kucing</label>
+                <input type="number" id="age" name="age" placeholder="Umur kucing" required>
+
+                <label for="breed">Baka Kucing</label>
+                <input type="text" id="breed" name="breed" placeholder="Baka kucing (Kampung/Sijil)" required>
+
+                <label for="weight">Berat Kucing</label>
+                <input type="text" id="weight" name="weight" placeholder="Berat" required>
+
+                <!-- Appointment & Treatment -->
+                <label for="appointment-date">Tarikh Temujanji</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+
+                <label for="exam-purpose">Tujuan Pemeriksaan</label>
+                <input type="text" id="exam-purpose" name="exam-purpose" placeholder="Vaksin / Grooming / Boarding / Sakit" required>
+
+                <!-- Treatment Status -->
+                <label for="treatment-status">Status Rawatan</label>
+                <textarea id="treatment-status" name="treatment-status" placeholder="Dalam Pemantauan / Tiada Rawatan" required></textarea>
+
+                <!-- Consent -->
+                <label for="consent">Persetujuan</label>
+                <textarea id="consent" name="consent" placeholder="Persetujuan rawatan / pemandulan" required></textarea>
+
+                <!-- Submit Button -->
+                <button type="submit">Hantar Maklumat Pelanggan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Catoonies Veterinary Clinic. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
