@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catoonies Veterinary Clinic</title>
+    <title>Tahap Kesihatan - Catoonies Veterinary Clinic</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -19,20 +19,9 @@
             padding: 20px;
             font-size: 24px;
         }
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 20px;
-        }
-        .hero img {
-            max-width: 200px;
-            height: auto;
-            border-radius: 10px;
-        }
         .content {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 50px auto;
             padding: 20px;
             background: #111;
             border-radius: 10px;
@@ -50,72 +39,20 @@
         .buttons button:hover {
             background-color: #ffcc00;
         }
-        #chatbox {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: white;
-            color: black;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-        footer {
-            background-color: #111;
-            padding: 20px;
-        }
-        .social-media a {
-            color: gold;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .social-media a:hover {
-            color: #ffcc00;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>🐾 Selamat Datang ke Catoonies Veterinary Clinic! 🐾</h1>
+        <h1>🐾 Tahap Kesihatan 🐾</h1>
     </header>
     
-    <section class="hero">
-        <img src="logo.png" alt="Catoonies Veterinary Clinic Logo">
-        <div class="content">
-            <p>Meow~! 😻 Anda mencari tempat terbaik untuk si bulus kesayangan? Catoonies Veterinary Clinic sedia memberikan penjagaan penuh kasih sayang untuk kucing anda!</p>
-            <h2>🏥 Perkhidmatan Kami:</h2>
-            <p>💉 Pemeriksaan & Rawatan | 🏥 Vaksinasi | ✂️ Pemandulan jantan & betina | ✨ Grooming & Boarding | 🚑 Rawatan kecemasan | 🦷💖 Penjagaan gigi & kesihatan menyeluruh</p>
-            <h2>📍 Lokasi:</h2>
-            <p>No.47, Jalan Emas 2, Pusat Perniagaan Kota Emas, 82000 Pontian, Johor</p>
-            <p><a href="https://maps.app.goo.gl/eq7p8Yu67MxYHmkS8" target="_blank" style="color: gold;">Lihat di Google Maps</a></p>
-            <h2>📞 Hubungi Kami:</h2>
-            <p>WhatsApp 👉 <a href="https://wa.me/60182624047" target="_blank" style="color: gold;">018-2624047</a></p>
-            <h2>🌐 Ikuti Kami:</h2>
-            <p>
-                <a href="https://www.facebook.com/CatooniesVetPontian" target="_blank">Facebook</a> |
-                <a href="https://www.youtube.com/@catooniesveterinaryclinic5610" target="_blank">YouTube</a> |
-                <a href="https://www.tiktok.com/@catooniesvetpontian" target="_blank">TikTok</a>
-            </p>
-            <p>Email: catooniesveterinaryclinic@gmail.com</p>
-            <h3>🐾 Catoonies – Kasih Sayang untuk Si Meow Kesayangan Anda! 😻💕</h3>
-        </div>
+    <section class="content">
+        <h2>Sila pilih tahap kesihatan kucing anda:</h2>
         <div class="buttons">
-            <button onclick="navigateTo('checkup.html')">Pemeriksaan</button>
-            <button onclick="navigateTo('inquiry.html')">Pertanyaan</button>
+            <button onclick="navigateTo('halaman3.html')">Sihat</button>
+            <button onclick="navigateTo('halaman4.html')">Tidak Sihat</button>
         </div>
     </section>
-    
-    <div id="chatbox">AI Chatbox Placeholder</div>
-    
-    <footer>
-        <div class="social-media">
-            <a href="https://wa.me/60182624047" target="_blank">WhatsApp</a>
-            <a href="https://www.facebook.com/CatooniesVetPontian" target="_blank">Facebook</a>
-            <a href="https://www.youtube.com/@catooniesveterinaryclinic5610" target="_blank">YouTube</a>
-            <a href="https://www.tiktok.com/@catooniesvetpontian" target="_blank">TikTok</a>
-        </div>
-    </footer>
     
     <script>
         function navigateTo(page) {
