@@ -3,93 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Website</title>
+    <title>Veterinary Clinic</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to Our Website</h1>
-        <button id="showInfo">Discover More</button>
-        <div id="info" class="hidden">
-            <p>This is the additional information that appears after clicking the button.</p>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
-
-/* styles.css */
-body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-.container {
-    max-width: 600px;
-}
-button {
-    background-color: gold;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-}
-.hidden {
-    display: none;
-}
-
-/* script.js */
-document.getElementById("showInfo").addEventListener("click", function() {
-document.getElementById("info").classList.toggle("hidden");
-
-<!DOCTYPE html>
-<html lang="ms">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Utama - Catoonies Vet</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #111;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border: 5px solid gold;
+            border-radius: 10px;
+        }
+        .buttons button {
+            background-color: gold;
+            color: black;
+            font-size: 20px;
+            padding: 15px 30px;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buttons button:hover {
+            background-color: #ffcc00;
+        }
+        #chatbox {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: white;
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        footer {
+            background-color: #111;
+            padding: 20px;
+        }
+        .social-media a {
+            color: gold;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .social-media a:hover {
+            color: #ffcc00;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>🐾 Selamat Datang ke Catoonies Veterinary Clinic! 🐾</h1>
+        <h1>Veterinary Clinic</h1>
     </header>
-    <main>
-        <p>Meow~! 😻 Anda mencari tempat terbaik untuk si bulus kesayangan? Catoonies Veterinary Clinic sedia memberikan penjagaan penuh kasih sayang untuk kucing anda!</p>
-        <h2>🏥 Perkhidmatan Kami:</h2>
-        <ul>
-            <li>✔ Pemeriksaan & Rawatan 💉</li>
-            <li>✔ Vaksinasi 🏥</li>
-            <li>✔ Pemandulan jantan & betina ✂</li>
-            <li>✔ Grooming & Boarding ✨</li>
-            <li>✔ Rawatan kecemasan 🚑</li>
-            <li>✔ Penjagaan gigi & kesihatan menyeluruh 🦷</li>
-        </ul>
-        <p>📍 Lokasi: No.47, Jalan Emas 2, Pusat Perniagaan Kota Emas, 82000 Pontian, Johor</p>
-        <p>Lokasi (Google Maps): <a href="https://maps.app.goo.gl/eq7p8Yu67MxYHmkS8" target="_blank">Klik di sini</a></p>
-        <p>📞 Hubungi Kami: <a href="https://wa.me/60182624047">WhatsApp 018-2624047</a></p>
-        <p>🌐 Ikuti Kami:</p>
-        <ul>
-            <li><a href="https://www.facebook.com/CatooniesVetPontian" target="_blank">Facebook</a></li>
-            <li><a href="https://www.youtube.com/@catooniesveterinaryclinic5610" target="_blank">YouTube</a></li>
-            <li><a href="https://www.tiktok.com/@catooniesvetpontian" target="_blank">TikTok</a></li>
-        </ul>
-        <p>Email: <a href="mailto:catooniesveterinaryclinic@gmail.com">catooniesveterinaryclinic@gmail.com</a></p>
-        <p>🐾 Catoonies – Kasih Sayang untuk Si Meow Kesayangan Anda! 😻💕</p>
-        
-        <div class="button-container">
-            <button onclick="goToPage(2)">Pemeriksaan</button>
-            <button onclick="goToPage(12)">Pertanyaan</button>
+    
+    <section class="hero">
+        <img src="cat.jpg" alt="Large Cat Image">
+        <div class="buttons">
+            <button onclick="navigateTo('inquiry.html')">Inquiry</button>
+            <button onclick="navigateTo('checkup.html')">Check-up</button>
         </div>
-    </main>
-    <script src="script.js"></script>
+    </section>
+    
+    <div id="chatbox">AI Chatbox Placeholder</div>
+    
+    <footer>
+        <div class="social-media">
+            <a href="https://wa.me/your-number" target="_blank">WhatsApp</a>
+            <a href="https://facebook.com/yourpage" target="_blank">Facebook</a>
+            <a href="https://youtube.com/yourchannel" target="_blank">YouTube</a>
+        </div>
+    </footer>
+    
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
 </body>
 </html>
