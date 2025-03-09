@@ -1,63 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tahap Kesihatan - Catoonies Veterinary Clinic</title>
+    <title>Catoonies Veterinary Clinic</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #111;
-            padding: 20px;
-            font-size: 24px;
-        }
-        .content {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #111;
-            border-radius: 10px;
-        }
-        .buttons button {
-            background-color: gold;
-            color: black;
-            font-size: 20px;
-            padding: 15px 30px;
-            margin: 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .buttons button:hover {
-            background-color: #ffcc00;
-        }
-    </style>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>🐾 Tahap Kesihatan 🐾</h1>
-    </header>
-    
-    <section class="content">
-        <h2>Sila pilih tahap kesihatan kucing anda:</h2>
-        <div class="buttons">
-            <button onclick="navigateTo('halaman3.html')">Sihat</button>
-            <button onclick="navigateTo('halaman4.html')">Tidak Sihat</button>
-        </div>
-    </section>
-    
-    <script>
-        function navigateTo(page) {
-            window.location.href = page;
-        }
-    </script>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Catoonies Veterinary Clinic Logo" class="logo">
+            <h1>🐾 Selamat Datang ke Catoonies Veterinary Clinic! 🐾</h1>
+        </header>
+        <main>
+            <p>Meow~! 😻 Anda mencari tempat terbaik untuk si bulus kesayangan? Catoonies Veterinary Clinic sedia memberikan penjagaan penuh kasih sayang untuk kucing anda!</p>
+            <ul>
+                <li>💉 Pemeriksaan & Rawatan</li>
+                <li>🏥 Vaksinasi</li>
+                <li>✂️ Pemandulan jantan & betina</li>
+                <li>✨ Grooming & Boarding</li>
+                <li>🚑 Rawatan kecemasan</li>
+                <li>🦷💖 Penjagaan gigi & kesihatan menyeluruh</li>
+            </ul>
+            <button onclick="navigateTo('halaman2.html')">Pemeriksaan</button>
+            <button onclick="navigateTo('halaman12.html')">Pertanyaan</button>
+        </main>
+        <footer>
+            <p>📍 <a href="https://maps.app.goo.gl/eq7p8Yu67MxYHmkS8">Lokasi Kami</a></p>
+            <p>📞 WhatsApp: <a href="https://wa.me/60182624047">018-2624047</a></p>
+            <p>🌐 Ikuti Kami:
+                <a href="https://www.facebook.com/CatooniesVetPontian">Facebook</a> |
+                <a href="https://www.youtube.com/@catooniesveterinaryclinic5610">YouTube</a> |
+                <a href="https://www.tiktok.com/@catooniesvetpontian">TikTok</a>
+            </p>
+        </footer>
+    </div>
 </body>
 </html>
