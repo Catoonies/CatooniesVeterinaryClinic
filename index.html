@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catoonies Veterinary Clinic</title>
+    <title>Tahap Kesihatan - Catoonies Veterinary Clinic</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -19,16 +19,12 @@
             padding: 20px;
             font-size: 24px;
         }
-        .container {
+        .content {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             background: #111;
             border-radius: 10px;
-        }
-        .logo img {
-            max-width: 200px;
-            height: auto;
         }
         .buttons button {
             background-color: gold;
@@ -46,50 +42,15 @@
     </style>
 </head>
 <body>
-    <!-- Halaman 1: Halaman Utama -->
     <header>
-        <h1>🐾 Selamat Datang ke Catoonies Veterinary Clinic! 🐾</h1>
+        <h1>🐾 Tahap Kesihatan 🐾</h1>
     </header>
-    <section class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Catoonies Veterinary Clinic Logo">
-        </div>
-        <p>Meow~! 😻 Anda mencari tempat terbaik untuk si bulus kesayangan? Catoonies Veterinary Clinic sedia memberikan penjagaan penuh kasih sayang untuk kucing anda!</p>
-        <div class="buttons">
-            <button onclick="navigateTo('halaman2.html')">Pemeriksaan</button>
-            <button onclick="navigateTo('halaman12.html')">Pertanyaan</button>
-        </div>
-    </section>
     
-    <!-- Halaman 2: Tahap Kesihatan -->
-    <section class="container" id="halaman2" style="display: none;">
-        <h2>🐾 Tahap Kesihatan 🐾</h2>
-        <p>Sila pilih tahap kesihatan kucing anda:</p>
+    <section class="content">
+        <h2>Sila pilih tahap kesihatan kucing anda:</h2>
         <div class="buttons">
             <button onclick="navigateTo('halaman3.html')">Sihat</button>
             <button onclick="navigateTo('halaman4.html')">Tidak Sihat</button>
-        </div>
-    </section>
-
-    <!-- Halaman 3: Kucing Sihat -->
-    <section class="container" id="halaman3" style="display: none;">
-        <h2>🐾 Kucing Sihat 🐾</h2>
-        <p>Sila pilih pilihan yang sesuai:</p>
-        <div class="buttons">
-            <button onclick="navigateTo('halaman5.html')">Vaksinasi</button>
-            <button onclick="navigateTo('halaman5.html')">Pemandulan</button>
-            <button onclick="navigateTo('halaman13.html')">Sudah Vaksin Tahunan</button>
-        </div>
-    </section>
-
-    <!-- Halaman 4: Kucing Tidak Sihat -->
-    <section class="container" id="halaman4" style="display: none;">
-        <h2>🐾 Kucing Tidak Sihat 🐾</h2>
-        <p>Sila pilih keadaan kucing anda:</p>
-        <div class="buttons">
-            <button onclick="navigateTo('halaman14.html')">Sudah Dirawat Lain</button>
-            <button onclick="navigateTo('halaman5.html')">Baru (Kurang 1 Minggu)</button>
-            <button onclick="navigateTo('halaman7.html')">Lama (Lebih Seminggu)</button>
         </div>
     </section>
     
