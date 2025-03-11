@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temujanji Susulan - Catoonies Vet</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #000; color: #fff; text-align: center; padding: 20px; }
+    label, select, input { display: block; margin: 10px auto; padding: 8px; width: 80%; max-width: 400px; }
+    .cta-button { background-color: #FFD700; color: #000; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    .cta-button:hover { background-color: #E6C200; }
+  </style>
+</head>
+<body>
+  <h1>Tahniah! Meow Pawrents Telah Berjaya Menjalankan Kewajipan Anda Sebagai Meow Pawrents  🎉🐾</h1>
+  <p>Terima kasih kerana menjaga kesihatan dan kebahagiaan Cik Meow! Kami bangga dengan komitmen Meow Pawrents. 😻💕</p>
+  
+  <form id="appointmentForm">
+    <label>No. Invoice:</label>
+    <input type="text" id="invoice" required>
+    
+    <label>Tarikh Hadir:</label>
+    <input type="date" id="visitDate" required onchange="calculateFollowUpDate()">
+    
+    <label>Masa Hadir:</label>
+    <input type="time" id="visitTime" required>
+    
+    <label>Jadual:</label>
+    <select id="schedule">
+      <option value="Pemeriksaan">Pemeriksaan</option>
+      <option value="Vaksin Booster">Vaksin Booster</option>
+      <option value="Vaksin Tahunan">Vaksin Tahunan</option>
+      <option value="Susulan">Susulan</option>
+    </select>
+    
+    <label>Tarikh Susulan:</label>
+    <input type="date" id="followUpDate" readonly>
+    
+    <label>Masa Susulan:</label>
+    <input type="time" id="followUpTime" readonly>
+    
+    <label>Nama Pemilik:</label>
+    <input type="text" id="ownerName" required>
+    
+    <label>Nama Kucing:</label>
+    <input type="text" id="catName" required>
+    
+    <label>Umur Kucing:</label>
+    <input type="text" id="catAge" required>
+    
+    <label>Baka Kucing:</label>
+    <input type="text" id="catBreed" required>
+    
+    <label>Berat Kucing (kg):</label>
+    <input type="number" id="catWeight" required step="0.1">
+    
+    <label>Suhu:</label>
+    <input type="text" id="catTemp" required>
+    
+    <button type="button" class="cta-button" onclick="sendToWhatsApp()">HANTAR </button>
+  </form>
+
+  <script>
+    function calculateFollowUpDate() {
+      let visitDate = document.getElementById('visitDate').value;
+      if (visitDate) {
+        let date = new Date(visitDate);
+        date.setDate(date.getDate() + 7);
+        document.getElementById('followUpDate').value = date.toISOString().split('T')[0];
+      }
+    }
+
+    function sendToWhatsApp() {
+      let invoice = document.getElementById('invoice').value;
+      let visitDate = document.getElementById('visitDate').value;
+      let visitTime = document.getElementById('visitTime').value;
+      let schedule = document.getElementById('schedule').value;
+      let followUpDate = document.getElementById('followUpDate').value;
+      let followUpTime = visitTime;
+      let ownerName = document.getElementById('ownerName').value;
+      let catName = document.getElementById('catName').value;
+      let catAge = document.getElementById('catAge').value;
+      let catBreed = document.getElementById('catBreed').value;
+      let catWeight = document.getElementById('catWeight').value;
+      let catTemp = document.getElementById('catTemp').value;
+      
+      let message = `Tahniah! 🎉🐾%0A%0ANo. Invoice: ${invoice}%0A` +
+                    `Tarikh Hadir: ${visitDate}%0A` +
+                    `Masa Hadir: ${visitTime}%0A` +
+                    `Jadual: ${schedule}%0A%0A` +
+                    `Tarikh Susulan: ${followUpDate}%0A` +
+                    `Masa Susulan: ${followUpTime}%0A%0A` +
+                    `Pemilik: ${ownerName}%0A` +
+                    `Kucing: ${catName}%0A` +
+                    `Umur: ${catAge}%0A` +
+                    `Baka: ${catBreed}%0A` +
+                    `Berat: ${catWeight} kg%0A` +
+                    `Suhu: ${catTemp}%0A%0A` +
+                    `Terima kasih kerana membuat temujanji! Jangan lupa bawa Cik Meow untuk pemeriksaan ya! 😻💕`;
+      
+      let whatsappURL = `https://wa.me/60182624047?text=${message}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+</body>
+</html>
