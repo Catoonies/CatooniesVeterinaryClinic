@@ -3,33 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borang Referral Kes Kritikal Catoonies 🐾🚑</title>
+  <title>Borang Referral Kes Kritikal - Catoonies Veterinary Clinic</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;700&family=Raleway:wght@400;600&family=Nunito:wght@400;600&family=Avenir:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #fef5e7; /* Light beige */
-      color: #333;
+      background-color: #f0f0f0;
+      color: #000;
       margin: 0;
       padding: 0;
     }
 
     header, footer {
-      background-color: #000;
-      color: #fff;
+      background-color: #FFD700;
+      color: #000;
       padding: 20px;
       text-align: center;
     }
 
-    h1, h2, h3 {
-      color: #FFD700; /* Gold color */
+    h1, h2 {
+      color: #000;
     }
 
     .cta-button {
       font-family: 'Nunito', sans-serif;
       font-weight: 600;
       padding: 10px 20px;
-      background-color: #FFD700; /* Gold color */
+      background-color: #FFD700;
       color: #000;
       text-decoration: none;
       border-radius: 5px;
@@ -43,163 +43,147 @@
       text-decoration: underline;
     }
 
+    form {
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
     footer {
       font-family: 'Merriweather', serif;
       font-size: 14px;
       font-weight: 400;
     }
-
-    section {
-      padding: 20px;
-    }
-
-    .heading {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-    }
-
-    input[type="text"], input[type="email"], input[type="number"], textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
-      border-color: #FFD700;
-      outline: none;
-    }
-
-    label {
-      font-weight: bold;
-    }
-
-    .checkbox {
-      margin: 10px 0;
-    }
-
-    .checkbox input {
-      margin-right: 10px;
-    }
   </style>
 </head>
 <body>
+
   <header>
-    <h1 class="heading">Borang Referral Kes Kritikal Catoonies 🐾🚑</h1>
-    <p>Kami di Catoonies ingin memastikan setiap Cik Meow mendapat rawatan terbaik. Isi borang ini jika kucing kesayangan anda memerlukan rujukan ke pusat rawatan lanjutan. 😻💖</p>
+    <h1>Borang Referral Kes Kritikal Catoonies</h1>
+    <p>Isi borang ini jika kucing kesayangan anda memerlukan rujukan ke pusat rawatan lanjutan.</p>
   </header>
 
   <section>
-    <form id="critical-case-form">
+    <h2>Maklumat Pemilik (semua maklumat wajib isi)</h2>
+    <form action="https://wa.me/60182624047" method="get" target="_blank">
       <!-- Maklumat Pemilik -->
-      <h2 class="heading">Maklumat Pemilik (Semua maklumat wajib diisi)</h2>
-      <label for="owner-name">Nama Pemilik:</label>
-      <input type="text" id="owner-name" name="owner-name" required><br>
+      <div class="form-group">
+        <label for="owner-name">Nama Pemilik:</label>
+        <input type="text" id="owner-name" name="text" required>
+      </div>
 
-      <label for="owner-phone">No. Telefon:</label>
-      <input type="text" id="owner-phone" name="owner-phone" required><br>
+      <div class="form-group">
+        <label for="phone-number">No. Telefon:</label>
+        <input type="tel" id="phone-number" name="phone" required>
+      </div>
 
-      <label for="owner-address">Alamat:</label>
-      <input type="text" id="owner-address" name="owner-address" required><br>
+      <div class="form-group">
+        <label for="address">Alamat:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
 
-      <label for="owner-email">Emel:</label>
-      <input type="email" id="owner-email" name="owner-email" required><br>
+      <div class="form-group">
+        <label for="email">Emel:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
 
-      <label for="reason">Alasan tidak dapat bawa:</label>
-      <select id="reason" name="reason" required>
-        <option value="">Pilih Alasan</option>
-        <option value="Tiada kenderaan">Tiada kenderaan</option>
-        <option value="Kerja">Kerja</option>
-        <option value="Akan diwadkan">Akan diwadkan</option>
-      </select><br>
+      <div class="form-group">
+        <label for="reason">Alasan Tidak Dapat Bawa:</label>
+        <select id="reason" name="reason" required>
+          <option value="Tiada kenderaan">Tiada kenderaan</option>
+          <option value="Kerja">Kerja</option>
+          <option value="Akan diwadkan">Akan diwadkan</option>
+        </select>
+      </div>
 
       <!-- Maklumat Kucing -->
-      <h2 class="heading">Maklumat Kucing</h2>
-      <label for="cat-name">Nama Kucing:</label>
-      <input type="text" id="cat-name" name="cat-name" required><br>
+      <h2>Maklumat Kucing</h2>
+      <div class="form-group">
+        <label for="cat-name">Nama Kucing:</label>
+        <input type="text" id="cat-name" name="cat-name" required>
+      </div>
 
-      <label for="cat-age">Umur:</label>
-      <input type="text" id="cat-age" name="cat-age" required><br>
+      <div class="form-group">
+        <label for="cat-age">Umur Kucing:</label>
+        <input type="text" id="cat-age" name="cat-age" required>
+      </div>
 
-      <label for="cat-breed">Baka Kucing:</label>
-      <input type="text" id="cat-breed" name="cat-breed" required><br>
+      <div class="form-group">
+        <label for="cat-breed">Baka Kucing:</label>
+        <input type="text" id="cat-breed" name="cat-breed" required>
+      </div>
 
-      <label for="cat-gender">Jantina:</label>
-      <select id="cat-gender" name="cat-gender" required>
-        <option value="">Pilih Jantina</option>
-        <option value="Jantan">Jantan</option>
-        <option value="Betina">Betina</option>
-      </select><br>
+      <div class="form-group">
+        <label for="cat-gender">Jantina:</label>
+        <select id="cat-gender" name="cat-gender" required>
+          <option value="Jantan">Jantan</option>
+          <option value="Betina">Betina</option>
+        </select>
+      </div>
 
-      <label for="cat-weight">Berat Kucing:</label>
-      <input type="number" id="cat-weight" name="cat-weight" required><br>
+      <div class="form-group">
+        <label for="cat-weight">Berat Kucing:</label>
+        <input type="text" id="cat-weight" name="cat-weight" required>
+      </div>
 
-      <label for="cat-condition">Gejala / Keadaan Semasa:</label>
-      <textarea id="cat-condition" name="cat-condition" required></textarea><br>
+      <div class="form-group">
+        <label for="symptoms">Gejala / Keadaan Semasa:</label>
+        <textarea id="symptoms" name="symptoms" required></textarea>
+      </div>
 
-      <label for="critical-condition">Kritikal:</label>
-      <select id="critical-condition" name="critical-condition" required>
-        <option value="">Pilih Keadaan Kritikal</option>
-        <option value="Nafas">Nafas</option>
-        <option value="Patah">Patah</option>
-        <option value="Kemalangan">Kemalangan</option>
-        <option value="Pendarahan">Pendarahan</option>
-      </select><br>
+      <div class="form-group">
+        <label for="critical-condition">Kritikal:</label>
+        <select id="critical-condition" name="critical-condition" required>
+          <option value="Nafas">Nafas</option>
+          <option value="Patah">Patah</option>
+          <option value="Kemalangan">Kemalangan</option>
+          <option value="Pendarahan">Pendarahan</option>
+        </select>
+      </div>
 
       <!-- Pilihan Penghantaran -->
-      <h2 class="heading">Pilihan Penghantaran</h2>
-      <div class="checkbox">
-        <input type="checkbox" id="self-transport" name="transport" value="Bawa sendiri">
-        <label for="self-transport">Saya ingin bawa kucing ke pusat rujukan sendiri</label><br>
-        
-        <input type="checkbox" id="clinic-transport" name="transport" value="Bawa klinik">
-        <label for="clinic-transport">Saya ingin pihak Catoonies membawa kucing ke pusat rujukan</label><br>
+      <h2>Pilihan Penghantaran</h2>
+      <div class="form-group">
+        <label><input type="checkbox" name="delivery-option" value="Bawa sendiri" required> Saya ingin bawa kucing ke pusat rujukan sendiri</label><br>
+        <label><input type="checkbox" name="delivery-option" value="Catoonies Bawa" required> Saya ingin pihak Catoonies membawa kucing ke pusat rujukan</label>
       </div>
 
-      <!-- Persetujuan -->
-      <h2 class="heading">Persetujuan</h2>
-      <p>Saya bersetuju untuk membuat pemeriksaan di Catoonies Veterinary Clinic dengan penuh keyakinan dan kasih sayang, tanpa paksaan daripada mana-mana pihak. Semua langkah yang disarankan oleh Catoonies Veterinary Clinic adalah untuk kebaikan dan kesihatan Cik Meow saya. Saya faham bahawa segala risiko yang mungkin berlaku adalah tanggungjawab saya sendiri.</p>
-      
-      <div class="checkbox">
-        <input type="checkbox" id="terms" name="terms" required>
-        <label for="terms">Saya bersetuju dengan terma dan syarat</label>
+      <!-- Persetujuan Pemilik -->
+      <div class="form-group">
+        <label for="consent">Persetujuan Pemilik:</label>
+        <textarea id="consent" name="consent" readonly>Saya bersetuju untuk membuat pemeriksaan di Catoonies Veterinary Clinic dengan penuh keyakinan dan kasih sayang, tanpa paksaan daripada mana-mana pihak. Semua langkah yang disarankan oleh Catoonies Veterinary Clinic adalah untuk kebaikan dan kesihatan Cik Meow saya. Saya faham bahawa segala risiko yang mungkin berlaku adalah tanggungjawab saya sendiri.</textarea>
       </div>
 
-      <button type="button" class="cta-button" onclick="sendToWhatsApp()">HANTAR BORANG & HANTAR 📲</button>
+      <button type="submit" class="cta-button">Hantar Borang ke WhatsApp</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Catoonies Veterinary Clinic. Semua hak cipta terpelihara.</p>
+    <p>Catoonies Veterinary Clinic – Kasih Sayang untuk Kucing Anda!</p>
   </footer>
-
-  <script>
-    function sendToWhatsApp() {
-      var ownerName = document.getElementById('owner-name').value;
-      var ownerPhone = document.getElementById('owner-phone').value;
-      var ownerAddress = document.getElementById('owner-address').value;
-      var ownerEmail = document.getElementById('owner-email').value;
-      var reason = document.getElementById('reason').value;
-      var catName = document.getElementById('cat-name').value;
-      var catAge = document.getElementById('cat-age').value;
-      var catBreed = document.getElementById('cat-breed').value;
-      var catGender = document.getElementById('cat-gender').value;
-      var catWeight = document.getElementById('cat-weight').value;
-      var catCondition = document.getElementById('cat-condition').value;
-      var criticalCondition = document.getElementById('critical-condition').value;
-      var termsAccepted = document.getElementById('terms').checked;
-
-      if (!ownerName || !ownerPhone || !ownerAddress || !ownerEmail || !reason || !catName || !catAge || !catBreed || !catGender || !catWeight || !catCondition || !criticalCondition || !termsAccepted) {
-        alert("Sila lengkapkan semua maklumat sebelum menghantar.");
-        return;
-      }
-
-      var message = `**Maklumat Pemilik**\nNama Pemilik: ${ownerName}\nNo. Telefon: ${ownerPhone}\nAlamat: ${ownerAddress}\nEmel: ${ownerEmail}\nAlasan tidak dapat bawa: ${reason}\n\n**Maklumat Kucing**\nNama Kucing: ${catName}\nUmur: ${catAge}\nBaka: ${catBreed}\nJantina: ${catGender}\nBerat Kucing: ${catWeight}\nGejala / Keadaan Semasa: ${catCondition}\nKritikal: ${criticalCondition}`;
-
-      var whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(message)}`;
-      window.open(whatsappURL, '_blank');
-    }
-  </script>
 </body>
 </html>
