@@ -1,169 +1,199 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Halaman 8 - Harga & Syarat</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perkhidmatan Catoonies Veterinary Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-        header {
-            background-color: #000;
-            color: #FFD700;
-            text-align: center;
-            padding: 1.5rem 0;
-        }
+    header {
+      background-color: #FFD700;
+      color: #000;
+      padding: 20px;
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
+    h1, h2, p {
+      margin: 10px;
+    }
 
-        .section-title {
-            color: #FFD700;
-            font-size: 2rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
+    .cta-button {
+      font-weight: 600;
+      padding: 10px 20px;
+      background-color: #FFD700;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-block;
+    }
 
-        .content {
-            padding: 2rem;
-            text-align: center;
-        }
+    .cta-button:hover {
+      background-color: #FFD700;
+      color: #000;
+      text-decoration: underline;
+    }
 
-        .content p {
-            font-size: 1.2rem;
-            margin: 1rem 0;
-        }
+    .content-container {
+      margin-top: 20px;
+      padding: 20px;
+    }
 
-        .content a {
-            color: #FFD700;
-            font-size: 1.1rem;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin-top: 1rem;
-            display: inline-block;
-            background-color: #000;
-            border: 2px solid #FFD700;
-            border-radius: 5px;
-        }
+    .content-container ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-        .content a:hover {
-            background-color: #FFD700;
-            color: #000;
-        }
+    .content-container ul li {
+      margin: 10px 0;
+      font-size: 18px;
+    }
 
-        footer {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 1.5rem 0;
-        }
+    .service-description {
+      background-color: #333;
+      padding: 15px;
+      margin-top: 10px;
+      display: none;
+    }
 
-        footer p {
-            font-size: 1rem;
-        }
+    .service-description p {
+      font-size: 16px;
+      margin: 0;
+    }
 
-        .button-section {
-            margin-top: 1rem;
-        }
+    .promotions {
+      background-color: #333;
+      padding: 20px;
+      margin-top: 30px;
+    }
 
-        .details {
-            display: none;
-            background-color: #222;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-    </style>
+    .google-map-link {
+      margin-top: 20px;
+      text-decoration: underline;
+      color: #FFD700;
+    }
+
+    .select-button {
+      margin-top: 20px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Perkhidmatan Catoonies Veterinary Clinic</h1>
+    <p>Di Catoonies, kami bukan hanya merawat kucing, tetapi kami menjaga mereka seperti keluarga! ❤️ Nikmati perkhidmatan penuh kasih sayang untuk Cik Meow kesayangan anda! 😻💖</p>
+  </header>
 
-    <!-- Header Section -->
-    <header>
-        <h1>🐾 Harga & Syarat 🐾</h1>
-        <p>Meow~! 😻 Ketahui harga perkhidmatan kami dan syarat-syarat untuk pelanggan tetap!</p>
-    </header>
-
-    <!-- Main Content -->
-    <section class="content">
-        <h2 class="section-title">Perkhidmatan Kami</h2>
-
-        <!-- Pemeriksaan -->
-        <div class="button-section">
-            <button onclick="document.getElementById('rawatan-details').style.display='block'">1. Pemeriksaan</button>
-            <div id="rawatan-details" class="details">
-                <p><b>a) Rawatan:</b> RM30.00 / kucing</p>
-                <p><b>b) Grooming:</b> RM10.00 / kucing</p>
-                <p><b>Pelanggan Tetap:</b> Discount 20% - 50% (Mengikut terma & syarat)</p>
-                <a href="halaman9.html">Pelanggan Tetap</a>
-            </div>
+  <section class="content-container">
+    <h2>Senarai Harga Perkhidmatan Kami:</h2>
+    <ul>
+      <li>
+        <button class="cta-button" onclick="toggleDescription('rawatan')">🐾 Pemeriksaan sahaja </button>
+        <div id="rawatan" class="service-description">
+          <p>Rawatan: RM30.00 / kucing</p>
         </div>
-
-        <!-- Vaksinasi -->
-        <div class="button-section">
-            <button onclick="document.getElementById('vaksinasi-details').style.display='block'">2. Vaksinasi</button>
-            <div id="vaksinasi-details" class="details">
-                <p><b>Pelanggan Baru (Termasuk kos pemeriksaan):</b></p>
-                <p>a) Booster Pertama: RM65.00 / kucing</p>
-                <p>b) Booster Kedua: RM55.00 / kucing</p>
-                <p>c) Booster Ketiga: RM55.00 / kucing</p>
-                <p>d) Booster Tahunan: RM55.00 / kucing</p>
-                <p><b>Pelanggan Tetap:</b> Discount 20% - 50% (Mengikut terma & syarat)</p>
-                <a href="halaman9.html">Pelanggan Tetap</a>
-            </div>
+      </li>
+      <li>
+      </div>
+      </li>
+      <li>
+        <button class="cta-button" onclick="toggleDescription('vaksinasi')">💉 Pemeriksaan & Vaksinasi</button>
+        <div id="vaksinasi" class="service-description">
+          <p>💉 Pelanggan Baru (Termasuk kos pemeriksaan)</p>
+          <p>Booster Pertama: RM65.00 / kucing</p>
+          <p>Booster Kedua: RM55.00 / kucing</p>
+          <p>Booster Ketiga: RM55.00 / kucing</p>
+          <p>Booster Tahunan: RM55.00 / kucing</p>
         </div>
-
-        <!-- Pemandulan -->
-        <div class="button-section">
-            <button onclick="document.getElementById('pemandulan-details').style.display='block'">3. Pemandulan</button>
-            <div id="pemandulan-details" class="details">
-                <p><b>Jantan:</b> RM120.00 / jantan</p>
-                <p><b>Betina:</b> RM160.00 / betina</p>
-                <p><b>Pelanggan Tetap:</b> Discount 20% - 50% (Mengikut terma & syarat)</p>
-                <a href="halaman9.html">Pelanggan Tetap</a>
-            </div>
+      </li>
+      <li>
+        <button class="cta-button" onclick="toggleDescription('pemandulan')">🐱 Pemeriksaan & Pemandulan</button>
+        <div id="pemandulan" class="service-description">
+          <p>Jantan: RM120.00 / kucing</p>
+          <p>Betina: RM160.00 / kucing</p>
         </div>
-
-        <!-- Grooming -->
-        <div class="button-section">
-            <button onclick="document.getElementById('grooming-details').style.display='block'">4. Grooming</button>
-            <div id="grooming-details" class="details">
-                <p><b>a) Domestik:</b> RM50.00 - RM100.00</p>
-                <p><b>b) Berbaka:</b> RM60.00 - RM150.00</p>
-                <p><b>Pelanggan Tetap:</b> Discount 20% - 50% (Mengikut terma & syarat)</p>
-                <a href="halaman9.html">Pelanggan Tetap</a>
-            </div>
+      </li>
+      <li>
+        <button class="cta-button" onclick="toggleDescription('grooming2')">✂️ Kos Grooming (Termasuk pemeriksaan & boarding)</button>
+        <div id="grooming2" class="service-description">
+          <p>Domestik: RM50.00 - RM100.00</p>
+          <p>Berbaka: RM60.00 - RM150.00</p>
         </div>
-
-        <!-- Boarding -->
-        <div class="button-section">
-            <button onclick="document.getElementById('boarding-details').style.display='block'">5. Boarding</button>
-            <div id="boarding-details" class="details">
-                <p><b>a) Sangkar Kecil:</b> RM35.00 (1 ekor sahaja)</p>
-                <p><b>b) Sangkar Besar:</b> RM60.00 (1-3 ekor bergantung kepada berat)</p>
-                <p><b>Pelanggan Tetap:</b> Discount 20% - 50% (Mengikut terma & syarat)</p>
-                <a href="halaman9.html">Pelanggan Tetap</a>
-            </div>
+      </li>
+      <li>
+        <button class="cta-button" onclick="toggleDescription('boarding')">🏠 Kos Boarding (Termasuk Pasir & makanan)</button>
+        <div id="boarding" class="service-description">
+          <p>Sangkar Kecil: RM35.00 (1 ekor sahaja)</p>
+          <p>Sangkar Besar: RM60.00 (1-3 ekor, bergantung kepada berat)</p>
+		  <p>Bawa makanan sendiri: Tolak RM5.00 / kucing </p>
         </div>
-
-        <!-- Main Page Button -->
-        <div>
-            <a href="index.html">Halaman Utama</a>
+      </li>
+      <li>
+        <button class="cta-button" onclick="toggleDescription('ubatkutu')">💊 Pemeriksaan & Ubat Kutu</button>
+        <div id="ubatkutu" class="service-description">
+          <p>RM50.00 ~ RM150.00 (Mengikut berat dan jenis ubat kutu)</p>
         </div>
-    </section>
+      </li>
+      <li>
+        <button class="cta-button" onclick="toggleDescription('cacing')">💊 Pemeriksaan & Cacing</button>
+        <div id="cacing" class="service-description">
+          <p>RM5.00 ~ RM50.00 (Mengikut berat dan jenis ubat kutu)</p>
+        </div>
+      </li>
+      <li>
+        <button class="cta-button" onclick="toggleDescription('rawatanam')">💊 Pemeriksaan & Ubat (Rawatan Am)</button>
+        <div id="rawatanam" class="service-description">
+          <p>RM50.00 ~ RM150.00 (Tanpa wad)</p>
+        </div>
+      </li>
+      <li>
+        <button class="cta-button" onclick="toggleDescription('wad')">🛏️ Pemeriksaan & Wad (Penjagaan sahaja)</button>
+        <div id="wad" class="service-description">
+          <p>RM40.00 ~ RM150.00 / malam (Bergantung kepada keperluan semasa hadir pemeriksaan dan tahap rawatan)</p>
+        </div>
+      </li>
+      <li>
+        <button class="cta-button" onclick="toggleDescription('pembersihan')">🧼 Pemeriksaan & Pembersihan Asas (Tanpa Mandian)</button>
+        <div id="pembersihan" class="service-description">
+          <p>RM5.00 ~ RM50.00 (Cuci Telinga / Potong Kuku / Sikat)</p>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Catoonies Veterinary Clinic. All Rights Reserved.</p>
-    </footer>
+  <section class="promotions">
+    <h2>Promosi Pelanggan Tetap</h2>
+    <p>Discount 20% - 50% (Mengikut terma & syarat)</p>
+    <a href="halaman9.html" class="cta-button">NAK JOIN PELANGGAN TETAP</a>
+  </section>
 
+  <div class="button-container">
+    <a href="index.html" class="cta-button">HALAMAN UTAMA</a>
+  </div>
+
+  <footer>
+    <p>🐾 Catoonies – Kasih Sayang untuk Si Meow Kesayangan Anda! 😻💕</p>
+  </footer>
+
+  <script>
+    function toggleDescription(service) {
+      var description = document.getElementById(service);
+      description.style.display = description.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
