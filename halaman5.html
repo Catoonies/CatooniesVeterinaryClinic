@@ -59,7 +59,7 @@
       font-weight: 600;
     }
 
-    input[type="text"], input[type="email"], select {
+    input[type="text"], input[type="email"], input[type="date"], select {
       width: 100%;
       padding: 10px;
       margin: 10px 0;
@@ -67,7 +67,7 @@
       border: 1px solid #ccc;
     }
 
-    input[type="text"]:focus, input[type="email"]:focus, select:focus {
+    input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, select:focus {
       border-color: #FFD700;
       outline: none;
     }
@@ -80,14 +80,13 @@
 <body>
   <header>
     <h1 class="heading">Borang Tempahan & Persetujuan Rawatan 🐾</h1>
-    <p class="clinic-description">"Daftar Sekarang untuk Memberi Rawatan Terbaik kepada Kucing Kesayangan Anda – Kasih Sayang & Kepakaran Catoonies Sentiasa Bersama Si Bulus! 🐱💖"
-Pilih tarikh dan masa yang sesuai untuk temujanji, tetapi ia akan bergantung pada kekosongan jadual kami. Kami akan mengesahkan temujanji secepat mungkin!</p>
+    <p class="clinic-description">"Daftar Sekarang untuk Memberi Rawatan Terbaik kepada Kucing Kesayangan Anda – Kasih Sayang & Kepakaran Catoonies Sentiasa Bersama Si Bulus! 🐱💖" Pilih tarikh dan masa yang sesuai untuk temujanji, tetapi ia akan bergantung pada kekosongan jadual kami. Kami akan mengesahkan temujanji secepat mungkin!</p>
   </header>
 
   <section>
     <form id="booking-form">
       <!-- Maklumat Pemilik -->
-      <h2 class="heading">MAKLUMAT PEMILIK</h2>
+      <h2 class="heading">MAKLUMAT PEMILIK (Semua maklumat wajib di isi)</h2>
       <label for="owner-name">Nama Pemilik:</label>
       <input type="text" id="owner-name" name="owner-name" required><br>
 
@@ -111,34 +110,49 @@ Pilih tarikh dan masa yang sesuai untuk temujanji, tetapi ia akan bergantung pad
       <label for="cat-age">Umur:</label>
       <input type="text" id="cat-age" name="cat-age" required><br>
 
-      <label for="cat-breed">Baka Kucing:</label>
+      <label for="cat-breed">Baka:</label>
       <select id="cat-breed" name="cat-breed" required>
-          <option value="">Sila Pilih</option>
-          <option value="Kampung">Kampung / Tempatan</option>
-          <option value="Persian">Persian</option>
-          <option value="Maine Coon">Maine Coon</option>
-          <option value="Siamese">Siamese</option>
-          <option value="Bengal">Bengal</option>
-          <option value="British Shorthair">British Shorthair</option>
-          <option value="Sphynx">Sphynx</option>
-          <option value="Ragdoll">Ragdoll</option>
-          <option value="Abyssinian">Abyssinian</option>
-          <option value="Scottish Fold">Scottish Fold</option>
-          <option value="Russian Blue">Russian Blue</option>
-          <option value="Burmese">Burmese</option>
-          <option value="Birman">Birman</option>
-          <option value="Oriental Shorthair">Oriental Shorthair</option>
-          <option value="Exotic Shorthair">Exotic Shorthair</option>
-          <option value="American Shorthair">American Shorthair</option>
-          <option value="Savannah">Savannah</option>
-          <option value="Turkish Angora">Turkish Angora</option>
-          <option value="Scottish Straight">Scottish Straight</option>
-          <option value="Himalayan">Himalayan</option>
-          <option value="Lain-lain">Lain-lain (Jika lain, nyatakan)</option>
-      </select><br><br>
+        <option value="">Sila Pilih</option>
+        <option value="Kampung">Kampung / Tempatan</option>
+        <option value="Persian">Persian</option>
+        <option value="Maine Coon">Maine Coon</option>
+        <option value="Siamese">Siamese</option>
+        <option value="Bengal">Bengal</option>
+        <option value="British Shorthair">British Shorthair</option>
+        <option value="Sphynx">Sphynx</option>
+        <option value="Ragdoll">Ragdoll</option>
+        <option value="Abyssinian">Abyssinian</option>
+        <option value="Scottish Fold">Scottish Fold</option>
+        <option value="Russian Blue">Russian Blue</option>
+        <option value="Burmese">Burmese</option>
+        <option value="Birman">Birman</option>
+        <option value="Oriental Shorthair">Oriental Shorthair</option>
+        <option value="Exotic Shorthair">Exotic Shorthair</option>
+        <option value="American Shorthair">American Shorthair</option>
+        <option value="Savannah">Savannah</option>
+        <option value="Turkish Angora">Turkish Angora</option>
+        <option value="Scottish Straight">Scottish Straight</option>
+        <option value="Himalayan">Himalayan</option>
+        <option value="Lain-lain">Lain-lain (Jika lain, nyatakan)</option>
+      </select><br>
+
+      <label for="cat-weight">Berat:</label>
+      <input type="text" id="cat-weight" name="cat-weight" required><br>
+
+      <!-- Temujanji & Rawatan -->
+      <h2 class="heading">TEMUJANJI & RAWATAN 🗓️</h2>
+      <label for="appointment-date">Tarikh Temujanji:</label>
+      <input type="date" id="appointment-date" name="appointment-date" required><br>
+
+      <label for="treatment-purpose">Tujuan Pemeriksaan:</label>
+      <input type="text" id="treatment-purpose" name="treatment-purpose" required placeholder="Vaksin / Grooming / Boarding / Sakit - Nyatakan gejala"><br>
+
+      <label for="treatment-status">Status Rawatan:</label>
+      <input type="text" id="treatment-status" name="treatment-status" placeholder="Dalam Pemantauan / Tiada Rawatan"><br>
 
       <!-- Persetujuan -->
-      <p>Dengan ini, saya bersetuju untuk meneruskan rawatan/pemandulan dan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
+      <h2 class="heading">PERSETUJUAN</h2>
+      <p>Saya bersetuju untuk meneruskan rawatan/pemandulan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur seperti yang dinasihatkan oleh pihak klinik. 🐾</p>
 
       <button type="button" class="cta-button" onclick="sendToWhatsApp()">TEKAN & HANTAR 📲</button>
     </form>
@@ -158,29 +172,11 @@ Pilih tarikh dan masa yang sesuai untuk temujanji, tetapi ia akan bergantung pad
       var catName = document.getElementById('cat-name').value;
       var catAge = document.getElementById('cat-age').value;
       var catBreed = document.getElementById('cat-breed').value;
+      var catWeight = document.getElementById('cat-weight').value;
+      var appointmentDate = document.getElementById('appointment-date').value;
+      var treatmentPurpose = document.getElementById('treatment-purpose').value;
+      var treatmentStatus = document.getElementById('treatment-status').value;
 
       // Semak jika semua medan diisi
-      if (!ownerName || !ownerId || !ownerAddress || !ownerPhone || !ownerEmail || !catName || !catAge || !catBreed) {
-        alert("Sila isi semua maklumat sebelum menghantar.");
-        return;
-      }
-
-      var message = `🐾 *Tempahan & Persetujuan Rawatan - Catoonies Veterinary Clinic* 🐾\n\n` +
-                    `🔹 *Maklumat Pemilik*\n` +
-                    `👤 Nama Pemilik: ${ownerName}\n` +
-                    `🆔 No. Kad Pengenalan: ${ownerId}\n` +
-                    `🏠 Alamat: ${ownerAddress}\n` +
-                    `📞 No. Telefon: ${ownerPhone}\n` +
-                    `✉️ Emel: ${ownerEmail}\n\n` +
-                    `🔹 *Maklumat Kucing*\n` +
-                    `🐱 Nama Kucing: ${catName}\n` +
-                    `📅 Umur: ${catAge}\n` +
-                    `🐾 Baka: ${catBreed}\n\n` +
-                    `✅ Dengan ini, saya bersetuju untuk meneruskan rawatan yang diperlukan.`
-
-      var whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(message)}`;
-      window.open(whatsappURL, '_blank');
-    }
-  </script>
-</body>
-</html>
+      if (!ownerName || !ownerId || !ownerAddress || !ownerPhone || !ownerEmail || !catName || !catAge || !catBreed || !catWeight || !appointmentDate || !treatmentPurpose || !treatmentStatus) {
+       
