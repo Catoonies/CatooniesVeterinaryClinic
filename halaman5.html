@@ -144,11 +144,29 @@
       <label for="appointment-date">Tarikh Temujanji:</label>
       <input type="date" id="appointment-date" name="appointment-date" required><br>
 
-      <label for="treatment-purpose">Tujuan Pemeriksaan:</label>
-      <input type="text" id="treatment-purpose" name="treatment-purpose" required placeholder="Vaksin / Grooming / Boarding / Sakit - Nyatakan gejala"><br>
+     <label for="Tujuan Pemeriksaan:">Tujuan Pemeriksaan:</label>
+      <select id="Tujuan" name="Tujuan" required>
+        <option value="">Sila Pilih</option>
+        <option value="Pemeriksaan Penyakit">Pemeriksaan Penyakit</option>
+        <option value="Vaksinasi">Vaksinasi</option>
+        <option value="Pemandulan Jantan">Pemandulan Jantan</option>
+    <option value="Pemandulan Betina">Pemandulan Betina</option>
+	<option value="Grooming">Grooming</option>
+		<option value="Boarding">Boarding</option>
+      </select><br> 
 
-      <label for="treatment-status">Status Rawatan:</label>
-      <input type="text" id="treatment-status" name="treatment-status" placeholder="Dalam Pemantauan / Tiada Rawatan"><br>
+    <label for="Status Rawatan:">Status Semasa:</label>
+      <select id="Tujuan" name="Tujuan" required>
+        <option value="">Sila Pilih</option>
+        <option value="Pertama kali">Pertama kali</option>
+	        <option value="Baru Beli">Baru Beli</option>	
+		     <option value="Baru Ambil">Baru Ambil</option>	
+        <option value="Tiada Rawatan">Tiada Rawatan</option>
+        <option value="Vaksin Pertama">Vaksin Pertama</option>
+		<option value="Vaksin Kedua">Vaksin Kedua</option>
+		<option value="Vaksin Ketiga">Vaksin Ketiga</option>
+				<option value="Vaksin Tahunan">Vaksin Tahunan</option>
+        </select><br> 
 
       <!-- Persetujuan -->
       <h2 class="heading">PERSETUJUAN</h2>
