@@ -182,7 +182,7 @@
         return;
       }
 
-      var message = `**Maklumat Pemilik**\nNama Pemilik: ${ownerName}\nNo. Kad Pengenalan: ${ownerId}\nAlamat: ${ownerAddress}\nNo. Telefon: ${ownerPhone}\nEmel: ${ownerEmail}\n\n**Maklumat Kucing**\nNama Kucing: ${catName}\nUmur: ${catAge}\nBaka: ${catBreed}\nBerat: ${catWeight}\n\n**Temujanji & Rawatan**\nTarikh Temujanji: ${appointmentDate}\nTujuan Pemeriksaan: ${treatmentPurpose}\nStatus Rawatan: ${treatmentStatus}\n\n**Persetujuan**\nSaya bersetuju untuk meneruskan rawatan/pemandulan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur seperti yang dinasihatkan oleh pihak klinik. 🐾`;
+      var message = `**Maklumat Pemilik**\nNama Pemilik: ${ownerName}\nNo. Kad Pengenalan: ${ownerId}\nAlamat: ${ownerAddress}\nNo. Telefon: ${ownerPhone}\nEmel: ${ownerEmail}\n\n**Maklumat Kucing**\nNama Kucing: ${catName}\nUmur: ${catAge}\nBaka: ${catBreed}\nBerat: ${catWeight}\n\n**Temujanji & Rawatan**\nTarikh Temujanji: ${appointmentDate}\nTujuan Pemeriksaan: ${treatmentPurpose}\nStatus Rawatan: ${treatmentStatus}\n\n**Persetujuan Rawatan**\nSaya bersetuju untuk meneruskan rawatan/pemandulan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur seperti yang dinasihatkan oleh pihak klinik. 🐾`;
 
       var whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(message)}`;
       window.open(whatsappURL, '_blank');
