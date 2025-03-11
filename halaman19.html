@@ -10,92 +10,80 @@
       font-family: 'Poppins', sans-serif;
       background-color: #000;
       color: #fff;
-      text-align: center;
       margin: 0;
       padding: 20px;
+      text-align: center;
     }
-
-    h1, h2 {
+    h1 {
       color: #FFD700;
     }
-
     form {
-      max-width: 600px;
-      margin: 20px auto;
-      background: #111;
+      background: #222;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      display: inline-block;
       text-align: left;
+      max-width: 400px;
+      width: 100%;
     }
-
     label {
-      font-weight: 600;
-      color: #FFD700;
+      display: block;
+      margin-top: 10px;
     }
-
     input, select, textarea {
       width: 100%;
-      padding: 10px;
+      padding: 8px;
       margin-top: 5px;
-      margin-bottom: 15px;
-      border: 1px solid #FFD700;
       border-radius: 5px;
-      background: #222;
-      color: #fff;
+      border: none;
     }
-
-    button {
-      font-weight: 600;
-      padding: 12px 24px;
+    .cta-button {
+      display: block;
       background-color: #FFD700;
       color: #000;
-      border: none;
+      padding: 10px;
+      text-align: center;
+      margin-top: 20px;
       border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
+      text-decoration: none;
+      font-weight: bold;
     }
-
-    button:hover {
-      background-color: #FFC107;
-    }
-
   </style>
 </head>
 <body>
-
-  <h1>🐾🚑 Borang Referral Kes Kritikal Catoonies</h1>
+  <h1>Borang Referral Kes Kritikal Catoonies 🐾🚑</h1>
   <p>Kami di Catoonies ingin memastikan setiap Cik Meow mendapat rawatan terbaik. Isi borang ini jika kucing kesayangan anda memerlukan rujukan ke pusat rawatan lanjutan. 😻💖</p>
-
+  
   <form id="referralForm">
-    <h2>📋 Maklumat Pemilik</h2>
+    <h2>Maklumat Pemilik</h2>
     <label>Nama Pemilik:</label>
-    <input type="text" id="namaPemilik" required>
-
+    <input type="text" required>
+    
     <label>No. Telefon:</label>
-    <input type="tel" id="noTelefon" required>
-
+    <input type="tel" required>
+    
     <label>Alamat:</label>
-    <textarea id="alamat" required></textarea>
-
+    <textarea required></textarea>
+    
     <label>Emel:</label>
-    <input type="email" id="email" required>
-
-    <label>Alasan Tidak Dapat Bawa:</label>
-    <select id="alasan">
+    <input type="email" required>
+    
+    <label>Alasan tidak dapat bawa:</label>
+    <select>
+	      <option>Sila Pilih</option>
       <option>Tiada kenderaan</option>
       <option>Kerja</option>
       <option>Akan diwadkan</option>
     </select>
-
-    <h2>🐾 Maklumat Kucing</h2>
+    
+    <h2>Maklumat Kucing</h2>
     <label>Nama Kucing:</label>
-    <input type="text" id="namaKucing" required>
-
+    <input type="text" required>
+    
     <label>Umur:</label>
-    <input type="text" id="umur" required>
-
-    <label for="cat-breed">Baka Kucing:</label>
+    <input type="number" required>
+    
+       <label for="cat-breed">Baka Kucing:</label>
       <select id="cat-breed" name="cat-breed"required>
           <option value="Kampung">Sila Pilih</option>
   <option value="Kampung">Kampung / Tempatan</option>
@@ -120,79 +108,38 @@
         <option value="Himalayan">Himalayan</option>
         <option value="Lain-lain">Lain-lain (Jika lain, nyatakan)</option>
       </select><br><br>
-
-
-
+  
     <label>Jantina:</label>
-    <select id="jantina">
-      <option>Jantan</option>
+    <select>
+    	      <option>Sila Pilih</option>
+	<option>Jantan</option>
       <option>Betina</option>
     </select>
-
+    
     <label>Berat Kucing (kg):</label>
-    <input type="text" id="berat" required>
-
+    <input type="number" step="0.1" required>
+    
     <label>Gejala / Keadaan Semasa:</label>
-    <textarea id="gejala" required></textarea>
-
+    <textarea required></textarea>
+    
     <label>Kritikal:</label>
-    <select id="kritikal">
-      <option>Nafas</option>
+    <select>
+   	      <option>Sila Pilih</option>
+   <option>Nafas</option>
       <option>Patah</option>
       <option>Kemalangan</option>
       <option>Pendarahan</option>
     </select>
-
-    <h2>🚗 Pilihan Penghantaran</h2>
-    <select id="penghantaran">
+    
+    <label>Pilihan Penghantaran:</label>
+    <select>
       <option>Saya ingin bawa kucing ke pusat rujukan sendiri</option>
       <option>Saya ingin pihak Catoonies membawa kucing ke pusat rujukan</option>
     </select>
-
-    <p>✅ Saya bersetuju untuk membuat pemeriksaan di Catoonies Veterinary Clinic dengan penuh keyakinan dan kasih sayang, tanpa paksaan daripada mana-mana pihak. Semua langkah yang disarankan oleh Catoonies Veterinary Clinic adalah untuk kebaikan dan kesihatan Cik Meow saya. Saya faham bahawa segala risiko yang mungkin berlaku adalah tanggungjawab saya sendiri.</p>
-
-    <button type="button" onclick="hantarWhatsApp()">📤 HANTAR </button>
+    
+    <p>Saya bersetuju untuk membuat pemeriksaan di Catoonies Veterinary Clinic dengan penuh keyakinan dan kasih sayang, tanpa paksaan daripada mana-mana pihak. Semua langkah yang disarankan oleh Catoonies Veterinary Clinic adalah untuk kebaikan dan kesihatan Cik Meow saya.</p>
+    
+    <a href="https://wa.me/60182624047" class="cta-button">HANTAR</a>
   </form>
-
-  <script>
-    function hantarWhatsApp() {
-      var namaPemilik = document.getElementById("namaPemilik").value;
-      var noTelefon = document.getElementById("noTelefon").value;
-      var alamat = document.getElementById("alamat").value;
-      var email = document.getElementById("email").value;
-      var alasan = document.getElementById("alasan").value;
-      var namaKucing = document.getElementById("namaKucing").value;
-      var umur = document.getElementById("umur").value;
-      var baka = document.getElementById("baka").value;
-      var jantina = document.getElementById("jantina").value;
-      var berat = document.getElementById("berat").value;
-      var gejala = document.getElementById("gejala").value;
-      var kritikal = document.getElementById("kritikal").value;
-      var penghantaran = document.getElementById("penghantaran").value;
-
-      var message = 
-        "🐾 Borang Referral Kes Kritikal Catoonies 🐾%0A%0A" +
-        "📌 *Maklumat Pemilik*%0A" +
-        "👤 Nama: " + namaPemilik + "%0A" +
-        "📞 No. Telefon: " + noTelefon + "%0A" +
-        "🏡 Alamat: " + alamat + "%0A" +
-        "📧 Emel: " + email + "%0A" +
-        "❌ Alasan tidak dapat bawa: " + alasan + "%0A%0A" +
-        "📌 *Maklumat Kucing*%0A" +
-        "🐱 Nama: " + namaKucing + "%0A" +
-        "📅 Umur: " + umur + "%0A" +
-        "🐾 Baka: " + baka + "%0A" +
-        "⚧ Jantina: " + jantina + "%0A" +
-        "⚖ Berat: " + berat + "kg%0A" +
-        "😿 Gejala: " + gejala + "%0A" +
-        "⚠️ Kritikal: " + kritikal + "%0A%0A" +
-        "🚑 *Pilihan Penghantaran:* " + penghantaran + "%0A%0A" +
-        "✅ Saya bersetuju untuk mendapatkan rawatan di Catoonies Veterinary Clinic.";
-
-      var whatsappURL = "https://wa.me/60182624047?text=" + message;
-      window.open(whatsappURL, "_blank");
-    }
-  </script>
-
 </body>
 </html>
