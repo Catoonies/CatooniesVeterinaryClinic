@@ -1,187 +1,197 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Maklumat Pelanggan - Catoonies Veterinary Clinic</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borang Tempahan & Persetujuan Rawatan - Catoonies Veterinary Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;700&family=Raleway:wght@400;600&family=Nunito:wght@400;600&family=Avenir:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-        header {
-            background-color: #FFD700;
-            color: #000;
-            text-align: center;
-            padding: 1.5rem 0;
-        }
+    header, footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
+    h1, h2, h3 {
+      color: #FFD700; /* Gold color */
+    }
 
-        .content-container {
-            width: 80%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+    .cta-button {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      padding: 10px 20px;
+      background-color: #FFD700; /* Gold color */
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-block;
+    }
 
-        .content-container h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+    .cta-button:hover {
+      background-color: #FFD700;
+      color: #000;
+      text-decoration: underline;
+    }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
+    footer {
+      font-family: 'Merriweather', serif;
+      font-size: 14px;
+      font-weight: 400;
+    }
 
-        .form-group label {
-            display: block;
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
+    section {
+      padding: 20px;
+    }
 
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            font-size: 1rem;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .form-group textarea {
-            height: 150px;
-        }
-
-        .button-container {
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .button-container a {
-            padding: 1rem 2rem;
-            background-color: #FFD700;
-            text-decoration: none;
-            color: #000;
-            font-size: 1.2rem;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .button-container a:hover {
-            background-color: #f7d300;
-        }
-
-    </style>
+    .heading {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1 class="heading">Borang Tempahan & Persetujuan Rawatan 🐾</h1>
+    <p class="clinic-description">"Daftar Sekarang untuk Memberi Rawatan Terbaik kepada Kucing Kesayangan Anda – Kasih Sayang & Kepakaran Catoonies Sentiasa Bersama Si Bulus! 🐱💖"
+Pilih tarikh dan masa yang sesuai untuk temujanji, tetapi ia akan bergantung pada kekosongan jadual kami. Kami akan mengesahkan temujanji secepat mungkin!</p>
+  </header>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Maklumat Pelanggan - Borang Tempahan & Persetujuan Rawatan</h1>
-    </header>
+  <section>
+    <form id="booking-form">
+      <!-- Maklumat Pemilik -->
+      <h2 class="heading">MAKLUMAT PEMILIK</h2>
+      <label for="owner-name">Nama Pemilik:</label>
+      <input type="text" id="owner-name" name="owner-name" required><br><br>
 
-    <!-- Content Section -->
-    <section class="content-container">
-        <h2>MAKLUMAT PEMILIK</h2>
+      <label for="owner-id">No. Kad Pengenalan:</label>
+      <input type="text" id="owner-id" name="owner-id" required><br><br>
 
-        <!-- Form for Customer Information -->
-        <form action="https://wa.me/60182624047?text=" method="GET" target="_blank">
-            <!-- Owner's Information -->
-            <div class="form-group">
-                <label for="ownerName">Nama Pemilik:</label>
-                <input type="text" id="ownerName" name="ownerName" placeholder="Nama penuh" required>
-            </div>
+      <label for="owner-address">Alamat:</label>
+      <input type="text" id="owner-address" name="owner-address" required><br><br>
 
-            <div class="form-group">
-                <label for="icNumber">No. Kad Pengenalan:</label>
-                <input type="text" id="icNumber" name="icNumber" placeholder="No. Kad Pengenalan" required>
-            </div>
+      <label for="owner-phone">No. Telefon:</label>
+      <input type="text" id="owner-phone" name="owner-phone" required><br><br>
 
-            <div class="form-group">
-                <label for="address">Alamat:</label>
-                <input type="text" id="address" name="address" placeholder="Alamat rumah" required>
-            </div>
+      <label for="owner-email">Emel:</label>
+      <input type="email" id="owner-email" name="owner-email" required><br><br>
 
-            <div class="form-group">
-                <label for="phone">No. Telefon:</label>
-                <input type="text" id="phone" name="phone" placeholder="Nombor telefon" required>
-            </div>
+      <!-- Maklumat Kucing -->
+      <h2 class="heading">MAKLUMAT KUCING 🐱</h2>
+      <label for="cat-name">Nama Kucing:</label>
+      <input type="text" id="cat-name" name="cat-name" required><br><br>
 
-            <div class="form-group">
-                <label for="email">Emel:</label>
-                <input type="email" id="email" name="email" placeholder="Alamat emel" required>
-            </div>
+      <label for="cat-age">Umur:</label>
+      <input type="text" id="cat-age" name="cat-age" required><br><br>
 
-            <!-- Cat's Information -->
-            <h2>MAKLUMAT KUCING</h2>
+      <label for="cat-breed">Baka Kucing:</label>
+      <select id="cat-breed" name="cat-breed"required>
+          <option value="Kampung">Sila Pilih</option>
+  <option value="Kampung">Kampung / Tempatan</option>
+        <option value="Persian">Persian</option>
+        <option value="Maine Coon">Maine Coon</option>
+        <option value="Siamese">Siamese</option>
+        <option value="Bengal">Bengal</option>
+        <option value="British Shorthair">British Shorthair</option>
+        <option value="Sphynx">Sphynx</option>
+        <option value="Ragdoll">Ragdoll</option>
+        <option value="Abyssinian">Abyssinian</option>
+        <option value="Scottish Fold">Scottish Fold</option>
+        <option value="Russian Blue">Russian Blue</option>
+        <option value="Burmese">Burmese</option>
+        <option value="Birman">Birman</option>
+        <option value="Oriental Shorthair">Oriental Shorthair</option>
+        <option value="Exotic Shorthair">Exotic Shorthair</option>
+        <option value="American Shorthair">American Shorthair</option>
+        <option value="Savannah">Savannah</option>
+        <option value="Turkish Angora">Turkish Angora</option>
+        <option value="Scottish Straight">Scottish Straight</option>
+        <option value="Himalayan">Himalayan</option>
+        <option value="Lain-lain">Lain-lain (Jika lain, nyatakan)</option>
+      </select><br><br>
 
-            <div class="form-group">
-                <label for="catName">Nama Kucing:</label>
-                <input type="text" id="catName" name="catName" placeholder="Nama kucing" required>
-            </div>
+      <label for="cat-weight">Berat Kucing:</label>
+      <input type="text" id="cat-weight" name="cat-weight" required><br><br>
 
-            <div class="form-group">
-                <label for="catAge">Umur:</label>
-                <input type="text" id="catAge" name="catAge" placeholder="Umur kucing" required>
-            </div>
+      <!-- Temujanji & Rawatan -->
+      <h2 class="heading">TEMUJANJI & RAWATAN 🗓️</h2>
+      <label for="appointment-date">Tarikh Temujanji:</label>
+      <input type="date" id="appointment-date" name="appointment-date" required><br><br>
 
-            <div class="form-group">
-                <label for="catBreed">Baka:</label>
-                <select id="catBreed" name="catBreed">
-                    <option value="Kampung">Kampung</option>
-                    <option value="Sijil">Sijil - Nyatakan Baka</option>
-                </select>
-            </div>
+      <label for="treatment-purpose">Tujuan Pemeriksaan:</label>
+      <select id="treatment-purpose" name="treatment-purpose" required>
+           <option value="Vaksin">Sila Pilih</option>
+   <option value="Vaksin">Vaksin</option>
+        <option value="Grooming">Grooming</option>
+        <option value="Boarding">Boarding</option>
+        <option value="Sakit">Sakit (Nyatakan gejala)</option>
+      </select><br><br>
+	  
+	        <label for="treatment-purpose">Tujuan Hadir/ Gejala:</label>
+      <select id="treatment-purpose" name="treatment-purpose" required>
+	    <option value="Sila Pilih">Sila Pilih</option>
+        <option value="Tiada Gejala">Tiada Gejala</option>
+        <option value="Bersin">Bersin</option>
+        <option value="Cirit-Birit">Cirit-Birit</option>
+        <option value="Kurang Makan">Kurang Makan</option>
+	    <option value="Kurang Aktif">Kurang Aktif</option>
+        <option value="Selsema">Selsema</option>
+        <option value="Tidak boleh kencing">Tidak boleh kencing</option>	
+	    <option value="Mulut berair & berbau">Mulut berair & berbau</option>
+	    <option value="Sakit mata">Sakit mata</option>
+        <option value="Ada Kutu">Ada Kutu</option>
+        <option value="Bulu Gugur">Bulu Gugur</option>	
+		<option value="Kurap">Kurap</option>
+      </select><br><br>
 
-            <div class="form-group">
-                <label for="catWeight">Berat:</label>
-                <input type="text" id="catWeight" name="catWeight" placeholder="Berat kucing" required>
-            </div>
+      <label for="treatment-purpose">Status Semasa:</label>
+      <select id="treatment-purpose" name="treatment-purpose" required>
+        <option value="Sila Pilih">Sila Pilih</option>
+		<option value="Vaksin Booster ke-1">Vaksin Booster ke-1</option>
+        <option value="Vaksin Booster ke-2">Vaksin Booster ke-2</option>	
+		<option value="Vaksin Booster ke-3">Vaksin Booster ke-3</option>
+        <option value="Vaksin Tahunan">Vaksin Booster Tahunan</option>	
+        <option value="Sakit"> Tiada rawatan</option>
+      </select><br><br>	  
 
-            <!-- Appointment and Treatment Details -->
-            <h2>TEMUJANJI & RAWATAN</h2>
+      <label for="treatment-status">Maklumat Tambahan/ Komplain</label>
+      <input type="text" id="treatment-status" name="treatment-status" required><br><br>
 
-            <div class="form-group">
-                <label for="appointmentDate">Tarikh Temujanji:</label>
-                <input type="date" id="appointmentDate" name="appointmentDate" required>
-            </div>
+      <!-- Persetujuan -->
+      <p>Dengan ini, saya bersetuju untuk meneruskan rawatan/pemandulan dan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
 
-            <div class="form-group">
-                <label for="examPurpose">Tujuan Pemeriksaan:</label>
-                <select id="examPurpose" name="examPurpose">
-                    <option value="Vaksin">Vaksin</option>
-                    <option value="Grooming">Grooming</option>
-                    <option value="Boarding">Boarding</option>
-                    <option value="Sakit">Sakit - Nyatakan gejala</option>
-                </select>
-            </div>
+      <button type="button" class="cta-button" onclick="sendToWhatsApp()">TEKAN & HANTAR 📲</button>
+    </form>
+  </section>
 
-            <div class="form-group">
-                <label for="treatmentStatus">STATUS RAWATAN:</label>
-                <input type="text" id="treatmentStatus" name="treatmentStatus" placeholder="Dalam Pemantauan: [Nama & Tarikh] / Tiada Rawatan" required>
-            </div>
+  <footer>
+    <p>&copy; 2025 Catoonies Veterinary Clinic. Semua hak cipta terpelihara.</p>
+  </footer>
 
-            <!-- Agreement Section -->
-            <h2>PERSETUJUAN</h2>
-            <p>Saya bersetuju untuk meneruskan rawatan/pemandulan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur seperti yang dinasihatkan oleh Catoonies Veterinary Clinic.</p>
+  <script>
+    function sendToWhatsApp() {
+      var ownerName = document.getElementById('owner-name').value;
+      var ownerPhone = document.getElementById('owner-phone').value;
+      var catName = document.getElementById('cat-name').value;
+      var appointmentDate = document.getElementById('appointment-date').value;
+      var treatmentPurpose = document.getElementById('treatment-purpose').value;
+      var treatmentStatus = document.getElementById('treatment-status').value;
 
-            <p>Terima kasih kerana mempercayai Catoonies Veterinary Clinic dan pasukan kami untuk menjaga kesihatan kucing anda.</p>
+      var message = `**Maklumat Pemilik**\nNama Pemilik: ${ownerName}\nNo. Telefon: ${ownerPhone}\n\n**Maklumat Kucing**\nNama Kucing: ${catName}\nTarikh Temujanji: ${appointmentDate}\nTujuan Pemeriksaan: ${treatmentPurpose}\nStatus Rawatan: ${treatmentStatus}`;
 
-            <!-- Submit Button -->
-            <div class="button-container">
-                <a href="https://wa.me/60182624047?text=Nama%20Pemilik:%20[ownerName]%20No.%20Kad%20Pengenalan:%20[icNumber]%20Alamat:%20[address]%20No.%20Telefon:%20[phone]%20Emel:%20[email]%20Nama%20Kucing:%20[catName]%20Umur:%20[catAge]%20Baka:%20[catBreed]%20Berat:%20[catWeight]%20Tarikh%20Temujanji:%20[appointmentDate]%20Tujuan%20Pemeriksaan:%20[examPurpose]%20STATUS%20RAWATAN:%20[treatmentStatus]" class="submit-button">Hantar</a>
-            </div>
-
-        </form>
-    </section>
-
+      var whatsappURL = `https://wa.me/0182624047?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
 </body>
 </html>
