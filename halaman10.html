@@ -3,56 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borang Pendaftaran Pelanggan Tetap</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Borang Pendaftaran Pelanggan Tetap - Catoonies Veterinary Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;700&family=Raleway:wght@400;600&family=Nunito:wght@400;600&family=Avenir:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #fff;
+      background-color: #fef5e7; /* Light beige */
+      color: #333;
       margin: 0;
       padding: 0;
+    }
+
+    header, footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
       text-align: center;
     }
 
-    header {
-      background-color: #FFD700;
-      color: #000;
-      padding: 20px;
-    }
-
-    h1, h2, p {
-      margin: 10px;
-    }
-
-    .form-container {
-      background-color: #333;
-      padding: 20px;
-      margin-top: 20px;
-      display: inline-block;
-      width: 80%;
-      max-width: 600px;
-    }
-
-    label, input, select {
-      display: block;
-      margin: 10px 0;
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    select, input[type="text"], input[type="number"], input[type="email"] {
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #FFD700;
-      border-radius: 5px;
+    h1, h2, h3 {
+      color: #FFD700; /* Gold color */
     }
 
     .cta-button {
+      font-family: 'Nunito', sans-serif;
       font-weight: 600;
       padding: 10px 20px;
-      background-color: #FFD700;
+      background-color: #FFD700; /* Gold color */
       color: #000;
       text-decoration: none;
       border-radius: 5px;
@@ -67,83 +44,147 @@
     }
 
     footer {
-      margin-top: 20px;
+      font-family: 'Merriweather', serif;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .heading {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    input[type="text"], input[type="email"], input[type="date"], select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, select:focus {
+      border-color: #FFD700;
+      outline: none;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .checkbox {
+      margin: 10px 0;
+    }
+
+    .checkbox input {
+      margin-right: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>😻✨ Saya nak jadi pelanggan tetap di Catoonies Veterinary Clinic! ✨🐾</h1>
+    <h1 class="heading">📝 Borang Pendaftaran Pelanggan Tetap</h1>
+    <p>😻✨ Saya nak jadi pelanggan tetap di Catoonies Veterinary Clinic! ✨🐾</p>
   </header>
 
-  <section class="form-container">
-    <h2>🧑‍⚕️ Maklumat Pemilik</h2>
-    <form action="https://wa.me/60182624047" method="get" target="_blank">
-      <label for="ownerName">Nama Pemilik:</label>
-      <input type="text" id="ownerName" name="ownerName" required>
+  <section>
+    <form id="registration-form">
+      <!-- Maklumat Pemilik -->
+      <h2 class="heading">🧑‍⚕️ Maklumat Pemilik</h2>
+      <label for="owner-name">Nama Pemilik:</label>
+      <input type="text" id="owner-name" name="owner-name" required><br>
 
-      <label for="ownerId">No. Kad Pengenalan:</label>
-      <input type="text" id="ownerId" name="ownerId" required>
+      <label for="owner-id">No. Kad Pengenalan:</label>
+      <input type="text" id="owner-id" name="owner-id" required><br>
 
-      <label for="address">Alamat:</label>
-      <input type="text" id="address" name="address" required>
+      <label for="owner-address">Alamat:</label>
+      <input type="text" id="owner-address" name="owner-address" required><br>
 
-      <label for="phone">No. Telefon:</label>
-      <input type="number" id="phone" name="phone" required>
+      <label for="owner-phone">No. Telefon:</label>
+      <input type="text" id="owner-phone" name="owner-phone" required><br>
 
-      <label for="email">Emel:</label>
-      <input type="email" id="email" name="email" required>
+      <label for="owner-email">Emel:</label>
+      <input type="email" id="owner-email" name="owner-email" required><br>
 
-      <h2>🐱 Maklumat Kucing</h2>
-      <label for="catName">Nama Kucing:</label>
-      <input type="text" id="catName" name="catName" required>
+      <!-- Maklumat Kucing -->
+      <h2 class="heading">🐱 Maklumat Kucing</h2>
+      <label for="cat-name">Nama Kucing:</label>
+      <input type="text" id="cat-name" name="cat-name" required><br>
 
-      <label for="catAge">Umur:</label>
-      <input type="number" id="catAge" name="catAge" required>
+      <label for="cat-age">Umur:</label>
+      <input type="text" id="cat-age" name="cat-age" required><br>
 
-      <label for="catBreed">Baka:</label>
-      <select id="catBreed" name="catBreed" required>
-             <option value="kampung">Sila pilih</option>
-	 <option value="kampung">Kampung / Tempatan</option>
-        <option value="persian">Persian</option>
-        <option value="mainecoon">Maine Coon</option>
-        <option value="siamese">Siamese</option>
-        <option value="bengal">Bengal</option>
-        <option value="britishshorthair">British Shorthair</option>
-        <option value="sphynx">Sphynx</option>
-        <option value="ragdoll">Ragdoll</option>
-        <option value="abyssinian">Abyssinian</option>
-        <option value="scottishfold">Scottish Fold</option>
-        <option value="russianblue">Russian Blue</option>
-        <option value="burmese">Burmese</option>
-        <option value="birman">Birman</option>
-        <option value="orientalshorthair">Oriental Shorthair</option>
-        <option value="exoticshorthair">Exotic Shorthair</option>
-        <option value="americanshorthair">American Shorthair</option>
-        <option value="savannah">Savannah</option>
-        <option value="turkishangora">Turkish Angora</option>
-        <option value="scottishstraight">Scottish Straight</option>
-        <option value="himalayan">Himalayan</option>
-      </select>
+      <label for="cat-breed">Baka:</label>
+      <select id="cat-breed" name="cat-breed" required>
+        <option value="">Sila Pilih</option>
+        <option value="Kampung">Kampung / Tempatan</option>
+        <option value="Persian">Persian</option>
+        <option value="Maine Coon">Maine Coon</option>
+        <option value="Siamese">Siamese</option>
+        <option value="Bengal">Bengal</option>
+        <option value="British Shorthair">British Shorthair</option>
+        <option value="Sphynx">Sphynx</option>
+        <option value="Ragdoll">Ragdoll</option>
+        <option value="Abyssinian">Abyssinian</option>
+        <option value="Scottish Fold">Scottish Fold</option>
+        <option value="Russian Blue">Russian Blue</option>
+        <option value="Burmese">Burmese</option>
+        <option value="Birman">Birman</option>
+        <option value="Oriental Shorthair">Oriental Shorthair</option>
+        <option value="Exotic Shorthair">Exotic Shorthair</option>
+        <option value="American Shorthair">American Shorthair</option>
+        <option value="Savannah">Savannah</option>
+        <option value="Turkish Angora">Turkish Angora</option>
+        <option value="Scottish Straight">Scottish Straight</option>
+        <option value="Himalayan">Himalayan</option>
+      </select><br>
 
-      <label for="catWeight">Berat:</label>
-      <input type="number" id="catWeight" name="catWeight" required>
+      <label for="cat-weight">⚖️ Berat:</label>
+      <input type="text" id="cat-weight" name="cat-weight" required><br>
 
-      <label>
-        <input type="checkbox" name="agreement" required>
-        💖 Saya setuju dengan semua terma dan syarat ditetapkan oleh Catoonies Veterinary Clinic. Ia adalah kehendak saya sendiri dan bukan paksaan daripada pihak klinik.
-      </label>
+      <!-- Persetujuan -->
+      <h2 class="heading">💖 Persetujuan</h2>
+      <p>Saya setuju dengan semua terma dan syarat ditetapkan oleh Catoonies Veterinary Clinic. Ia adalah kehendak saya sendiri dan bukan paksaan daripada pihak klinik.</p>
 
-      <button type="submit" class="cta-button">Hantar</button>
+      <div class="checkbox">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Saya bersetuju dengan terma dan syarat</label>
+      </div>
+
+      <button type="button" class="cta-button" onclick="sendToWhatsApp()">DAFTAR & HANTAR 📲</button>
     </form>
   </section>
 
-  <section>
-    <a href="index.html" class="cta-button">Halaman Utama</a>
-  </section>
-
   <footer>
-    <p>🐾 Catoonies – Kasih Sayang untuk Si Meow Kesayangan Anda! 😻💕</p>
+    <p>&copy; 2025 Catoonies Veterinary Clinic. Semua hak cipta terpelihara.</p>
   </footer>
+
+  <script>
+    function sendToWhatsApp() {
+      var ownerName = document.getElementById('owner-name').value;
+      var ownerId = document.getElementById('owner-id').value;
+      var ownerAddress = document.getElementById('owner-address').value;
+      var ownerPhone = document.getElementById('owner-phone').value;
+      var ownerEmail = document.getElementById('owner-email').value;
+      var catName = document.getElementById('cat-name').value;
+      var catAge = document.getElementById('cat-age').value;
+      var catBreed = document.getElementById('cat-breed').value;
+      var catWeight = document.getElementById('cat-weight').value;
+      var termsAccepted = document.getElementById('terms').checked;
+
+      if (!ownerName || !ownerId || !ownerAddress || !ownerPhone || !ownerEmail || !catName || !catAge || !catBreed || !catWeight || !termsAccepted) {
+        alert('Sila lengkapkan semua maklumat dan setuju dengan terma dan syarat!');
+        return;
+      }
+
+      var message = `🧑‍⚕️ **Maklumat Pemilik**\nNama Pemilik: ${ownerName}\nNo. Kad Pengenalan: ${ownerId}\nAlamat: ${ownerAddress}\nNo. Telefon: ${ownerPhone}\nEmel: ${ownerEmail}\n\n🐱 **Maklumat Kucing**\nNama Kucing: ${catName}\nUmur: ${catAge}\nBaka: ${catBreed}\nBerat: ${catWeight}\n\n💖 **Persetujuan**\nSaya setuju dengan semua terma dan syarat ditetapkan oleh Catoonies Veterinary Clinic.`;
+
+      var whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
 </body>
 </html>
