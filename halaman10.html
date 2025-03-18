@@ -3,188 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borang Pendaftaran Pelanggan Tetap - Catoonies Veterinary Clinic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;700&family=Raleway:wght@400;600&family=Nunito:wght@400;600&family=Avenir:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <title>Borang Pendaftaran Pelanggan Tetap</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #fef5e7; /* Light beige */
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    header, footer {
       background-color: #000;
       color: #fff;
+      margin: 0;
       padding: 20px;
-      text-align: center;
     }
-
-    h1, h2, h3 {
-      color: #FFD700; /* Gold color */
+    h1, h2 {
+      color: #FFD700;
     }
-
-    .cta-button {
-      font-family: 'Nunito', sans-serif;
-      font-weight: 600;
-      padding: 10px 20px;
-      background-color: #FFD700; /* Gold color */
-      color: #000;
-      text-decoration: none;
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
       border-radius: 5px;
-      margin-top: 20px;
-      display: inline-block;
+      border: none;
     }
-
-    .cta-button:hover {
+    button {
       background-color: #FFD700;
       color: #000;
-      text-decoration: underline;
-    }
-
-    footer {
-      font-family: 'Merriweather', serif;
-      font-size: 14px;
-      font-weight: 400;
-    }
-
-    section {
-      padding: 20px;
-    }
-
-    .heading {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-    }
-
-    input[type="text"], input[type="email"], input[type="date"], select {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
+      padding: 10px 20px;
+      border: none;
       border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, select:focus {
-      border-color: #FFD700;
-      outline: none;
-    }
-
-    label {
-      font-weight: bold;
-    }
-
-    .checkbox {
-      margin: 10px 0;
-    }
-
-    .checkbox input {
-      margin-right: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1 class="heading">📝 Borang Pendaftaran Pelanggan Tetap</h1>
-    <p>😻✨ Saya nak jadi pelanggan tetap di Catoonies Veterinary Clinic! ✨🐾</p>
-  </header>
-
-  <section>
-    <form id="registration-form">
-      <!-- Maklumat Pemilik -->
-      <h2 class="heading">🧑‍⚕️ Maklumat Pemilik</h2>
-      <label for="owner-name">Nama Pemilik:</label>
-      <input type="text" id="owner-name" name="owner-name" required><br>
-
-      <label for="owner-id">No. Kad Pengenalan:</label>
-      <input type="text" id="owner-id" name="owner-id" required><br>
-
-      <label for="owner-address">Alamat:</label>
-      <input type="text" id="owner-address" name="owner-address" required><br>
-
-      <label for="owner-phone">No. Telefon:</label>
-      <input type="text" id="owner-phone" name="owner-phone" required><br>
-
-      <label for="owner-email">Emel:</label>
-      <input type="email" id="owner-email" name="owner-email" required><br>
-
-      <!-- Maklumat Kucing -->
-      <h2 class="heading">🐱 Maklumat Kucing</h2>
-      <label for="cat-name">Nama Kucing:</label>
-      <input type="text" id="cat-name" name="cat-name" required><br>
-
-      <label for="cat-age">Umur:</label>
-      <input type="text" id="cat-age" name="cat-age" required><br>
-
-      <label for="cat-breed">Baka:</label>
-      <select id="cat-breed" name="cat-breed" required>
-        <option value="">Sila Pilih</option>
-        <option value="Kampung">Kampung / Tempatan</option>
-        <option value="Persian">Persian</option>
-        <option value="Maine Coon">Maine Coon</option>
-        <option value="Siamese">Siamese</option>
-        <option value="Bengal">Bengal</option>
-        <option value="British Shorthair">British Shorthair</option>
-        <option value="Sphynx">Sphynx</option>
-        <option value="Ragdoll">Ragdoll</option>
-        <option value="Abyssinian">Abyssinian</option>
-        <option value="Scottish Fold">Scottish Fold</option>
-        <option value="Russian Blue">Russian Blue</option>
-        <option value="Burmese">Burmese</option>
-        <option value="Birman">Birman</option>
-        <option value="Oriental Shorthair">Oriental Shorthair</option>
-        <option value="Exotic Shorthair">Exotic Shorthair</option>
-        <option value="American Shorthair">American Shorthair</option>
-        <option value="Savannah">Savannah</option>
-        <option value="Turkish Angora">Turkish Angora</option>
-        <option value="Scottish Straight">Scottish Straight</option>
-        <option value="Himalayan">Himalayan</option>
-      </select><br>
-
-      <label for="cat-weight">⚖️ Berat:</label>
-      <input type="text" id="cat-weight" name="cat-weight" required><br>
-
-      <!-- Persetujuan -->
-      <h2 class="heading">💖 Persetujuan Pelanggan Tetap  </h2>
-      <p>Saya setuju dengan semua terma dan syarat  oleh Catoonies Veterinary Clinic. Ia adalah kehendak saya sendiri dan bukan paksaan daripada pihak klinik.</p>
-
-      <div class="checkbox">
-        <input type="checkbox" id="terms" name="terms" required>
-        <label for="terms">Saya bersetuju dengan terma dan syarat</label>
-      </div>
-
-      <button type="button" class="cta-button" onclick="sendToWhatsApp()">DAFTAR & HANTAR 📲</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Catoonies Veterinary Clinic. Semua hak cipta terpelihara.</p>
-  </footer>
+  <h1>Borang Pendaftaran Pelanggan Tetap</h1>
+  <form id="whatsappForm">
+    <h2>MAKLUMAT PEMILIK</h2>
+    <label>Nama Pemilik: <input type="text" id="namaPemilik" required></label>
+    <label>No. Kad Pengenalan: <input type="text" id="noKp" required></label>
+    <label>Alamat: <textarea id="alamat" required></textarea></label>
+    <label>No. Telefon: <input type="tel" id="telefon" required></label>
+    <label>Emel: <input type="email" id="emel" required></label>
+    
+    <h2>MAKLUMAT KUCING 🐱</h2>
+    <label>Nama Kucing: <input type="text" id="namaKucing" required></label>
+    <label>Umur: <input type="text" id="umur" required></label>
+    <label>Baka:
+      <select id="baka">
+        <option value="Kampung">Kampung</option>
+        <option value="Tempatan">Tempatan</option>
+        <option value="Lain">Lain (Nyatakan di bawah)</option>
+      </select>
+    </label>
+    <label>Nyatakan baka: <input type="text" id="nyatakanBaka"></label>
+    <label>Berat: <input type="text" id="berat" required></label>
+    <label>Status Vaksin:
+      <select id="statusVaksin">
+        <option value="Tiada Vaksin">Tiada Vaksin</option>
+        <option value="Vaksin Booster">Vaksin Booster</option>
+        <option value="Vaksin Tahunan">Vaksin Tahunan</option>
+      </select>
+    </label>
+    
+    <label>
+      <input type="checkbox" id="persetujuan" required>
+      💖 Saya setuju dengan semua terma dan syarat untuk menjadi Pelanggan Tetap Catoonies Vet Clinic.
+    </label>
+    
+    <button type="button" onclick="hantarKeWhatsApp()">Hantar ke WhatsApp</button>
+  </form>
 
   <script>
-    function sendToWhatsApp() {
-      var ownerName = document.getElementById('owner-name').value;
-      var ownerId = document.getElementById('owner-id').value;
-      var ownerAddress = document.getElementById('owner-address').value;
-      var ownerPhone = document.getElementById('owner-phone').value;
-      var ownerEmail = document.getElementById('owner-email').value;
-      var catName = document.getElementById('cat-name').value;
-      var catAge = document.getElementById('cat-age').value;
-      var catBreed = document.getElementById('cat-breed').value;
-      var catWeight = document.getElementById('cat-weight').value;
-      var termsAccepted = document.getElementById('terms').checked;
-
-      if (!ownerName || !ownerId || !ownerAddress || !ownerPhone || !ownerEmail || !catName || !catAge || !catBreed || !catWeight || !termsAccepted) {
-        alert('Sila lengkapkan semua maklumat dan setuju dengan terma dan syarat!');
-        return;
-      }
-
-      var message = `🧑‍⚕️ **Maklumat Pemilik**\nNama Pemilik: ${ownerName}\nNo. Kad Pengenalan: ${ownerId}\nAlamat: ${ownerAddress}\nNo. Telefon: ${ownerPhone}\nEmel: ${ownerEmail}\n\n🐱 **Maklumat Kucing**\nNama Kucing: ${catName}\nUmur: ${catAge}\nBaka: ${catBreed}\nBerat: ${catWeight}\n\n💖 **Persetujuan Pelanggan Tetap**\nSaya setuju dengan semua terma dan syarat ditetapkan oleh Catoonies Veterinary Clinic.`;
-
-      var whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(message)}`;
-      window.open(whatsappURL, '_blank');
+    function hantarKeWhatsApp() {
+      let namaPemilik = document.getElementById("namaPemilik").value;
+      let noKp = document.getElementById("noKp").value;
+      let alamat = document.getElementById("alamat").value;
+      let telefon = document.getElementById("telefon").value;
+      let emel = document.getElementById("emel").value;
+      let namaKucing = document.getElementById("namaKucing").value;
+      let umur = document.getElementById("umur").value;
+      let baka = document.getElementById("baka").value;
+      let nyatakanBaka = document.getElementById("nyatakanBaka").value;
+      let berat = document.getElementById("berat").value;
+      let statusVaksin = document.getElementById("statusVaksin").value;
+      let persetujuan = document.getElementById("persetujuan").checked ? "Saya setuju dengan semua terma dan syarat untuk menjadi Pelanggan Tetap Catoonies Vet Clinic." : "";
+      
+      let message = `Borang Pendaftaran Pelanggan Tetap\n\n` +
+        `Nama Pemilik: ${namaPemilik}\n` +
+        `No. Kad Pengenalan: ${noKp}\n` +
+        `Alamat: ${alamat}\n` +
+        `No. Telefon: ${telefon}\n` +
+        `Emel: ${emel}\n\n` +
+        `Nama Kucing: ${namaKucing}\n` +
+        `Umur: ${umur}\n` +
+        `Baka: ${baka} ${nyatakanBaka}\n` +
+        `Berat: ${berat}\n` +
+        `Status Vaksin: ${statusVaksin}\n\n` +
+        `${persetujuan}`;
+      
+      let encodedMessage = encodeURIComponent(message);
+      let whatsappUrl = `https://wa.me/60182624047?text=${encodedMessage}`;
+      window.open(whatsappUrl, "_blank");
     }
   </script>
 </body>
 </html>
+
+
