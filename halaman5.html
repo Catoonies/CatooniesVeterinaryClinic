@@ -37,33 +37,39 @@
       <input type="text" id="namaKucing" required>
       <label>Umur:</label>
       <input type="text" id="umurKucing" required>
-      <label>Baka:</label>
-      <input type="text" id="bakaKucing" required>
-      <label>Berat (kg):</label>
+      <label>Jenis Baka:</label>
+      <select id="jenisBaka">
+        <option value="Kampung">Kampung</option>
+        <option value="Tempatan">Tempatan</option>
+      </select>
+      <label>Nyatakan Baka:</label>
+      <input type="text" id="nyatakanBaka">
+      <label>Berat:</label>
       <input type="text" id="beratKucing" required>
       <label>Status Vaksin:</label>
       <select id="statusVaksin">
-        <option>Tiada Vaksin</option>
-        <option>Vaksin Booster</option>
-        <option>Vaksin Tahunan</option>
+        <option value="Tiada Vaksin">Tiada Vaksin</option>
+        <option value="Vaksin Booster">Vaksin Booster</option>
+        <option value="Vaksin Tahunan">Vaksin Tahunan</option>
       </select>
       
       <h2>Temujanji & Rawatan 🗓️</h2>
       <label>Tarikh Temujanji:</label>
       <input type="date" id="tarikhTemujanji" required>
       <label>Tujuan Pemeriksaan:</label>
-      <select id="tujuanRawatan">
-        <option>Rawatan</option>
-        <option>Vaksin</option>
-        <option>Grooming</option>
-        <option>Boarding</option>
-        <option>Sakit</option>
+      <select id="tujuanPemeriksaan">
+        <option value="Rawatan">Rawatan</option>
+        <option value="Vaksin">Vaksin</option>
+        <option value="Grooming">Grooming</option>
+        <option value="Boarding">Boarding</option>
+        <option value="Sakit">Sakit</option>
       </select>
       <label>Nyatakan Gejala:</label>
-      <textarea id="gejalaKucing"></textarea>
+      <textarea id="gejala"></textarea>
       
       <h2>Persetujuan</h2>
-      <p>Saya bersetuju untuk meneruskan rawatan dan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
+      <p>Saya bersetuju untuk meneruskan rawatan/pemandulan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur seperti yang dinasihatkan oleh pihak klinik. 🐾</p>
+      
       <button type="button" onclick="sendToWhatsApp()">Hantar ke WhatsApp</button>
     </form>
   </div>
@@ -71,20 +77,23 @@
   <script>
     function sendToWhatsApp() {
       var phoneNumber = "60182624047";
-      var message = "Borang Tempahan & Persetujuan Rawatan 🐾%0A" +
+      var message = "*Borang Tempahan & Persetujuan Rawatan*%0A" +
         "Nama Pemilik: " + document.getElementById("namaPemilik").value + "%0A" +
         "No. Kad Pengenalan: " + document.getElementById("icPemilik").value + "%0A" +
         "Alamat: " + document.getElementById("alamatPemilik").value + "%0A" +
         "No. Telefon: " + document.getElementById("telefonPemilik").value + "%0A" +
         "Emel: " + document.getElementById("emelPemilik").value + "%0A%0A" +
-        "Nama Kucing: " + document.getElementById("namaKucing").value + "%0A" +
+        "*Maklumat Kucing*%0A" +
+        "Nama: " + document.getElementById("namaKucing").value + "%0A" +
         "Umur: " + document.getElementById("umurKucing").value + "%0A" +
-        "Baka: " + document.getElementById("bakaKucing").value + "%0A" +
-        "Berat: " + document.getElementById("beratKucing").value + " kg%0A" +
+        "Jenis Baka: " + document.getElementById("jenisBaka").value + "%0A" +
+        "Nyatakan Baka: " + document.getElementById("nyatakanBaka").value + "%0A" +
+        "Berat: " + document.getElementById("beratKucing").value + "%0A" +
         "Status Vaksin: " + document.getElementById("statusVaksin").value + "%0A%0A" +
-        "Tarikh Temujanji: " + document.getElementById("tarikhTemujanji").value + "%0A" +
-        "Tujuan Pemeriksaan: " + document.getElementById("tujuanRawatan").value + "%0A" +
-        "Gejala: " + document.getElementById("gejalaKucing").value;
+        "*Temujanji & Rawatan*%0A" +
+        "Tarikh: " + document.getElementById("tarikhTemujanji").value + "%0A" +
+        "Tujuan: " + document.getElementById("tujuanPemeriksaan").value + "%0A" +
+        "Gejala: " + document.getElementById("gejala").value;
       
       var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
       window.open(whatsappURL, '_blank');
