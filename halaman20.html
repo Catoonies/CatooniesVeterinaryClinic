@@ -3,157 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temujanji Berjaya - Catoonies Veterinary Clinic</title>
+  <title>Maklumat Susulan</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
-      text-align: center;
       padding: 20px;
     }
-    .container {
-      max-width: 500px;
-      margin: auto;
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    label, select, input {
+    label, input, select, textarea {
       display: block;
       width: 100%;
-      margin-top: 10px;
+      margin-bottom: 10px;
     }
-    .cta-button {
+    button {
       background-color: #FFD700;
       color: #000;
       padding: 10px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-      border-radius: 5px;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🎉 Tahniah! Anda Telah Berjaya Menjalankan Kewajipan Anda Sebagai Pemilik Kucing 🐾</h1>
-    <p>Terima kasih kerana menjaga kesihatan dan kebahagiaan Cik Meow! Kami bangga dengan komitmen anda. 😻💕</p>
-    
-    <form id="temujanji-form">
-      <label>No. Invoice:</label>
-      <input type="text" id="invoice" required>
-      
-      <label>Tarikh Hadir:</label>
-      <input type="date" id="tarikh_hadir" required>
-      
-      <label>Masa Hadir:</label>
-      <input type="time" id="masa_hadir" required>
-      
-      <label>Jadual:</label>
+  <h2>Maklumat Susulan 📅🐾</h2>
+  <form id="whatsappForm">
+    <label>No. Invoice: <input type="text" id="no_invoice"></label>
+    <label>Tarikh Hadir: <input type="date" id="tarikh_hadir"></label>
+    <label>Masa Hadir: <input type="time" id="masa_hadir"></label>
+    <label>Jadual:
       <select id="jadual">
-              <option>Sila Pilih</option>
-	  <option>Pemeriksaan</option>
-        <option>Vaksin Booster</option>
-        <option>Vaksin Tahunan</option>
-        <option>Susulan</option>
+        <option value="Pemeriksaan">Pemeriksaan</option>
+        <option value="Vaksin Booster">Vaksin Booster</option>
+        <option value="Vaksin Tahunan">Vaksin Tahunan</option>
+        <option value="Susulan">Susulan</option>
       </select>
-      
-      <label>Tarikh Susulan:</label>
-      <input type="date" id="tarikh_susulan">
-      
-      <label>Masa Susulan:</label>
+    </label>
+    <label>Tarikh Susulan: <input type="date" id="tarikh_susulan"></label>
+    <label>Masa Susulan:
       <select id="masa_susulan">
-        <option>Sila Pilih</option>
-        <option>11:00 AM</option>
-        <option>11:30 AM</option>
-        <option>12:00 PM</option>
-        <option>12:30 PM</option>
-        <option>1:00 PM</option>
-        <option>3:00 PM</option>
-        <option>3:30 PM</option>
-        <option>4:00 PM</option>
-        <option>4:30 PM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="11:30 AM">11:30 AM</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="12:30 PM">12:30 PM</option>
+        <option value="1:00 PM">1:00 PM</option>
+        <option value="3:00 PM">3:00 PM</option>
+        <option value="3:30 PM">3:30 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+        <option value="4:30 PM">4:30 PM</option>
       </select>
-      
-      <label>Nama Pemilik:</label>
-      <input type="text" id="pemilik" required>
-      
-      <label>Nama Kucing:</label>
-      <input type="text" id="kucing" required>
-      
-      <label>Umur Kucing:</label>
-      <input type="text" id="umur" required>
-      
-        <label for="cat-breed">Baka Kucing:</label>
-      <select id="cat-breed" name="cat-breed"required>
-          <option value="Kampung">Sila Pilih</option>
-  <option value="Kampung">Kampung / Tempatan</option>
-        <option value="Persian">Persian</option>
-        <option value="Maine Coon">Maine Coon</option>
-        <option value="Siamese">Siamese</option>
-        <option value="Bengal">Bengal</option>
-        <option value="British Shorthair">British Shorthair</option>
-        <option value="Sphynx">Sphynx</option>
-        <option value="Ragdoll">Ragdoll</option>
-        <option value="Abyssinian">Abyssinian</option>
-        <option value="Scottish Fold">Scottish Fold</option>
-        <option value="Russian Blue">Russian Blue</option>
-        <option value="Burmese">Burmese</option>
-        <option value="Birman">Birman</option>
-        <option value="Oriental Shorthair">Oriental Shorthair</option>
-        <option value="Exotic Shorthair">Exotic Shorthair</option>
-        <option value="American Shorthair">American Shorthair</option>
-        <option value="Savannah">Savannah</option>
-        <option value="Turkish Angora">Turkish Angora</option>
-        <option value="Scottish Straight">Scottish Straight</option>
-        <option value="Himalayan">Himalayan</option>
-        <option value="Lain-lain">Lain-lain (Jika lain, nyatakan)</option>
-      </select><br><br>
-	 
-	
-      <label>Berat Kucing (kg):</label>
-      <input type="text" id="berat" required>
-      
-      <label>Suhu:</label>
-      <input type="text" id="suhu" required>
-      
-      <a href="#" class="cta-button" onclick="hantarWhatsapp()">HANTAR</a>
-    </form>
-  </div>
+    </label>
+    <label>Nama Pemilik: <input type="text" id="nama_pemilik"></label>
+    <label>Nama Kucing: <input type="text" id="nama_kucing"></label>
+    <label>Umur: <input type="text" id="umur_kucing"></label>
+    <label>Jantina:
+      <select id="jantina">
+        <option value="Jantan">Jantan</option>
+        <option value="Betina">Betina</option>
+      </select>
+    </label>
+    <label>Baka: <input type="text" id="baka_kucing"></label>
+    <label>Berat Kucing: <input type="text" id="berat_kucing"></label>
+    <label>Suhu: <input type="text" id="suhu"></label>
+    
+    <p>Terima kasih kerana membuat temujanji! 🐾😺 Jangan lupa bawa Cik Meow untuk pemeriksaan ya! 😻💕 Pastikan tiba tepat pada waktunya~ Jika ada sebarang perubahan, boleh maklumkan kepada kami. 💕</p>
+    
+    <button type="button" onclick="hantarKeWhatsApp()">Hantar ke WhatsApp</button>
+  </form>
 
   <script>
-    function hantarWhatsapp() {
-      let invoice = document.getElementById('invoice').value;
-      let tarikh_hadir = document.getElementById('tarikh_hadir').value;
-      let masa_hadir = document.getElementById('masa_hadir').value;
-      let jadual = document.getElementById('jadual').value;
-      let tarikh_susulan = document.getElementById('tarikh_susulan').value;
-      let masa_susulan = document.getElementById('masa_susulan').value;
-      let pemilik = document.getElementById('pemilik').value;
-      let kucing = document.getElementById('kucing').value;
-      let umur = document.getElementById('umur').value;
-      let baka = document.getElementById('baka').value;
-      let berat = document.getElementById('berat').value;
-      let suhu = document.getElementById('suhu').value;
+    function hantarKeWhatsApp() {
+      let noInvoice = document.getElementById("no_invoice").value;
+      let tarikhHadir = document.getElementById("tarikh_hadir").value;
+      let masaHadir = document.getElementById("masa_hadir").value;
+      let jadual = document.getElementById("jadual").value;
+      let tarikhSusulan = document.getElementById("tarikh_susulan").value;
+      let masaSusulan = document.getElementById("masa_susulan").value;
+      let namaPemilik = document.getElementById("nama_pemilik").value;
+      let namaKucing = document.getElementById("nama_kucing").value;
+      let umurKucing = document.getElementById("umur_kucing").value;
+      let jantina = document.getElementById("jantina").value;
+      let bakaKucing = document.getElementById("baka_kucing").value;
+      let beratKucing = document.getElementById("berat_kucing").value;
+      let suhu = document.getElementById("suhu").value;
       
-      let mesej = `Tahniah! Anda Telah Berjaya Menjalankan Kewajipan Anda Sebagai Pemilik Kucing 🎉🐾%0A%0A` +
-                  `📅 No. Invoice: ${invoice}%0A` +
-                  `📅 Tarikh Hadir: ${tarikh_hadir}%0A` +
-                  `📅 Masa Hadir: ${masa_hadir}%0A` +
-                  `🔹 Jadual: ${jadual}%0A` +
-                  `📅 Tarikh Susulan: ${tarikh_susulan}%0A` +
-                  `⏰ Masa Susulan: ${masa_susulan}%0A` +
-                  `👩 Pemilik: ${pemilik}%0A` +
-                  `🐱 Kucing: ${kucing}%0A` +
-                  `📌 Umur: ${umur}%0A` +
-                  `🐾 Baka: ${baka}%0A` +
-                  `⚖️ Berat Kucing: ${berat} kg%0A` +
-                  `🌡️ Suhu: ${suhu}%0A%0A` +
-                  `Terima kasih kerana membuat temujanji! 🐾😺 Jangan lupa bawa Cik Meow untuk pemeriksaan ya! 😻💕`;
+      let mesej = `Maklumat Susulan 📅🐾\n\n` +
+                  `No. Invoice: ${noInvoice}\n` +
+                  `Tarikh Hadir: ${tarikhHadir}\n` +
+                  `Masa Hadir: ${masaHadir}\n` +
+                  `Jadual: ${jadual}\n` +
+                  `Tarikh Susulan: ${tarikhSusulan}\n` +
+                  `Masa Susulan: ${masaSusulan}\n` +
+                  `Nama Pemilik: ${namaPemilik}\n` +
+                  `Nama Kucing: ${namaKucing}\n` +
+                  `Umur: ${umurKucing}\n` +
+                  `Jantina: ${jantina}\n` +
+                  `Baka: ${bakaKucing}\n` +
+                  `Berat Kucing: ${beratKucing} kg\n` +
+                  `Suhu: ${suhu}\n\n` +
+                  `Terima kasih kerana membuat temujanji! 🐾😺 Jangan lupa bawa Cik Meow untuk pemeriksaan ya! 😻💕 Pastikan tiba tepat pada waktunya~ Jika ada sebarang perubahan, boleh maklumkan kepada kami. 💕`;
       
-      let whatsappURL = `https://wa.me/60182624047?text=${mesej}`;
-      window.open(whatsappURL, '_blank');
+      let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
+      window.open(whatsappURL, "_blank");
     }
   </script>
 </body>
