@@ -55,65 +55,102 @@
       background-color: #e6c200;
     }
   </style>
+  <script>
+    function sendToWhatsApp() {
+      let nama = document.getElementById("nama").value;
+      let ic = document.getElementById("ic").value;
+      let alamat = document.getElementById("alamat").value;
+      let telefon = document.getElementById("telefon").value;
+      let email = document.getElementById("email").value;
+      let namaKucing = document.getElementById("nama_kucing").value;
+      let umur = document.getElementById("umur").value;
+      let baka = document.getElementById("baka").value;
+      let nyatakanBaka = document.getElementById("nyatakan_baka").value;
+      let berat = document.getElementById("berat").value;
+      let statusVaksin = document.getElementById("status_vaksin").value;
+      let tarikh = document.getElementById("tarikh").value;
+      let tujuan = document.getElementById("tujuan").value;
+      let gejala = document.getElementById("gejala").value;
+      let statusRawatan = document.getElementById("status_rawatan").value;
+      
+      let message = `Borang Tempahan & Persetujuan Rawatan:%0A%0A` +
+        `Nama Pemilik: ${nama}%0A` +
+        `No. Kad Pengenalan: ${ic}%0A` +
+        `Alamat: ${alamat}%0A` +
+        `No. Telefon: ${telefon}%0A` +
+        `Emel: ${email}%0A%0A` +
+        `Nama Kucing: ${namaKucing}%0A` +
+        `Umur: ${umur}%0A` +
+        `Jenis Baka: ${baka}%0A` +
+        `Nyatakan Baka: ${nyatakanBaka}%0A` +
+        `Berat: ${berat}%0A` +
+        `Status Vaksin: ${statusVaksin}%0A%0A` +
+        `Tarikh Temujanji: ${tarikh}%0A` +
+        `Tujuan Pemeriksaan: ${tujuan}%0A` +
+        `Gejala: ${gejala}%0A%0A` +
+        `Status Rawatan: ${statusRawatan}%0A%0A` +
+        `Saya bersetuju untuk meneruskan rawatan.`;
+      
+      let whatsappURL = `https://wa.me/60182624047?text=${message}`;
+      window.open(whatsappURL, "_blank");
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>Borang Tempahan & Persetujuan Rawatan 🐾</h1>
   </header>
   <section>
-    <form action="https://wa.me/60182624047" method="get">
+    <form onsubmit="event.preventDefault(); sendToWhatsApp();">
       <h2>Maklumat Pemilik</h2>
       <label for="nama">Nama Pemilik:</label>
-      <input type="text" id="nama" name="nama" required>
+      <input type="text" id="nama" required>
       
       <label for="ic">No. Kad Pengenalan:</label>
-      <input type="text" id="ic" name="ic" required>
+      <input type="text" id="ic" required>
       
       <label for="alamat">Alamat:</label>
-      <input type="text" id="alamat" name="alamat" required>
+      <input type="text" id="alamat" required>
       
       <label for="telefon">No. Telefon:</label>
-      <input type="tel" id="telefon" name="telefon" required>
+      <input type="tel" id="telefon" required>
       
       <label for="email">Emel:</label>
-      <input type="email" id="email" name="email">
+      <input type="email" id="email">
       
       <h2>Maklumat Kucing 🐱</h2>
       <label for="nama_kucing">Nama Kucing:</label>
-      <input type="text" id="nama_kucing" name="nama_kucing" required>
+      <input type="text" id="nama_kucing" required>
       
       <label for="umur">Umur:</label>
-      <input type="text" id="umur" name="umur" required>
+      <input type="text" id="umur" required>
       
       <label for="baka">Jenis Baka:</label>
-      <select id="baka" name="baka">
-   <option value="Sila Pilih">Sila Pilih</option> 
-    <option value="kampung">Kampung / Tempatan</option>
+      <select id="baka">
+        <option value="kampung">Kampung / Tempatan</option>
         <option value="berbaka">Berbaka</option>
       </select>
       
       <label for="nyatakan_baka">Nyatakan Baka:</label>
-      <input type="text" id="nyatakan_baka" name="nyatakan_baka">
+      <input type="text" id="nyatakan_baka">
       
       <label for="berat">Berat:</label>
-      <input type="text" id="berat" name="berat" required>
+      <input type="text" id="berat" required>
       
       <label for="status_vaksin">Status Vaksin:</label>
-      <select id="status_vaksin" name="status_vaksin">
-       <option value="Sila Pilih">Sila Pilih</option>
-	   <option value="tiada">Tiada Vaksin</option>
+      <select id="status_vaksin">
+        <option value="tiada">Tiada Vaksin</option>
         <option value="booster">Vaksin Booster</option>
         <option value="tahunan">Vaksin Tahunan</option>
       </select>
       
       <h2>Temujanji & Rawatan 🗓️</h2>
       <label for="tarikh">Tarikh Temujanji:</label>
-      <input type="date" id="tarikh" name="tarikh" required>
+      <input type="date" id="tarikh" required>
       
       <label for="tujuan">Tujuan Pemeriksaan:</label>
-      <select id="tujuan" name="tujuan">
-        <option value="Sila Pilih">Sila Pilih</option>
-	   <option value="rawatan">Rawatan</option>
+      <select id="tujuan">
+        <option value="rawatan">Rawatan</option>
         <option value="vaksin">Vaksin</option>
         <option value="grooming">Grooming</option>
         <option value="boarding">Boarding</option>
@@ -121,20 +158,14 @@
       </select>
       
       <label for="gejala">Nyatakan Gejala:</label>
-      <textarea id="gejala" name="gejala"></textarea>
+      <textarea id="gejala"></textarea>
       
       <label for="status_rawatan">Status Rawatan:</label>
-      <input type="text" id="status_rawatan" name="status_rawatan" placeholder="Dalam Pemantauan: Nama & Tarikh / Tiada Rawatan">
+      <input type="text" id="status_rawatan">
       
-      <h2>Persetujuan</h2>
-      <p>Saya bersetuju untuk meneruskan rawatan/pemandulan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur seperti yang dinasihatkan oleh pihak klinik. 🐾</p>
-      
-      <button type="submit">HANTAR</button>
+      <button type="submit">Hantar ke WhatsApp</button>
     </form>
   </section>
-  <footer>
-    <p>🐾 Catoonies Veterinary Clinic - Kasih Sayang untuk Si Meow Kesayangan Anda! 😻💕</p>
-  </footer>
 </body>
 </html>
 
