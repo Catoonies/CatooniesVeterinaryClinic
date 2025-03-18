@@ -91,7 +91,7 @@
         `Status Rawatan: ${statusRawatan}%0A%0A` +
         `Saya bersetuju untuk meneruskan rawatan.`;
       
-      let whatsappURL = `https://wa.me/60182624047?text=${message}`;
+      let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(message)}`;
       window.open(whatsappURL, "_blank");
     }
   </script>
@@ -159,9 +159,6 @@
       
       <label for="gejala">Nyatakan Gejala:</label>
       <textarea id="gejala"></textarea>
-      
-      <label for="status_rawatan">Status Rawatan:</label>
-      <input type="text" id="status_rawatan">
       
       <button type="submit">Hantar ke WhatsApp</button>
     </form>
