@@ -3,161 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borang Pendaftaran Tabungan Rawatan Kecemasan - Catoonies Veterinary Clinic</title>
+  <title>Borang Pendaftaran Tabungan Rawatan Kecemasan</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
-      margin: 0;
       padding: 20px;
     }
-    h1 {
-      color: #FFD700;
-      text-align: center;
-    }
-    .form-container {
-      background-color: #222;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    label {
-      font-size: 16px;
-      color: #fff;
-      margin-bottom: 5px;
+    label, input, select, textarea {
       display: block;
-    }
-    input[type="text"], input[type="email"], input[type="number"], textarea, select {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      background-color: #333;
-      border: 1px solid #fff;
-      color: #fff;
-      border-radius: 5px;
+      margin-bottom: 10px;
     }
-    .radio-group {
-      margin-bottom: 15px;
-    }
-    .cta-button {
+    button {
       background-color: #FFD700;
       color: #000;
-      padding: 10px 20px;
-      text-decoration: none;
-      display: inline-block;
-      border-radius: 5px;
-      font-weight: 600;
-      text-align: center;
-    }
-    .cta-button:hover {
-      background-color: #ffd700;
-      text-decoration: underline;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h1>Borang Pendaftaran Tabungan Rawatan Kecemasan Catoonies Veterinary Clinic 🏥🐾</h1>
-  <p style="color: #fff; text-align: center;">💖 Menabung Untuk Kesihatan Si Meow! "Sediakan payung sebelum hujan! Dengan tabungan ini, anda boleh memastikan si bulus kesayangan mendapat rawatan tanpa risau kos kecemasan." 😻💰</p>
+  <h2>Borang Pendaftaran Tabungan Rawatan Kecemasan 🏥🐾</h2>
+  <p>💖 Menabung Untuk Kesihatan Si Meow! "Sediakan payung sebelum hujan! Dengan tabungan ini, anda boleh memastikan si bulus kesayangan mendapat rawatan tanpa risau kos kecemasan." 😻💰</p>
 
-  <div class="form-container">
-    <form action="https://wa.me/0182624047" method="GET" target="_blank">
-      <h2 style="color: #FFD700;">📌 Maklumat Pemilik</h2>
-      <label for="owner-name">Nama Pemilik:</label>
-      <input type="text" id="owner-name" name="owner_name" required>
+  <form id="whatsappForm">
+    <h3>Maklumat Pemilik</h3>
+    <label>Nama Pemilik: <input type="text" id="nama_pemilik"></label>
+    <label>No. IC: <input type="text" id="ic_pemilik"></label>
+    <label>No. Telefon (WhatsApp): <input type="text" id="telefon_pemilik"></label>
+    <label>Alamat: <textarea id="alamat_pemilik"></textarea></label>
+    <label>Email: <input type="email" id="emel_pemilik"></label>
 
-      <label for="owner-ic">No. IC:</label>
-      <input type="text" id="owner-ic" name="owner_ic" required>
-
-      <label for="owner-phone">No. Telefon (WhatsApp):</label>
-      <input type="text" id="owner-phone" name="owner_phone" required>
-
-      <label for="owner-address">Alamat:</label>
-      <textarea id="owner-address" name="owner_address" required></textarea>
-
-      <label for="owner-email">Email:</label>
-      <input type="email" id="owner-email" name="owner_email" required>
-
-      <h2 style="color: #FFD700;">📌 Maklumat Kucing 🐱</h2>
-      <label for="cat-name">Nama Kucing:</label>
-      <input type="text" id="cat-name" name="cat_name" required>
-
-      <label for="cat-age">Umur:</label>
-      <input type="number" id="cat-age" name="cat_age" required>
-
-  <label for="cat-breed">Baka Kucing:</label>
-      <select id="cat-breed" name="cat-breed"required>
-                   <option value="Tiada">Sila Pilih</option>
-	 <option value="Kampung">Kampung / Tempatan</option>
-        <option value="Persian">Persian</option>
-        <option value="Maine Coon">Maine Coon</option>
-        <option value="Siamese">Siamese</option>
-        <option value="Bengal">Bengal</option>
-        <option value="British Shorthair">British Shorthair</option>
-        <option value="Sphynx">Sphynx</option>
-        <option value="Ragdoll">Ragdoll</option>
-        <option value="Abyssinian">Abyssinian</option>
-        <option value="Scottish Fold">Scottish Fold</option>
-        <option value="Russian Blue">Russian Blue</option>
-        <option value="Burmese">Burmese</option>
-        <option value="Birman">Birman</option>
-        <option value="Oriental Shorthair">Oriental Shorthair</option>
-        <option value="Exotic Shorthair">Exotic Shorthair</option>
-        <option value="American Shorthair">American Shorthair</option>
-        <option value="Savannah">Savannah</option>
-        <option value="Turkish Angora">Turkish Angora</option>
-        <option value="Scottish Straight">Scottish Straight</option>
-        <option value="Himalayan">Himalayan</option>
-        <option value="Lain-lain">Lain-lain (Jika lain, nyatakan)</option>
-      </select><br><br>
-
-
-      <label for="cat-gender">Jantina:</label>
-      <select id="cat-gender" name="cat_gender" required>
-              <option value="Tiada">Sila Pilih</option>
-	 <option value="Jantan">Jantan</option>
+    <h3>Maklumat Kucing 🐱</h3>
+    <label>Nama Kucing: <input type="text" id="nama_kucing"></label>
+    <label>Umur: <input type="text" id="umur_kucing"></label>
+    <label>Jantina:
+      <select id="jantina_kucing">
+        <option value="Jantan">Jantan</option>
         <option value="Betina">Betina</option>
       </select>
-
-      <label for="vaccinated">Sudah divaksin?</label>
-      <select id="vaccinated" name="vaccinated" required>
-              <option value="Tiada">Sila Pilih</option>  
-	   <option value="Ya">Ya Sudah</option>
-        <option value="Belum">Belum lagi</option>
+    </label>
+    <label>Sudah divaksin?
+      <select id="vaksin_kucing">
+        <option value="Ya Sudah">Ya Sudah</option>
+        <option value="Belum lagi">Belum lagi</option>
       </select>
-
-      <label for="previous-treatment">Pernah buat rawatan di klinik lain?</label>
-      <select id="previous-treatment" name="previous_treatment" required>
-         <option value="Tiada">Sila Pilih</option>
- <option value="Tiada">Tiada</option>
-        <option value="Ada">Ya ada</option>
+    </label>
+    <label>Pernah buat rawatan di klinik lain?
+      <select id="rawatan_klinik">
+        <option value="Ya ada">Ya ada</option>
+        <option value="Tiada">Tiada</option>
       </select>
+    </label>
+    <label>Jika ya, berikan nama klinik: <input type="text" id="nama_klinik"></label>
 
-      <label for="previous-clinic">Jika ya, beri nama klinik:</label>
-      <input type="text" id="previous-clinic" name="previous_clinic" placeholder="Nama Klinik" />
+    <h3>Pilihan Pakej Tabungan 💰</h3>
+    <label><input type="radio" name="pakej" value="MeowCare Lite"> Pakej MeowCare Lite – RM10.00 / bulan (RM120.00 / tahun)</label>
+    <label><input type="radio" name="pakej" value="MeowCare Plus"> Pakej MeowCare Plus – RM30.00 / bulan (RM360.00 / tahun)</label>
+    <label><input type="radio" name="pakej" value="MeowCare Premium"> Pakej MeowCare Premium – RM100.00 / bulan (RM1,200.00 / tahun)</label>
 
-      <h2 style="color: #FFD700;">📌 Pilihan Pakej Tabungan 💰</h2>
-      <div class="radio-group">
-        <label><input type="radio" name="package" value="MeowCare Lite" required> Pakej MeowCare Lite – RM10.00 / bulan (RM120.00 / tahun) – Simpanan untuk rawatan asas dan kecemasan ringan. Sesuai untuk kucing yang sihat & sebagai persediaan awal.</label><br>
-        <label><input type="radio" name="package" value="MeowCare Plus" required> Pakej MeowCare Plus – RM30.00 / bulan (RM360.00 / tahun) – Perlindungan lebih baik untuk rawatan kecemasan dan penyakit kritikal. Sesuai untuk pemilik yang mahukan jaminan tambahan untuk si bulus.</label><br>
-        <label><input type="radio" name="package" value="MeowCare Premium" required> Pakej MeowCare Premium – RM100.00 / bulan (RM1,200.00 / tahun) – Simpanan terbaik untuk sebarang rawatan kecemasan & kritikal. Ideal bagi pemilik dengan lebih daripada satu kucing atau perancangan menambah kucing baharu.</label>
-      </div>
+    <h3>Terma & Syarat 📜</h3>
+    <p>1. Tabungan ini adalah pilihan peribadi dan bukan paksaan dari pihak klinik.</p>
+    <p>2. Dana tabungan hanya boleh digunakan untuk rawatan di Catoonies Veterinary Clinic.</p>
+    <p>3. Tidak boleh dipindah milik atau ditukar kepada wang tunai.</p>
+    <p>4. Sebarang perubahan atau penamatan pakej perlu dimaklumkan sekurang-kurangnya 30 hari sebelum tarikh pembaharuan.</p>
 
-      <h2 style="color: #FFD700;">📌 Terma & Syarat 📜</h2>
-      <p style="color: #fff;">1. Tabungan ini adalah pilihan peribadi dan bukan paksaan dari pihak klinik.</p>
-      <p style="color: #fff;">2. Dana tabungan hanya boleh digunakan untuk rawatan di Catoonies Veterinary Clinic.</p>
-      <p style="color: #fff;">3. Tidak boleh dipindah milik atau ditukar kepada wang tunai.</p>
-      <p style="color: #fff;">4. Sebarang perubahan atau penamatan pakej perlu dimaklumkan sekurang-kurangnya 30 hari sebelum tarikh pembaharuan.</p>
+    <h3>Pengesahan Pemilik ✍️</h3>
+    <label><input type="checkbox" id="persetujuan"> Maklumat di atas adalah benar dan saya bersetuju dengan semua syarat di atas.</label>
+    <label><input type="checkbox" id="tanpa_paksaan"> Ia adalah kehendak saya dan tiada paksaan daripada pihak lain dan klinik.</label>
+    
+    <button type="button" onclick="hantarKeWhatsApp()">Hantar ke WhatsApp</button>
+  </form>
 
-      <h2 style="color: #FFD700;">📌 Pengesahan Pemilik ✍️</h2>
-      <label><input type="checkbox" name="confirmation" value="true" required> Maklumat di atas adalah benar dan saya bersetuju dengan semua syarat di atas.</label><br>
-      <label><input type="checkbox" name="voluntary" value="true" required> Ia adalah kehendak saya dan tiada paksaan daripada pihak lain dan klinik.</label><br>
+  <script>
+    function hantarKeWhatsApp() {
+      let namaPemilik = document.getElementById("nama_pemilik").value;
+      let icPemilik = document.getElementById("ic_pemilik").value;
+      let telefonPemilik = document.getElementById("telefon_pemilik").value;
+      let alamatPemilik = document.getElementById("alamat_pemilik").value;
+      let emelPemilik = document.getElementById("emel_pemilik").value;
+      let namaKucing = document.getElementById("nama_kucing").value;
+      let umurKucing = document.getElementById("umur_kucing").value;
+      let jantinaKucing = document.getElementById("jantina_kucing").value;
+      let vaksinKucing = document.getElementById("vaksin_kucing").value;
+      let rawatanKlinik = document.getElementById("rawatan_klinik").value;
+      let namaKlinik = document.getElementById("nama_klinik").value;
+      let pakej = document.querySelector('input[name="pakej"]:checked').value;
+      let persetujuan = document.getElementById("persetujuan").checked;
+      let tanpaPaksaan = document.getElementById("tanpa_paksaan").checked;
+      
+      let mesej = `Borang Pendaftaran Tabungan Rawatan Kecemasan 🏥🐾\n\n` +
+                  `Nama Pemilik: ${namaPemilik}\n` +
+                  `No. IC: ${icPemilik}\n` +
+                  `No. Telefon: ${telefonPemilik}\n` +
+                  `Alamat: ${alamatPemilik}\n` +
+                  `Email: ${emelPemilik}\n\n` +
+                  `Nama Kucing: ${namaKucing}\n` +
+                  `Umur: ${umurKucing}\n` +
+                  `Jantina: ${jantinaKucing}\n` +
+                  `Sudah divaksin? ${vaksinKucing}\n` +
+                  `Pernah buat rawatan di klinik lain? ${rawatanKlinik}\n` +
+                  `Nama Klinik: ${namaKlinik}\n\n` +
+                  `Pakej Dipilih: ${pakej}\n\n` +
+                  `Saya bersetuju dengan semua syarat.`;
 
-      <div style="text-align: center;">
-        <button type="submit" class="cta-button">HANTAR BORANG</button>
-      </div>
-    </form>
-  </div>
+      let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
+      window.open(whatsappURL, "_blank");
+    }
+  </script>
 </body>
 </html>
