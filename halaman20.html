@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maklumat Susulan</title>
+  <title>Borang Maklumat Susulan</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@
       color: #fff;
       padding: 20px;
     }
-    label, input, select, textarea {
+    label, input, select {
       display: block;
       width: 100%;
       margin-bottom: 10px;
@@ -26,11 +26,23 @@
   </style>
 </head>
 <body>
-  <h2>Maklumat Susulan 📅🐾</h2>
+  <h2>Maklumat Susulan 📅</h2>
   <form id="whatsappForm">
-    <label>No. Invoice: <input type="text" id="no_invoice"></label>
-    <label>Tarikh Hadir: <input type="date" id="tarikh_hadir"></label>
-    <label>Masa Hadir: <input type="time" id="masa_hadir"></label>
+    <label>No. Invoice: <input type="text" id="no_invoice" required></label>
+    <label>Tarikh Hadir: <input type="date" id="tarikh_hadir" required onchange="kiraTarikhSusulan()"></label>
+    <label>Masa Hadir: 
+      <select id="masa_hadir" required onchange="setMasaSusulan()">
+        <option value="11:00">11:00 AM</option>
+        <option value="11:30">11:30 AM</option>
+        <option value="12:00">12:00 PM</option>
+        <option value="12:30">12:30 PM</option>
+        <option value="1:00">1:00 PM</option>
+        <option value="15:00">3:00 PM</option>
+        <option value="15:30">3:30 PM</option>
+        <option value="16:00">4:00 PM</option>
+        <option value="16:30">4:30 PM</option>
+      </select>
+    </label>
     <label>Jadual:
       <select id="jadual">
         <option value="Pemeriksaan">Pemeriksaan</option>
@@ -39,39 +51,42 @@
         <option value="Susulan">Susulan</option>
       </select>
     </label>
-    <label>Tarikh Susulan: <input type="date" id="tarikh_susulan"></label>
-    <label>Masa Susulan:
-      <select id="masa_susulan">
-        <option value="11:00 AM">11:00 AM</option>
-        <option value="11:30 AM">11:30 AM</option>
-        <option value="12:00 PM">12:00 PM</option>
-        <option value="12:30 PM">12:30 PM</option>
-        <option value="1:00 PM">1:00 PM</option>
-        <option value="3:00 PM">3:00 PM</option>
-        <option value="3:30 PM">3:30 PM</option>
-        <option value="4:00 PM">4:00 PM</option>
-        <option value="4:30 PM">4:30 PM</option>
-      </select>
-    </label>
-    <label>Nama Pemilik: <input type="text" id="nama_pemilik"></label>
-    <label>Nama Kucing: <input type="text" id="nama_kucing"></label>
-    <label>Umur: <input type="text" id="umur_kucing"></label>
+    <label>Tarikh Susulan: <input type="date" id="tarikh_susulan" readonly></label>
+    <label>Masa Susulan: <input type="text" id="masa_susulan" readonly></label>
+    <label>Pemilik: <input type="text" id="pemilik" required></label>
+    <label>Kucing: <input type="text" id="kucing" required></label>
+    <label>Umur: <input type="text" id="umur" required></label>
     <label>Jantina:
       <select id="jantina">
         <option value="Jantan">Jantan</option>
         <option value="Betina">Betina</option>
       </select>
     </label>
-    <label>Baka: <input type="text" id="baka_kucing"></label>
-    <label>Berat Kucing: <input type="text" id="berat_kucing"></label>
-    <label>Suhu: <input type="text" id="suhu"></label>
+    <label>Baka: <input type="text" id="baka" required></label>
+    <label>Berat Kucing: <input type="text" id="berat" required> kg</label>
+    <label>Suhu: <input type="text" id="suhu" required></label>
     
-    <p>Terima kasih kerana membuat temujanji! 🐾😺 Jangan lupa bawa Cik Meow untuk pemeriksaan ya! 😻💕 Pastikan tiba tepat pada waktunya~ Jika ada sebarang perubahan, boleh maklumkan kepada kami. 💕</p>
+    <p>Terima kasih kerana membuat temujanji! 🐾😺 Jangan lupa bawa Cik Meow untuk pemeriksaan ya! 😻💕<br>
+    Pastikan tiba tepat pada waktunya~ Jika ada sebarang perubahan, boleh maklumkan kepada kami. 💕</p>
     
     <button type="button" onclick="hantarKeWhatsApp()">Hantar ke WhatsApp</button>
   </form>
 
   <script>
+    function kiraTarikhSusulan() {
+      let tarikhHadir = document.getElementById("tarikh_hadir").value;
+      if (tarikhHadir) {
+        let tarikh = new Date(tarikhHadir);
+        tarikh.setDate(tarikh.getDate() + 7);
+        document.getElementById("tarikh_susulan").value = tarikh.toISOString().split('T')[0];
+      }
+    }
+    
+    function setMasaSusulan() {
+      let masaHadir = document.getElementById("masa_hadir").value;
+      document.getElementById("masa_susulan").value = masaHadir;
+    }
+    
     function hantarKeWhatsApp() {
       let noInvoice = document.getElementById("no_invoice").value;
       let tarikhHadir = document.getElementById("tarikh_hadir").value;
@@ -79,29 +94,29 @@
       let jadual = document.getElementById("jadual").value;
       let tarikhSusulan = document.getElementById("tarikh_susulan").value;
       let masaSusulan = document.getElementById("masa_susulan").value;
-      let namaPemilik = document.getElementById("nama_pemilik").value;
-      let namaKucing = document.getElementById("nama_kucing").value;
-      let umurKucing = document.getElementById("umur_kucing").value;
+      let pemilik = document.getElementById("pemilik").value;
+      let kucing = document.getElementById("kucing").value;
+      let umur = document.getElementById("umur").value;
       let jantina = document.getElementById("jantina").value;
-      let bakaKucing = document.getElementById("baka_kucing").value;
-      let beratKucing = document.getElementById("berat_kucing").value;
+      let baka = document.getElementById("baka").value;
+      let berat = document.getElementById("berat").value;
       let suhu = document.getElementById("suhu").value;
       
-      let mesej = `Maklumat Susulan 📅🐾\n\n` +
-                  `No. Invoice: ${noInvoice}\n` +
-                  `Tarikh Hadir: ${tarikhHadir}\n` +
-                  `Masa Hadir: ${masaHadir}\n` +
-                  `Jadual: ${jadual}\n` +
-                  `Tarikh Susulan: ${tarikhSusulan}\n` +
-                  `Masa Susulan: ${masaSusulan}\n` +
-                  `Nama Pemilik: ${namaPemilik}\n` +
-                  `Nama Kucing: ${namaKucing}\n` +
-                  `Umur: ${umurKucing}\n` +
+      let mesej = `MAKLUMAT SUSULAN\n\n` +
+                  `📅 No. Invoice: ${noInvoice}\n` +
+                  `📅 Tarikh Hadir: ${tarikhHadir}\n` +
+                  `⏰ Masa Hadir: ${masaHadir}\n` +
+                  `🔹 Jadual: ${jadual}\n` +
+                  `📅 Tarikh Susulan: ${tarikhSusulan}\n` +
+                  `⏰ Masa Susulan: ${masaSusulan}\n\n` +
+                  `👩 Pemilik: ${pemilik}\n` +
+                  `🐱 Kucing: ${kucing}\n` +
+                  `📌 Umur: ${umur}\n` +
                   `Jantina: ${jantina}\n` +
-                  `Baka: ${bakaKucing}\n` +
-                  `Berat Kucing: ${beratKucing} kg\n` +
-                  `Suhu: ${suhu}\n\n` +
-                  `Terima kasih kerana membuat temujanji! 🐾😺 Jangan lupa bawa Cik Meow untuk pemeriksaan ya! 😻💕 Pastikan tiba tepat pada waktunya~ Jika ada sebarang perubahan, boleh maklumkan kepada kami. 💕`;
+                  `🐾 Baka: ${baka}\n` +
+                  `⚖️ Berat Kucing: ${berat} kg\n` +
+                  `🌡️ Suhu: ${suhu}\n\n` +
+                  `Terima kasih kerana membuat temujanji! 🐾😺 Jangan lupa bawa Cik Meow untuk pemeriksaan ya! 😻💕`;
       
       let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
       window.open(whatsappURL, "_blank");
