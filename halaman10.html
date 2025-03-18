@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borang Pelanggan Tetap</title>
+  <title>Borang Pendaftaran Pelanggan Tetap</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -26,19 +26,26 @@
   </style>
 </head>
 <body>
-  <h2>Borang Pelanggan Tetap 🐾</h2>
+  <h2>Borang Pendaftaran Pelanggan Tetap</h2>
   <form id="whatsappForm">
-    <h3>Maklumat Pemilik</h3>
+    <h3>MAKLUMAT PEMILIK</h3>
     <label>Nama Pemilik: <input type="text" id="nama_pemilik"></label>
     <label>No. Kad Pengenalan: <input type="text" id="ic_pemilik"></label>
     <label>Alamat: <textarea id="alamat_pemilik"></textarea></label>
     <label>No. Telefon: <input type="text" id="telefon_pemilik"></label>
     <label>Emel: <input type="email" id="emel_pemilik"></label>
 
-    <h3>Maklumat Kucing 🐱</h3>
+    <h3>MAKLUMAT KUCING 🐱</h3>
     <label>Nama Kucing: <input type="text" id="nama_kucing"></label>
     <label>Umur: <input type="text" id="umur_kucing"></label>
-    <label>Baka: <input type="text" id="baka_kucing"></label>
+    <label>Baka:
+      <select id="baka_kucing">
+        <option value="Kampung">Kampung</option>
+        <option value="Tempatan">Tempatan</option>
+        <option value="Lain">Lain (Nyatakan di bawah)</option>
+      </select>
+    </label>
+    <label>Nyatakan baka: <input type="text" id="nyatakan_baka"></label>
     <label>Berat: <input type="text" id="berat_kucing"></label>
     <label>Status Vaksin:
       <select id="vaksin_kucing">
@@ -48,19 +55,11 @@
       </select>
     </label>
 
-    <h3>Pelanggan Tetap Catoonies  🗓️</h3>
-    <label>Tarikh Pendafataran <input type="date" id="tarikh_pendaftaran"></label>
-    <label>Setuju/ tidak setuju: 
-      <select id="Pelanggan Tetap">
-        <option value="Sila Pilih">Sila Pilih</option>
-        <option value="Ya saya setuju">Saya setuju dan faham terma & syarat </option>
-        <option value="Tidak setuju">Saya Tidak setuju</option>
-        
-      </select>
-    </label>
-
     <h3>Persetujuan</h3>
-    <p>Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
+    <label>
+      <input type="checkbox" id="persetujuan" required>
+      Saya setuju dengan semua terma dan syarat ditetapkan oleh Catoonies Veterinary Clinic. Ia adalah kehendak saya sendiri dan bukan paksaan daripada pihak klinik.
+    </label>
     
     <button type="button" onclick="hantarKeWhatsApp()">Hantar ke WhatsApp</button>
   </form>
@@ -75,13 +74,12 @@
       let namaKucing = document.getElementById("nama_kucing").value;
       let umurKucing = document.getElementById("umur_kucing").value;
       let bakaKucing = document.getElementById("baka_kucing").value;
+      let nyatakanBaka = document.getElementById("nyatakan_baka").value;
       let beratKucing = document.getElementById("berat_kucing").value;
       let vaksinKucing = document.getElementById("vaksin_kucing").value;
-      let tarikhTemujanji = document.getElementById("tarikh_temujanji").value;
-      let tujuanPemeriksaan = document.getElementById("tujuan_pemeriksaan").value;
-      let gejala = document.getElementById("gejala").value;
+      let persetujuan = document.getElementById("persetujuan").checked ? "Saya setuju dengan semua terma dan syarat ditetapkan oleh Catoonies Veterinary Clinic. Ia adalah kehendak saya sendiri dan bukan paksaan daripada pihak klinik." : "";
 
-      let mesej = `Borang Tempahan & Persetujuan Rawatan 🐾\n\n` +
+      let mesej = `Borang Pendaftaran Pelanggan Tetap\n\n` +
                   `Nama Pemilik: ${namaPemilik}\n` +
                   `No. Kad Pengenalan: ${icPemilik}\n` +
                   `Alamat: ${alamatPemilik}\n` +
@@ -89,13 +87,10 @@
                   `Emel: ${emelPemilik}\n\n` +
                   `Nama Kucing: ${namaKucing}\n` +
                   `Umur: ${umurKucing}\n` +
-                  `Baka: ${bakaKucing}\n` +
+                  `Baka: ${bakaKucing} ${nyatakanBaka}\n` +
                   `Berat: ${beratKucing}\n` +
                   `Status Vaksin: ${vaksinKucing}\n\n` +
-                  `Tarikh Temujanji: ${tarikhTemujanji}\n` +
-                  `Tujuan Pemeriksaan: ${tujuanPemeriksaan}\n` +
-                  `Gejala: ${gejala}\n\n` +
-                  `Saya bersetuju terma & syarat untuk menjadi Pelanggan Tetap Catoonies Vet Clinic.`;
+                  `${persetujuan}`;
 
       let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
       window.open(whatsappURL, "_blank");
