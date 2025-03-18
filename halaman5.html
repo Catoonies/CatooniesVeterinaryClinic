@@ -4,99 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Borang Tempahan & Persetujuan Rawatan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Poppins', sans-serif; background-color: #000; color: #fff; margin: 0; padding: 20px; }
-    header, footer { text-align: center; padding: 20px; background-color: #000; color: #FFD700; }
-    .container { max-width: 600px; margin: auto; padding: 20px; background: #222; border-radius: 10px; }
-    label { display: block; margin: 10px 0 5px; }
-    input, textarea, select { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: none; }
-    button { width: 100%; padding: 10px; background-color: #FFD700; color: #000; border: none; cursor: pointer; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+    }
+    label, input, select, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #FFD700;
+      color: #000;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Borang Tempahan & Persetujuan Rawatan 🐾</h1>
-  </header>
-  <div class="container">
-    <form id="whatsappForm">
-      <h2>Maklumat Pemilik</h2>
-      <label>Nama Pemilik:</label>
-      <input type="text" id="namaPemilik" required>
-      <label>No. Kad Pengenalan:</label>
-      <input type="text" id="icPemilik" required>
-      <label>Alamat:</label>
-      <textarea id="alamatPemilik" required></textarea>
-      <label>No. Telefon:</label>
-      <input type="text" id="telefonPemilik" required>
-      <label>Emel:</label>
-      <input type="email" id="emelPemilik" required>
-      
-      <h2>Maklumat Kucing 🐱</h2>
-      <label>Nama Kucing:</label>
-      <input type="text" id="namaKucing" required>
-      <label>Umur:</label>
-      <input type="text" id="umurKucing" required>
-      <label>Jenis Baka:</label>
-      <select id="jenisBaka">
-        <option value="Kampung">Kampung</option>
-        <option value="Tempatan">Tempatan</option>
-      </select>
-      <label>Nyatakan Baka:</label>
-      <input type="text" id="nyatakanBaka">
-      <label>Berat:</label>
-      <input type="text" id="beratKucing" required>
-      <label>Status Vaksin:</label>
-      <select id="statusVaksin">
+  <h2>Borang Tempahan & Persetujuan Rawatan 🐾</h2>
+  <form id="whatsappForm">
+    <h3>Maklumat Pemilik</h3>
+    <label>Nama Pemilik: <input type="text" id="nama_pemilik"></label>
+    <label>No. Kad Pengenalan: <input type="text" id="ic_pemilik"></label>
+    <label>Alamat: <textarea id="alamat_pemilik"></textarea></label>
+    <label>No. Telefon: <input type="text" id="telefon_pemilik"></label>
+    <label>Emel: <input type="email" id="emel_pemilik"></label>
+
+    <h3>Maklumat Kucing 🐱</h3>
+    <label>Nama Kucing: <input type="text" id="nama_kucing"></label>
+    <label>Umur: <input type="text" id="umur_kucing"></label>
+    <label>Baka: <input type="text" id="baka_kucing"></label>
+    <label>Berat: <input type="text" id="berat_kucing"></label>
+    <label>Status Vaksin:
+      <select id="vaksin_kucing">
         <option value="Tiada Vaksin">Tiada Vaksin</option>
         <option value="Vaksin Booster">Vaksin Booster</option>
         <option value="Vaksin Tahunan">Vaksin Tahunan</option>
       </select>
-      
-      <h2>Temujanji & Rawatan 🗓️</h2>
-      <label>Tarikh Temujanji:</label>
-      <input type="date" id="tarikhTemujanji" required>
-      <label>Tujuan Pemeriksaan:</label>
-      <select id="tujuanPemeriksaan">
+    </label>
+
+    <h3>Temujanji & Rawatan 🗓️</h3>
+    <label>Tarikh Temujanji: <input type="date" id="tarikh_temujanji"></label>
+    <label>Tujuan Pemeriksaan:
+      <select id="tujuan_pemeriksaan">
         <option value="Rawatan">Rawatan</option>
         <option value="Vaksin">Vaksin</option>
         <option value="Grooming">Grooming</option>
         <option value="Boarding">Boarding</option>
         <option value="Sakit">Sakit</option>
       </select>
-      <label>Nyatakan Gejala:</label>
-      <textarea id="gejala"></textarea>
-      
-      <h2>Persetujuan</h2>
-      <p>Saya bersetuju untuk meneruskan rawatan/pemandulan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur seperti yang dinasihatkan oleh pihak klinik. 🐾</p>
-      
-      <button type="button" onclick="sendToWhatsApp()">Hantar ke WhatsApp</button>
-    </form>
-  </div>
-  
+    </label>
+    <label>Gejala: <textarea id="gejala"></textarea></label>
+
+    <h3>Persetujuan</h3>
+    <p>Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
+    
+    <button type="button" onclick="hantarKeWhatsApp()">Hantar ke WhatsApp</button>
+  </form>
+
   <script>
-    function sendToWhatsApp() {
-      var phoneNumber = "60182624047";
-      var message = "*Borang Tempahan & Persetujuan Rawatan*%0A" +
-        "Nama Pemilik: " + document.getElementById("namaPemilik").value + "%0A" +
-        "No. Kad Pengenalan: " + document.getElementById("icPemilik").value + "%0A" +
-        "Alamat: " + document.getElementById("alamatPemilik").value + "%0A" +
-        "No. Telefon: " + document.getElementById("telefonPemilik").value + "%0A" +
-        "Emel: " + document.getElementById("emelPemilik").value + "%0A%0A" +
-        "*Maklumat Kucing*%0A" +
-        "Nama: " + document.getElementById("namaKucing").value + "%0A" +
-        "Umur: " + document.getElementById("umurKucing").value + "%0A" +
-        "Jenis Baka: " + document.getElementById("jenisBaka").value + "%0A" +
-        "Nyatakan Baka: " + document.getElementById("nyatakanBaka").value + "%0A" +
-        "Berat: " + document.getElementById("beratKucing").value + "%0A" +
-        "Status Vaksin: " + document.getElementById("statusVaksin").value + "%0A%0A" +
-        "*Temujanji & Rawatan*%0A" +
-        "Tarikh: " + document.getElementById("tarikhTemujanji").value + "%0A" +
-        "Tujuan: " + document.getElementById("tujuanPemeriksaan").value + "%0A" +
-        "Gejala: " + document.getElementById("gejala").value;
-      
-      var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-      window.open(whatsappURL, '_blank');
+    function hantarKeWhatsApp() {
+      let namaPemilik = document.getElementById("nama_pemilik").value;
+      let icPemilik = document.getElementById("ic_pemilik").value;
+      let alamatPemilik = document.getElementById("alamat_pemilik").value;
+      let telefonPemilik = document.getElementById("telefon_pemilik").value;
+      let emelPemilik = document.getElementById("emel_pemilik").value;
+      let namaKucing = document.getElementById("nama_kucing").value;
+      let umurKucing = document.getElementById("umur_kucing").value;
+      let bakaKucing = document.getElementById("baka_kucing").value;
+      let beratKucing = document.getElementById("berat_kucing").value;
+      let vaksinKucing = document.getElementById("vaksin_kucing").value;
+      let tarikhTemujanji = document.getElementById("tarikh_temujanji").value;
+      let tujuanPemeriksaan = document.getElementById("tujuan_pemeriksaan").value;
+      let gejala = document.getElementById("gejala").value;
+
+      let mesej = `Borang Tempahan & Persetujuan Rawatan 🐾\n\n` +
+                  `Nama Pemilik: ${namaPemilik}\n` +
+                  `No. Kad Pengenalan: ${icPemilik}\n` +
+                  `Alamat: ${alamatPemilik}\n` +
+                  `No. Telefon: ${telefonPemilik}\n` +
+                  `Emel: ${emelPemilik}\n\n` +
+                  `Nama Kucing: ${namaKucing}\n` +
+                  `Umur: ${umurKucing}\n` +
+                  `Baka: ${bakaKucing}\n` +
+                  `Berat: ${beratKucing}\n` +
+                  `Status Vaksin: ${vaksinKucing}\n\n` +
+                  `Tarikh Temujanji: ${tarikhTemujanji}\n` +
+                  `Tujuan Pemeriksaan: ${tujuanPemeriksaan}\n` +
+                  `Gejala: ${gejala}\n\n` +
+                  `Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.`;
+
+      let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
+      window.open(whatsappURL, "_blank");
     }
   </script>
 </body>
