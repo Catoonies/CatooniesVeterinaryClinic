@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ - Catoonies Veterinary Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #FFD700;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .accordion {
+      background-color: #222;
+      color: #FFD700;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.3s;
+      font-size: 16px;
+      border-bottom: 1px solid #444;
+    }
+
+    .active, .accordion:hover {
+      background-color: #333;
+    }
+
+    .panel {
+      padding: 0 15px 15px 15px;
+      background-color: #111;
+      display: none;
+      overflow: hidden;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .cta-button {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      padding: 12px 20px;
+      background-color: #FFD700;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+      display: block;
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    footer {
+      font-family: 'Merriweather', serif;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Soalan Lazim (FAQ)</h1>
+  <p>Jawapan kepada persoalan umum tentang kesihatan dan penjagaan kucing anda. 🐾</p>
+</header>
+
+<div class="container">
+  <!-- Accordion Items -->
+  <button class="accordion">1. Kucing saya tak mahu makan, kenapa ya?</button>
+  <div class="panel">Mungkin sakit, stres, atau perubahan makanan. Jika lebih 24 jam, sila bawa ke klinik.</div>
+
+  <button class="accordion">2. Perlu ke saya mandulkan kucing saya? Bila masa terbaik?</button>
+  <div class="panel">Ya, untuk kesihatan dan elak pembiakan. Umur terbaik: 5–6 bulan.</div>
+
+  <button class="accordion">3. Berapa kerap kucing perlu dimandikan?</button>
+  <div class="panel">Sebulan sekali atau bila kotor. Guna syampu khas kucing sahaja.</div>
+
+  <button class="accordion">4. Bila masa sesuai untuk vaksinasi kucing?</button>
+  <div class="panel">Anak kucing: 6–8 minggu. Dewasa: setiap tahun.</div>
+
+  <button class="accordion">5. Kucing saya cirit-birit / muntah — patut risau tak?</button>
+  <div class="panel">Jika lebih 24 jam atau ada darah, segera ke klinik. Boleh jadi jangkitan atau keracunan.</div>
+
+  <button class="accordion">6. Boleh ke bagi ubat manusia pada kucing?</button>
+  <div class="panel">Tidak boleh! Ubat manusia boleh membahayakan nyawa kucing.</div>
+
+  <button class="accordion">7. Apa makanan yang tak sesuai untuk kucing?</button>
+  <div class="panel">Elak beri: coklat, bawang, anggur, susu lembu, tulang kecil, makanan anjing.</div>
+
+  <button class="accordion">8. Kenapa kucing saya selalu menggaru? Ada kutu ke?</button>
+  <div class="panel">Ya, kemungkinan kutu atau masalah kulit. Rawatan antiparasit disediakan.</div>
+
+  <button class="accordion">9. Berapa lama kucing boleh berpuasa sebelum rawatan?</button>
+  <div class="panel">6–8 jam sebelum bius atau pembedahan. Rujuk vet anda.</div>
+
+  <button class="accordion">10. Macam mana nak tahu kucing saya sakit?</button>
+  <div class="panel">Tanda-tanda: murung, tak makan, sembunyi, perubahan tingkah laku atau bulu kasar.</div>
+
+  <button class="accordion">11. Perlu ke bawa kucing untuk pemeriksaan walaupun sihat?</button>
+  <div class="panel">Ya, pemeriksaan tahunan penting untuk kesihatan dan vaksinasi.</div>
+
+  <button class="accordion">12. Kucing saya asyik bernafas laju — normal ke tu?</button>
+  <div class="panel">Jika ada tanda lain seperti lesu, bawa segera ke vet. Ia mungkin kecemasan.</div>
+
+  <button class="accordion">13. Boleh tak saya campur makanan basah dan kering?</button>
+  <div class="panel">Boleh, asalkan seimbang dan sesuai untuk kucing anda.</div>
+
+  <button class="accordion">14. Berapa kos rawatan untuk vaksin / mandul / penyakit biasa?</button>
+  <div class="panel">Sila rujuk <a href="halaman8.html" style="color:#FFD700;">SENARAI HARGA</a> kami untuk maklumat lanjut.</div>
+
+  <button class="accordion">15. Apa patut saya buat kalau kucing saya hilang selera makan tiba-tiba?</button>
+  <div class="panel">Pastikan bukan disebabkan stres atau makanan baru. Jika berlarutan, jumpa vet.</div>
+
+  <a href="index.html" class="cta-button">KEMBALI KE HALAMAN UTAMA</a>
+</div>
+
+<footer>
+  <p>&copy; 2025 Catoonies Veterinary Clinic. Semua Hak Cipta Terpelihara.</p>
+</footer>
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
