@@ -7,8 +7,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
+      background-color: #fff;
+      color: #000;
       padding: 20px;
     }
     label, input, select, textarea {
@@ -40,9 +40,8 @@
     <label>Umur: <input type="text" id="umur_kucing"></label>
     <label>Baka:
       <select id="baka_kucing">
-       
-	 <option value="Sila Pilih">Sila Pilih</option> 
-	 <option value="Kampung">Kampung</option>
+        <option value="Sila Pilih">Sila Pilih</option> 
+        <option value="Kampung">Kampung</option>
         <option value="Berbaka">Berbaka</option>
         <option value="Lain">Lain (Nyatakan di bawah)</option>
       </select>
@@ -51,8 +50,8 @@
     <label>Berat: <input type="text" id="berat_kucing"></label>
     <label>Status Vaksin:
       <select id="vaksin_kucing">
-   <option value="Sila Pilih">Sila Pilih</option>    
-	 <option value="Tiada Vaksin">Tiada Vaksin</option>
+        <option value="Sila Pilih">Sila Pilih</option>    
+        <option value="Tiada Vaksin">Tiada Vaksin</option>
         <option value="Vaksin Booster">Vaksin Booster</option>
         <option value="Vaksin Tahunan">Vaksin Tahunan</option>
       </select>
@@ -80,7 +79,9 @@
       let nyatakanBaka = document.getElementById("nyatakan_baka").value;
       let beratKucing = document.getElementById("berat_kucing").value;
       let vaksinKucing = document.getElementById("vaksin_kucing").value;
-      let persetujuan = document.getElementById("persetujuan").checked ? "Saya setuju dengan semua terma dan syarat ditetapkan oleh Catoonies Veterinary Clinic. Ia adalah kehendak saya sendiri dan bukan paksaan daripada pihak klinik." : "";
+      let persetujuan = document.getElementById("persetujuan").checked 
+        ? "Saya setuju dengan semua terma dan syarat ditetapkan oleh Catoonies Veterinary Clinic. Ia adalah kehendak saya sendiri dan bukan paksaan daripada pihak klinik." 
+        : "";
 
       let mesej = `Borang Pendaftaran Pelanggan Tetap\n\n` +
                   `Nama Pemilik: ${namaPemilik}\n` +
