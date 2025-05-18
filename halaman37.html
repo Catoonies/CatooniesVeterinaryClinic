@@ -88,7 +88,201 @@
       <label><input type="radio" name="q5" value="1"> Ya</label>
       <label><input type="radio" name="q5" value="0"> Tidak</label>
     </div>
-    <div class="saringan-item">
+    <div class="saringan-item"><!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borang Tempahan & Persetujuan Rawatan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      padding: 20px;
+    }
+    label, input, select, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .saringan-item {
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #FFD700;
+      color: #000;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .warning {
+      color: red;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Borang Tempahan & Persetujuan Rawatan 🐾</h2>
+  <form id="whatsappForm">
+    <h3>Maklumat Pemilik</h3>
+    <label>Nama Pemilik: <input type="text" id="nama_pemilik"></label>
+    <label>No. Kad Pengenalan: <input type="text" id="ic_pemilik"></label>
+    <label>Alamat: <textarea id="alamat_pemilik"></textarea></label>
+    <label>No. Telefon: <input type="text" id="telefon_pemilik"></label>
+    <label>Emel: <input type="email" id="emel_pemilik"></label>
+
+    <h3>Maklumat Kucing 🐱</h3>
+    <label>Nama Kucing: <input type="text" id="nama_kucing"></label>
+    <label>Umur: <input type="text" id="umur_kucing"></label>
+    <label>Baka: <input type="text" id="baka_kucing"></label>
+    <label>Berat: <input type="text" id="berat_kucing"></label>
+    <label>Status Vaksin:
+      <select id="vaksin_kucing">
+        <option value="Sila Pilih">Sila Pilih</option>
+        <option value="Tiada Vaksin">Tiada Vaksin</option>
+        <option value="Vaksin Booster">Vaksin Booster</option>
+        <option value="Vaksin Tahunan">Vaksin Tahunan</option>
+      </select>
+    </label>
+
+    <h3>Saringan Kesihatan 🩺</h3>
+
+    <div class="saringan-item">1. Kucing aktif dan bertenaga?
+      <label><input type="radio" name="q1" value="1"> Ya</label>
+      <label><input type="radio" name="q1" value="0"> Tidak</label>
+    </div>
+    <div class="saringan-item">2. Tiada cirit-birit atau muntah dalam 3 hari lepas?
+      <label><input type="radio" name="q2" value="1"> Ya</label>
+      <label><input type="radio" name="q2" value="0"> Tidak</label>
+    </div>
+    <div class="saringan-item">3. Tiada luka, demam, atau jangkitan?
+      <label><input type="radio" name="q3" value="1"> Ya</label>
+      <label><input type="radio" name="q3" value="0"> Tidak</label>
+    </div>
+    <div class="saringan-item">4. Selera makan normal?
+      <label><input type="radio" name="q4" value="1"> Ya</label>
+      <label><input type="radio" name="q4" value="0"> Tidak</label>
+    </div>
+    <div class="saringan-item">5. Tiada rawatan antibiotik dalam 7 hari terakhir?
+      <label><input type="radio" name="q5" value="1"> Ya</label>
+      <label><input type="radio" name="q5" value="0"> Tidak</label>
+    </div>
+    <div class="saringan-item">6. Boleh sangkarkan kucing selepas pemeriksaan/pemandulan?
+      <label><input type="radio" name="q6" value="1"> Ya</label>
+      <label><input type="radio" name="q6" value="0"> Tidak</label>
+    </div>
+    <div class="saringan-item">7. Ada sangkar kecil (1 ekor kucing dewasa sahaja) di rumah?
+      <label><input type="radio" name="q7" value="1"> Ya</label>
+      <label><input type="radio" name="q7" value="0"> Tidak</label>
+    </div>
+    <div class="saringan-item">8. Boleh hadir susulan selepas seminggu pemeriksaan/pemandulan?
+      <label><input type="radio" name="q8" value="1"> Ya</label>
+      <label><input type="radio" name="q8" value="0"> Tidak</label>
+    </div>
+    <div class="saringan-item">9. Boleh sangkarkan kucing 1–3 bulan selepas vaksinasi pertama?
+      <label><input type="radio" name="q9" value="1"> Ya</label>
+      <label><input type="radio" name="q9" value="0"> Tidak</label>
+    </div>
+    <div class="saringan-item">10. Pernah buat rawatan di klinik lain?
+      <label><input type="radio" name="q10" value="1"> Ya</label>
+      <label><input type="radio" name="q10" value="0"> Tidak</label>
+    </div>
+
+    <p><strong>Skor Saringan:</strong> <span id="skor">0</span>%</p>
+    <p class="warning" id="peringatan">Skor kurang dari 80%. Tidak sesuai untuk vaksinasi atau pemandulan.</p>
+
+    <h3>Temujanji & Rawatan 🗓️</h3>
+    <label>Tarikh Temujanji: <input type="date" id="tarikh_temujanji"></label>
+    <label>Tujuan Pemeriksaan:
+      <select id="tujuan_pemeriksaan">
+        <option value="Sila Pilih">Sila Pilih</option>
+        <option value="Rawatan">Rawatan</option>
+        <option value="Vaksin">Vaksin</option>
+        <option value="Grooming">Grooming</option>
+        <option value="Boarding">Boarding</option>
+        <option value="Sakit">Sakit</option>
+      </select>
+    </label>
+    <label>Gejala: <textarea id="gejala"></textarea></label>
+
+    <h3>Persetujuan</h3>
+    <p>Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
+    
+    <button type="button" onclick="hantarKeWhatsApp()">Hantar</button>
+  </form>
+
+  <script>
+    function kiraSkor() {
+      let jumlahSoalan = 10;
+      let markah = 0;
+
+      for (let i = 1; i <= jumlahSoalan; i++) {
+        let jawapan = document.querySelector(`input[name="q${i}"]:checked`);
+        if (jawapan) {
+          markah += parseInt(jawapan.value);
+        }
+      }
+
+      let peratus = Math.round((markah / jumlahSoalan) * 100);
+      document.getElementById("skor").textContent = peratus;
+
+      let peringatan = document.getElementById("peringatan");
+      peringatan.style.display = (peratus < 80) ? "block" : "none";
+
+      return peratus;
+    }
+
+    document.querySelectorAll('input[type=radio]').forEach(radio => {
+      radio.addEventListener('change', kiraSkor);
+    });
+
+    function hantarKeWhatsApp() {
+      let skorSaringan = kiraSkor();
+      if (skorSaringan < 80) {
+        alert("Skor saringan kurang dari 80%. Tidak boleh teruskan vaksinasi/pemandulan.");
+        return;
+      }
+
+      let namaPemilik = document.getElementById("nama_pemilik").value;
+      let icPemilik = document.getElementById("ic_pemilik").value;
+      let alamatPemilik = document.getElementById("alamat_pemilik").value;
+      let telefonPemilik = document.getElementById("telefon_pemilik").value;
+      let emelPemilik = document.getElementById("emel_pemilik").value;
+      let namaKucing = document.getElementById("nama_kucing").value;
+      let umurKucing = document.getElementById("umur_kucing").value;
+      let bakaKucing = document.getElementById("baka_kucing").value;
+      let beratKucing = document.getElementById("berat_kucing").value;
+      let vaksinKucing = document.getElementById("vaksin_kucing").value;
+      let tarikhTemujanji = document.getElementById("tarikh_temujanji").value;
+      let tujuanPemeriksaan = document.getElementById("tujuan_pemeriksaan").value;
+      let gejala = document.getElementById("gejala").value;
+
+      let mesej = `Borang Tempahan & Persetujuan Rawatan 🐾\n\n` +
+                  `Nama Pemilik: ${namaPemilik}\n` +
+                  `No. Kad Pengenalan: ${icPemilik}\n` +
+                  `Alamat: ${alamatPemilik}\n` +
+                  `No. Telefon: ${telefonPemilik}\n` +
+                  `Emel: ${emelPemilik}\n\n` +
+                  `Nama Kucing: ${namaKucing}\n` +
+                  `Umur: ${umurKucing}\n` +
+                  `Baka: ${bakaKucing}\n` +
+                  `Berat: ${beratKucing}\n` +
+                  `Status Vaksin: ${vaksinKucing}\n\n` +
+                  `Skor Saringan Kesihatan: ${skorSaringan}%\n\n` +
+                  `Tarikh Temujanji: ${tarikhTemujanji}\n` +
+                  `Tujuan Pemeriksaan: ${tujuanPemeriksaan}\n` +
+                  `Gejala: ${gejala}\n\n` +
+                  `Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.`;
+
+      let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
+      window.open(whatsappURL, "_blank");
+    }
+  </script>
+</body>
+</html>
+
      7. Ada sangkar kecil (1 ekor kucing dewasa sahaja) di rumah ?
       <label><input type="radio" name="q5" value="1"> Ya</label>
       <label><input type="radio" name="q5" value="0"> Tidak</label>
