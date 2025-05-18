@@ -1,164 +1,102 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8">
-  <title>Borang Saringan Vaksinasi Kucing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Saringan Vaksinasi Kucing</title>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-      padding: 20px;
-    }
-
-    h2 {
-      color: #333;
-      text-align: center;
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    .question {
-      margin-top: 10px;
-    }
-
-    select, input[type="text"] {
-      padding: 8px;
-      width: 100%;
-      border-radius: 5px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      background-color: #f9f9f9;
-    }
-
-    button {
-      background-color: #FFD700;
-      color: #000;
-      padding: 12px 20px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      width: 100%;
-    }
-
-    .result {
-      margin-top: 30px;
-      padding: 15px;
-      border-radius: 5px;
-      font-size: 18px;
-      text-align: center;
-    }
-
-    .pass {
-      background-color: #d4edda;
-      color: #155724;
-      border: 1px solid #c3e6cb;
-    }
-
-    .fail {
-      background-color: #f8d7da;
-      color: #721c24;
-      border: 1px solid #f5c6cb;
-    }
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    label { display: block; margin-top: 10px; }
+    .question { margin-top: 20px; }
+    .hidden { display: none; color: green; font-weight: bold; }
   </style>
 </head>
 <body>
 
-  <h2>Borang Saringan Pra-Vaksinasi Kucing</h2>
+  <h2>Borang Saringan Vaksinasi Kucing</h2>
 
   <form id="vaccineForm">
-    <div class="question"><label>Nama Penuh:</label>
-      <input type="text" name="nama" required>
+    <label>Nama Penuh:
+      <input type="text" id="nama" required>
+    </label>
+    <label>No. IC:
+      <input type="text" id="ic" required>
+    </label>
+    <label>Alamat:
+      <input type="text" id="alamat" required>
+    </label>
+    <label>No. Telefon:
+      <input type="text" id="notel" required>
+    </label>
+
+    <div class="question">
+      <p>1. Adakah kucing anda sihat secara fizikal?</p>
+      <label><input type="radio" name="q1" value="1" required> Ya</label>
+      <label><input type="radio" name="q1" value="0"> Tidak</label>
     </div>
 
-    <div class="question"><label>No Kad Pengenalan:</label>
-      <input type="text" name="ic" required>
+    <div class="question">
+      <p>2. Adakah kucing anda makan dan minum seperti biasa?</p>
+      <label><input type="radio" name="q2" value="1" required> Ya</label>
+      <label><input type="radio" name="q2" value="0"> Tidak</label>
     </div>
 
-    <div class="question"><label>1. Adakah kucing anda sihat hari ini?</label>
-      <select name="q1"><option value="1">Ya</option><option value="0">Tidak</option></select></div>
+    <div class="question">
+      <p>3. Tiada tanda-tanda penyakit seperti cirit-birit, muntah atau bersin berterusan?</p>
+      <label><input type="radio" name="q3" value="1" required> Ya</label>
+      <label><input type="radio" name="q3" value="0"> Tidak</label>
+    </div>
 
-    <div class="question"><label>2. Adakah kucing makan dan minum seperti biasa?</label>
-      <select name="q2"><option value="1">Ya</option><option value="0">Tidak</option></select></div>
+    <div class="question">
+      <p>4. Kucing anda tidak pernah divaksin dalam tempoh 1 bulan lepas?</p>
+      <label><input type="radio" name="q4" value="1" required> Ya</label>
+      <label><input type="radio" name="q4" value="0"> Tidak</label>
+    </div>
 
-    <div class="question"><label>3. Ada muntah atau cirit-birit minggu ini?</label>
-      <select name="q3"><option value="1">Tidak</option><option value="0">Ya</option></select></div>
+    <div class="question">
+      <p>5. Kucing anda bebas dari kutu dan hama?</p>
+      <label><input type="radio" name="q5" value="1" required> Ya</label>
+      <label><input type="radio" name="q5" value="0"> Tidak</label>
+    </div>
 
-    <div class="question"><label>4. Pernah alami alahan terhadap vaksin?</label>
-      <select name="q4"><option value="1">Tidak</option><option value="0">Ya</option></select></div>
-
-    <div class="question"><label>5. Kucing aktif dan tidak demam?</label>
-      <select name="q5"><option value="1">Ya</option><option value="0">Tidak</option></select></div>
-
-    <div class="question"><label>6. Tiada masalah pernafasan seperti batuk/bersin?</label>
-      <select name="q6"><option value="1">Ya</option><option value="0">Tidak</option></select></div>
-
-    <div class="question"><label>7. Tidak sedang mengambil ubat atau rawatan?</label>
-      <select name="q7"><option value="1">Ya</option><option value="0">Tidak</option></select></div>
-
-    <div class="question"><label>8. Ada rancang untuk boarding dalam 1-3 bulan akan datang?</label>
-      <select name="q8"><option value="0">Ya</option><option value="1">Tidak</option></select></div>
-
-    <div class="question"><label>9. Ada rancang untuk grooming dalam 1-3 bulan akan datang?</label>
-      <select name="q9"><option value="0">Ya</option><option value="1">Tidak</option></select></div>
-
-    <div class="question"><label>10. Ada rancang untuk mating dalam 1-3 bulan akan datang?</label>
-      <select name="q10"><option value="0">Ya</option><option value="1">Tidak</option></select></div>
-
-    <div class="question"><label>11. Berapa lama sudah jaga kucing ini?</label>
-      <select name="q11">
-        <option value="0">Kurang seminggu</option>
-        <option value="0.5">Kurang sebulan</option>
-        <option value="1">Lebih sebulan</option>
-      </select></div>
-
-    <button type="button" onclick="kiraDanHantar()">Semak & Hantar WhatsApp</button>
+    <br>
+    <button type="button" onclick="kiraSaringan()">Hantar</button>
   </form>
 
-  <div id="result" class="result"></div>
+  <p id="keputusan" class="hidden"></p>
 
   <script>
-    function kiraDanHantar() {
-      const form = document.getElementById("vaccineForm");
-      const data = new FormData(form);
-      let total = 0;
-      let mesej = "";
-      let nama = data.get("nama");
-      let ic = data.get("ic");
+    function kiraSaringan() {
+      const totalSoalan = 5;
+      let skor = 0;
 
-      if (!nama || !ic) {
-        alert("Sila isi nama dan no kad pengenalan.");
-        return;
+      for (let i = 1; i <= totalSoalan; i++) {
+        const jawapan = document.querySelector('input[name="q' + i + '"]:checked');
+        if (jawapan && jawapan.value === "1") {
+          skor++;
+        }
       }
 
-      for (let i = 1; i <= 11; i++) {
-        let val = parseFloat(data.get("q" + i));
-        total += val;
+      const peratus = Math.round((skor / totalSoalan) * 100);
+
+      const nama = document.getElementById("nama").value;
+      const ic = document.getElementById("ic").value;
+      const alamat = document.getElementById("alamat").value;
+      const notel = document.getElementById("notel").value;
+
+      const keputusan = document.getElementById("keputusan");
+
+      if (peratus >= 80) {
+        keputusan.textContent = `Layak untuk vaksinasi! Skor saringan: ${peratus}%`;
+        keputusan.classList.remove("hidden");
+
+        const mesej = `Saringan Vaksinasi Kucing%0A%0A✅ Layak Vaksinasi!%0A%0ANama: ${nama}%0ANo. IC: ${ic}%0AAlamat: ${alamat}%0ANo Tel: ${notel}%0ASkor Saringan: ${peratus}%`;
+        const noWhatsApp = "60123456789"; // GANTI dengan nombor WhatsApp klinik
+        const pautan = `https://wa.me/${noWhatsApp}?text=${mesej}`;
+        window.open(pautan, "_blank");
+      } else {
+        keputusan.textContent = `Tidak layak untuk vaksinasi buat masa ini. Skor saringan: ${peratus}%`;
+        keputusan.classList.remove("hidden");
       }
-
-      let markah = (total / 11) * 100;
-      let status = markah >= 80 ? "LULUS untuk vaksinasi" : "TIDAK LULUS - Sila rujuk vet";
-
-      mesej += `📋 *Saringan Vaksinasi Kucing*\n`;
-      mesej += `👤 Nama: ${nama}\n`;
-      mesej += `🆔 IC: ${ic}\n`;
-      mesej += `✅ Markah: ${Math.round(markah)}%\n`;
-      mesej += `📌 Status: ${status}\n`;
-
-      const resultDiv = document.getElementById("result");
-      resultDiv.className = markah >= 80 ? "result pass" : "result fail";
-      resultDiv.innerHTML = mesej.replace(/\n/g, "<br>");
-
-      const noWhatsapp = "60123456789"; // Gantikan dengan nombor sebenar anda
-      const url = `https://wa.me/${noWhatsapp}?text=${encodeURIComponent(mesej)}`;
-      window.open(url, "_blank");
     }
   </script>
 
