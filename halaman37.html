@@ -50,64 +50,82 @@
     </label>
 
     <h3>Saringan Sebelum Vaksinasi/Pemandulan ✅❌</h3>
-    <label>1. Kucing aktif & makan seperti biasa?
+    <label>1. Adakah kucing baru dibeli/diambil kurang 7 hari?
       <select class="saringan">
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
-    <label>2. Tiada selsema atau cirit-birit?
+    <label>2. Adakah kucing baru balik boarding/grooming?
       <select class="saringan">
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
-    <label>3. Berat badan stabil?
+    <label>3. Ada perancangan untuk boarding/grooming dalam masa 1-3 bulan?
       <select class="saringan">
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
-    <label>4. Tiada luka luar atau dalam mulut?
+    <label>4. Ada gejala penyakit (cirit, muntah, selsema, bersin, kurang aktif, kurang makan)?
+      <select class="saringan">
+        <option value="0">Ya</option>
+        <option value="1">Tidak</option>
+      </select>
+    </label>
+    <label>5. Ada kucing sakit/mati di rumah dalam 2 minggu sebelum?
+      <select class="saringan">
+        <option value="0">Ya</option>
+        <option value="1">Tidak</option>
+      </select>
+    </label>
+    <label>6. Kucing ada masalah mulut berbau dan kurang makan?
+      <select class="saringan">
+        <option value="0">Ya</option>
+        <option value="1">Tidak</option>
+      </select>
+    </label>
+    <label>7. Boleh hadir susulan selepas seminggu pemeriksaan?
       <select class="saringan">
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
-    <label>5. Tiada kutu/jangkitan kulit yang serius?
+    <label>8. Boleh sangkarkan kucing dalam jangka masa 1-3 bulan?
       <select class="saringan">
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
-    <label>6. Boleh sangkarkan kucing selepas pemeriksaan/pemandulan?
+    <label>9. Ada luka di kawasan badan kucing?
+      <select class="saringan">
+        <option value="0">Ya</option>
+        <option value="1">Tidak</option>
+      </select>
+    </label>
+    <label>10. Ada sangkar kecil (1 ekor kucing dewasa sahaja) di rumah?
       <select class="saringan">
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
-    <label>7. Ada sangkar kecil (1 ekor kucing dewasa sahaja) di rumah?
+    <label>11. Pernah buat rawatan di klinik lain?
       <select class="saringan">
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
-    <label>8. Boleh hadir susulan selepas seminggu pemeriksaan/pemandulan?
+    <label>12. Adakah kucing ini boleh disentuh oleh orang lain?
       <select class="saringan">
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
-    <label>9. Boleh sangkarkan kucing 1-3 bulan selepas vaksinasi pertama?
+    <label>13. Adakah kucing ini garang dan menyerang?
       <select class="saringan">
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>10. Pernah buat rawatan di klinik lain?
-      <select class="saringan">
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
+        <option value="0">Ya</option>
+        <option value="1">Tidak</option>
       </select>
     </label>
 
@@ -127,7 +145,7 @@
 
     <h3>Persetujuan</h3>
     <p>Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
-    
+
     <button type="button" onclick="hantarKeWhatsApp()">Hantar</button>
   </form>
 
@@ -135,18 +153,21 @@
     function hantarKeWhatsApp() {
       let saringan = document.querySelectorAll(".saringan");
       let soalanTeks = [
-        "1. Kucing aktif & makan seperti biasa?",
-        "2. Tiada selsema atau cirit-birit?",
-        "3. Berat badan stabil?",
-        "4. Tiada luka luar atau dalam mulut?",
-        "5. Tiada kutu/jangkitan kulit yang serius?",
-        "6. Boleh sangkarkan kucing selepas pemeriksaan/pemandulan?",
-        "7. Ada sangkar kecil di rumah?",
-        "8. Boleh hadir susulan selepas seminggu?",
-        "9. Boleh sangkarkan kucing 1-3 bulan selepas vaksinasi pertama?",
-        "10. Pernah buat rawatan di klinik lain?"
+        "1. Kucing baru dibeli/diambil kurang 7 hari",
+        "2. Kucing baru balik boarding/grooming",
+        "3. Ada perancangan untuk boarding/grooming dalam masa 1-3 bulan",
+        "4. Ada gejala penyakit (cirit, muntah, selsema, bersin, kurang aktif, kurang makan)",
+        "5. Ada kucing sakit/mati di rumah dalam 2 minggu sebelum",
+        "6. Kucing ada masalah mulut berbau dan kurang makan",
+        "7. Boleh hadir susulan selepas seminggu pemeriksaan",
+        "8. Boleh sangkarkan kucing dalam jangka masa 1-3 bulan",
+        "9. Ada luka di kawasan badan kucing",
+        "10. Ada sangkar kecil di rumah",
+        "11. Pernah buat rawatan di klinik lain",
+        "12. Kucing boleh disentuh oleh orang lain",
+        "13. Kucing ini garang dan menyerang"
       ];
-      
+
       let jumlahSoalan = saringan.length;
       let jumlahYa = 0;
       let sebabTidakLayak = [];
@@ -168,34 +189,20 @@
         ? "\n\nSebab tidak layak:\n- " + sebabTidakLayak.join("\n- ")
         : "";
 
-      let namaPemilik = document.getElementById("nama_pemilik").value;
-      let icPemilik = document.getElementById("ic_pemilik").value;
-      let alamatPemilik = document.getElementById("alamat_pemilik").value;
-      let telefonPemilik = document.getElementById("telefon_pemilik").value;
-      let emelPemilik = document.getElementById("emel_pemilik").value;
-      let namaKucing = document.getElementById("nama_kucing").value;
-      let umurKucing = document.getElementById("umur_kucing").value;
-      let bakaKucing = document.getElementById("baka_kucing").value;
-      let beratKucing = document.getElementById("berat_kucing").value;
-      let vaksinKucing = document.getElementById("vaksin_kucing").value;
-      let tarikhTemujanji = document.getElementById("tarikh_temujanji").value;
-      let tujuanPemeriksaan = document.getElementById("tujuan_pemeriksaan").value;
-      let gejala = document.getElementById("gejala").value;
-
       let mesej = `Borang Tempahan & Persetujuan Rawatan 🐾\n\n` +
-                  `Nama Pemilik: ${namaPemilik}\n` +
-                  `No. Kad Pengenalan: ${icPemilik}\n` +
-                  `Alamat: ${alamatPemilik}\n` +
-                  `No. Telefon: ${telefonPemilik}\n` +
-                  `Emel: ${emelPemilik}\n\n` +
-                  `Nama Kucing: ${namaKucing}\n` +
-                  `Umur: ${umurKucing}\n` +
-                  `Baka: ${bakaKucing}\n` +
-                  `Berat: ${beratKucing}\n` +
-                  `Status Vaksin: ${vaksinKucing}\n\n` +
-                  `Tarikh Temujanji: ${tarikhTemujanji}\n` +
-                  `Tujuan Pemeriksaan: ${tujuanPemeriksaan}\n` +
-                  `Gejala: ${gejala}\n\n` +
+                  `Nama Pemilik: ${document.getElementById("nama_pemilik").value}\n` +
+                  `No. Kad Pengenalan: ${document.getElementById("ic_pemilik").value}\n` +
+                  `Alamat: ${document.getElementById("alamat_pemilik").value}\n` +
+                  `No. Telefon: ${document.getElementById("telefon_pemilik").value}\n` +
+                  `Emel: ${document.getElementById("emel_pemilik").value}\n\n` +
+                  `Nama Kucing: ${document.getElementById("nama_kucing").value}\n` +
+                  `Umur: ${document.getElementById("umur_kucing").value}\n` +
+                  `Baka: ${document.getElementById("baka_kucing").value}\n` +
+                  `Berat: ${document.getElementById("berat_kucing").value}\n` +
+                  `Status Vaksin: ${document.getElementById("vaksin_kucing").value}\n\n` +
+                  `Tarikh Temujanji: ${document.getElementById("tarikh_temujanji").value}\n` +
+                  `Tujuan Pemeriksaan: ${document.getElementById("tujuan_pemeriksaan").value}\n` +
+                  `Gejala: ${document.getElementById("gejala").value}\n\n` +
                   `Skor Saringan: ${skorSaringan}%\n` +
                   `${statusKelayakan}${alasan}\n\n` +
                   `Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.`;
