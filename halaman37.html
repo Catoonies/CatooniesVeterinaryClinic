@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Borang Tempahan & Persetujuan Rawatan</title>
   <style>
     body {
@@ -49,73 +49,63 @@
       </select>
     </label>
 
-    <h3>Saringan Sebelum Vaksinasi/Pemandulan 🩺</h3>
+    <h3>Saringan Sebelum Vaksinasi/Pemandulan ✅❌</h3>
     <label>1. Kucing aktif & makan seperti biasa?
       <select class="saringan">
-        <option value="0">Sila Pilih</option>
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
     <label>2. Tiada selsema atau cirit-birit?
       <select class="saringan">
-         <option value="0">Sila Pilih</option>
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
     <label>3. Berat badan stabil?
       <select class="saringan">
-         <option value="0">Sila Pilih</option>
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
     <label>4. Tiada luka luar atau dalam mulut?
       <select class="saringan">
-         <option value="0">Sila Pilih</option>
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
     <label>5. Tiada kutu/jangkitan kulit yang serius?
       <select class="saringan">
-         <option value="0">Sila Pilih</option>
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
     <label>6. Boleh sangkarkan kucing selepas pemeriksaan/pemandulan?
       <select class="saringan">
-         <option value="0">Sila Pilih</option>
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
     <label>7. Ada sangkar kecil (1 ekor kucing dewasa sahaja) di rumah?
       <select class="saringan">
-         <option value="0">Sila Pilih</option>
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
     <label>8. Boleh hadir susulan selepas seminggu pemeriksaan/pemandulan?
       <select class="saringan">
-         <option value="0">Sila Pilih</option>
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
     <label>9. Boleh sangkarkan kucing 1-3 bulan selepas vaksinasi pertama?
       <select class="saringan">
-         <option value="0">Sila Pilih</option>
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
     </label>
     <label>10. Pernah buat rawatan di klinik lain?
       <select class="saringan">
-         <option value="0">Sila Pilih</option>
         <option value="1">Ya</option>
         <option value="0">Tidak</option>
       </select>
@@ -137,24 +127,46 @@
 
     <h3>Persetujuan</h3>
     <p>Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
-
+    
     <button type="button" onclick="hantarKeWhatsApp()">Hantar</button>
   </form>
 
   <script>
     function hantarKeWhatsApp() {
       let saringan = document.querySelectorAll(".saringan");
+      let soalanTeks = [
+        "1. Kucing aktif & makan seperti biasa?",
+        "2. Tiada selsema atau cirit-birit?",
+        "3. Berat badan stabil?",
+        "4. Tiada luka luar atau dalam mulut?",
+        "5. Tiada kutu/jangkitan kulit yang serius?",
+        "6. Boleh sangkarkan kucing selepas pemeriksaan/pemandulan?",
+        "7. Ada sangkar kecil di rumah?",
+        "8. Boleh hadir susulan selepas seminggu?",
+        "9. Boleh sangkarkan kucing 1-3 bulan selepas vaksinasi pertama?",
+        "10. Pernah buat rawatan di klinik lain?"
+      ];
+      
       let jumlahSoalan = saringan.length;
       let jumlahYa = 0;
+      let sebabTidakLayak = [];
 
-      saringan.forEach(item => {
-        if (item.value === "1") jumlahYa++;
+      saringan.forEach((item, index) => {
+        if (item.value === "1") {
+          jumlahYa++;
+        } else {
+          sebabTidakLayak.push(soalanTeks[index]);
+        }
       });
 
       let skorSaringan = Math.round((jumlahYa / jumlahSoalan) * 100);
       let statusKelayakan = (skorSaringan >= 80) 
         ? "✅ Layak untuk vaksinasi/pemandulan." 
-        : "❌ Tidak layak untuk vaksinasi/pemandulan (skor < 80%).";
+        : "❌ Tidak layak (skor < 80%).";
+
+      let alasan = (sebabTidakLayak.length > 0)
+        ? "\n\nSebab tidak layak:\n- " + sebabTidakLayak.join("\n- ")
+        : "";
 
       let namaPemilik = document.getElementById("nama_pemilik").value;
       let icPemilik = document.getElementById("ic_pemilik").value;
@@ -184,8 +196,8 @@
                   `Tarikh Temujanji: ${tarikhTemujanji}\n` +
                   `Tujuan Pemeriksaan: ${tujuanPemeriksaan}\n` +
                   `Gejala: ${gejala}\n\n` +
-                  `Skor Saringan Kesihatan: ${skorSaringan}%\n` +
-                  `${statusKelayakan}\n\n` +
+                  `Skor Saringan: ${skorSaringan}%\n` +
+                  `${statusKelayakan}${alasan}\n\n` +
                   `Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.`;
 
       let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
