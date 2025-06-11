@@ -3,123 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borang Tempahan & Persetujuan Rawatan</title>
+  <title>Halaman Utama - Catoonies Veterinary Clinic</title>
+  <!-- Google Fonts Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;700&family=Raleway:wght@400;600&family=Nunito:wght@400;600&family=Avenir:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* General Styles */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      color: #000;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #000;
+      color: #fff;
       padding: 20px;
+      text-align: center;
     }
-    label, input, select, textarea {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
+
+    h1, h2, h3 {
+      color: #FFD700; /* Gold color */
     }
-    button {
+
+    .clinic-description, .contact-info, .location-info, .services-list {
+      color: #fff;
+    }
+
+    .cta-button {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      padding: 10px 20px;
+      background-color: #FFD700; /* Gold color */
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 5px;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
       background-color: #FFD700;
       color: #000;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .services-list {
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+    }
+
+    footer {
+      font-family: 'Merriweather', serif;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .button-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    /* Specific styles for sections */
+    section {
+      padding: 20px;
+    }
+
+    .heading {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .language-selector {
+      text-align: right;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <h2>BORANG SARINGAN VAKSINASI / PEMANDULAN/ GROOMING / BOARDING 🐾</h2>
+  <section>
+    <h2 class="heading">SILA PILIH BAHASA KEGEMARAN MEOW PAWRENT !</h2>
+<section>
+    </p>
+    <a href="halaman32.html" class="cta-button">Bahasa Melayu</a>
+    <a href="halaman6.html" class="cta-button">English</a>
+    <a href="halaman33.html" class="cta-button">Chinese</a>
 
-  <label for="bahasa">Pilih Bahasa / Select Language / 选择语言:
-    <select id="bahasa" onchange="tukarBahasa()">
-      <option value="ms">Bahasa Melayu</option>
-      <option value="en">English</option>
-      <option value="zh">中文</option>
-    </select>
-  </label>
+  </section>
 
-  <form id="whatsappForm">
-    <div id="borang_kandungan">
-      <!-- Kandungan borang akan dimasukkan melalui JavaScript mengikut bahasa -->
-    </div>
-    <button type="button" onclick="hantarKeWhatsApp()">Hantar</button>
-  </form>
 
-  <script>
-    const kandunganBorang = {
-      ms: `
-        <h3>Maklumat Pemilik</h3>
-        <label>Nama Pemilik: <input type="text" id="nama_pemilik"></label>
-        <label>No. Kad Pengenalan: <input type="text" id="ic_pemilik"></label>
-        <label>Alamat: <textarea id="alamat_pemilik"></textarea></label>
-        <label>No. Telefon: <input type="text" id="telefon_pemilik"></label>
-        <label>Emel: <input type="email" id="emel_pemilik"></label>
+  
 
-        <h3>Maklumat Kucing 🐱</h3>
-        <label>Nama Kucing: <input type="text" id="nama_kucing"></label>
-        <label>Umur: <input type="text" id="umur_kucing"></label>
-        <label>Baka: <input type="text" id="baka_kucing"></label>
-        <label>Berat: <input type="text" id="berat_kucing"></label>
-        <label>Status Vaksin:
-          <select id="vaksin_kucing">
-            <option value="Sila Pilih">Sila Pilih</option>
-            <option value="Tiada Vaksin">Tiada Vaksin</option>
-            <option value="Vaksin Booster">Vaksin Booster</option>
-            <option value="Vaksin Tahunan">Vaksin Tahunan</option>
-          </select>
-        </label>
 
-        <h3>Soalan-soalan Saringan</h3>
-        ${[...Array(13).keys()].map(i => `
-          <label>${i + 1}. Soalan ${i + 1}?
-            <select class="saringan">
-              <option value="0">Sila Pilih</option>
-              <option value="0">Ya</option>
-              <option value="1">Tidak</option>
-            </select>
-          </label>`).join('')}
-
-        <h3>Temujanji & Rawatan 🗓️</h3>
-        <label>Tarikh Temujanji: <input type="date" id="tarikh_temujanji"></label>
-        <label>Tujuan Pemeriksaan:
-          <select id="tujuan_pemeriksaan">
-            <option value="Sila Pilih">Sila Pilih</option>
-            <option value="Rawatan">Rawatan</option>
-            <option value="Vaksin">Vaksin</option>
-            <option value="Grooming">Grooming</option>
-            <option value="Boarding">Boarding</option>
-            <option value="Sakit">Sakit</option>
-          </select>
-        </label>
-        <label>Gejala: <textarea id="gejala"></textarea></label>
-
-        <h3>Persetujuan</h3>
-        <p>Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
-      `
-    };
-
-    function tukarBahasa() {
-      const bahasa = document.getElementById('bahasa').value;
-      document.getElementById('borang_kandungan').innerHTML = kandunganBorang[bahasa] || kandunganBorang.ms;
-    }
-
-    function hantarKeWhatsApp() {
-      let saringan = document.querySelectorAll(".saringan");
-      let jumlahSoalan = saringan.length;
-      let jumlahYa = 0;
-      saringan.forEach(item => {
-        if (item.value === "1") jumlahYa++;
-      });
-      let skor = Math.round((jumlahYa / jumlahSoalan) * 100);
-      let status = skor >= 80 ? "✅ Layak untuk vaksinasi/pemandulan." : "❌ Tidak layak (skor < 80%).";
-      let mesej = `Borang Tempahan & Persetujuan Rawatan 🐾\n\n` +
-                  `Nama Pemilik: ${document.getElementById("nama_pemilik").value}\n` +
-                  `Telefon: ${document.getElementById("telefon_pemilik").value}\n` +
-                  `Nama Kucing: ${document.getElementById("nama_kucing").value}\n` +
-                  `Tarikh Temujanji: ${document.getElementById("tarikh_temujanji").value}\n` +
-                  `Skor Saringan: ${skor}%\n${status}`;
-      window.open(`https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`, '_blank');
-    }
-
-    window.onload = tukarBahasa;
-  </script>
+  <footer>
+    <p>🐾 Catoonies – Kasih Sayang untuk Si Meow Kesayangan Anda! 😻💕</p>
+  </footer>
 </body>
 </html>
