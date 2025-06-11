@@ -27,20 +27,29 @@
 </head>
 <body>
   <h2>BORANG SARINGAN VAKSINASI / PEMANDULAN/ GROOMING / BOARDING 🐾</h2>
-  <form id="whatsappForm">
-    <h3>Maklumat Pemilik</h3>
-    <label>Nama Pemilik: <input type="text" id="nama_pemilik"></label>
-    <label>No. Kad Pengenalan: <input type="text" id="ic_pemilik"></label>
-    <label>Alamat: <textarea id="alamat_pemilik"></textarea></label>
-    <label>No. Telefon: <input type="text" id="telefon_pemilik"></label>
-    <label>Emel: <input type="email" id="emel_pemilik"></label>
 
-    <h3>Maklumat Kucing 🐱</h3>
-    <label>Nama Kucing: <input type="text" id="nama_kucing"></label>
-    <label>Umur: <input type="text" id="umur_kucing"></label>
-    <label>Baka: <input type="text" id="baka_kucing"></label>
-    <label>Berat: <input type="text" id="berat_kucing"></label>
-    <label>Status Vaksin:
+  <label for="bahasa">Pilih Bahasa / Select Language / 选择语言:
+    <select id="bahasa" onchange="tukarBahasa()">
+      <option value="ms">BM</option>
+      <option value="en">English</option>
+      <option value="zh">简体中文</option>
+    </select>
+  </label>
+
+  <form id="whatsappForm">
+    <h3 class="label" data-key="ownerInfo">Maklumat Pemilik</h3>
+    <label class="label" data-key="ownerName">Nama Pemilik: <input type="text" id="nama_pemilik"></label>
+    <label class="label" data-key="ownerIC">No. Kad Pengenalan: <input type="text" id="ic_pemilik"></label>
+    <label class="label" data-key="ownerAddress">Alamat: <textarea id="alamat_pemilik"></textarea></label>
+    <label class="label" data-key="ownerPhone">No. Telefon: <input type="text" id="telefon_pemilik"></label>
+    <label class="label" data-key="ownerEmail">Emel: <input type="email" id="emel_pemilik"></label>
+
+    <h3 class="label" data-key="catInfo">Maklumat Kucing 🐱</h3>
+    <label class="label" data-key="catName">Nama Kucing: <input type="text" id="nama_kucing"></label>
+    <label class="label" data-key="catAge">Umur: <input type="text" id="umur_kucing"></label>
+    <label class="label" data-key="catBreed">Baka: <input type="text" id="baka_kucing"></label>
+    <label class="label" data-key="catWeight">Berat: <input type="text" id="berat_kucing"></label>
+    <label class="label" data-key="catVaccine">Status Vaksin:
       <select id="vaksin_kucing">
         <option value="Sila Pilih">Sila Pilih</option>
         <option value="Tiada Vaksin">Tiada Vaksin</option>
@@ -49,102 +58,13 @@
       </select>
     </label>
 
-    <h3>Soalan-soalan Saringan</h3>
-    <label>1. Adakah kucing baru dibeli/diambil kurang 7 hari?
-      <select class="saringan">
-         <option value="0">Sila pIlih</option>
-        <option value="0">Ya</option>
-        <option value="1">Tidak</option>
-      </select>
-    </label>
-    <label>2. Adakah kucing baru balik boarding/grooming?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="0">Ya</option>
-        <option value="1">Tidak</option>
-      </select>
-    </label>
-    <label>3. Ada perancangan untuk boarding/grooming dalam masa 1-3 bulan?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="0">Ya</option>
-        <option value="1">Tidak</option>
-      </select>
-    </label>
-    <label>4. Ada gejala penyakit (cirit, muntah, selsema, bersin, kurang aktif, kurang makan)?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="0">Ya</option>
-        <option value="1">Tidak</option>
-      </select>
-    </label>
-    <label>5. Ada kucing sakit/mati di rumah dalam 2 minggu sebelum?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="0">Ya</option>
-        <option value="1">Tidak</option>
-      </select>
-    </label>
-    <label>6. Kucing ada masalah mulut berbau dan kurang makan?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="0">Ya</option>
-        <option value="1">Tidak</option>
-      </select>
-    </label>
-    <label>7. Boleh hadir susulan selepas seminggu pemeriksaan?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>8. Boleh sangkarkan kucing dalam jangka masa 1-3 bulan?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>9. Ada luka di kawasan badan kucing?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="0">Ya</option>
-        <option value="1">Tidak</option>
-      </select>
-    </label>
-    <label>10. Ada sangkar kecil (1 ekor kucing dewasa sahaja) di rumah?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>11. Pernah buat rawatan di klinik lain?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="0">Ya</option>
-        <option value="1">Tidak</option>
-      </select>
-    </label>
-    <label>12. Adakah kucing ini tidak boleh disentuh oleh orang lain?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>13. Adakah kucing ini garang dan menyerang?
-      <select class="saringan">
-        <option value="0">Sila pIlih</option>
-        <option value="0">Ya</option>
-        <option value="1">Tidak</option>
-      </select>
-    </label>
+    <h3 class="label" data-key="screening">Soalan-soalan Saringan</h3>
 
-    <h3>Temujanji & Rawatan 🗓️</h3>
-    <label>Tarikh Temujanji: <input type="date" id="tarikh_temujanji"></label>
-    <label>Tujuan Pemeriksaan:
+    <div id="soalan-container"></div>
+
+    <h3 class="label" data-key="appointment">Temujanji & Rawatan 🗓️</h3>
+    <label class="label" data-key="appointmentDate">Tarikh Temujanji: <input type="date" id="tarikh_temujanji"></label>
+    <label class="label" data-key="appointmentPurpose">Tujuan Pemeriksaan:
       <select id="tujuan_pemeriksaan">
         <option value="Sila Pilih">Sila Pilih</option>
         <option value="Rawatan">Rawatan</option>
@@ -154,34 +74,158 @@
         <option value="Sakit">Sakit</option>
       </select>
     </label>
-    <label>Gejala: <textarea id="gejala"></textarea></label>
+    <label class="label" data-key="symptoms">Gejala: <textarea id="gejala"></textarea></label>
 
-    <h3>Persetujuan</h3>
-    <p>Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
+    <h3 class="label" data-key="consent">Persetujuan</h3>
+    <p class="label" data-key="agreement">Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
 
     <button type="button" onclick="hantarKeWhatsApp()">Hantar</button>
   </form>
 
   <script>
-    function hantarKeWhatsApp() {
-      let saringan = document.querySelectorAll(".saringan");
-      let soalanTeks = [
-        "1. Kucing baru dibeli/diambil kurang 7 hari",
-        "2. Kucing baru balik boarding/grooming",
-        "3. Ada perancangan untuk boarding/grooming dalam masa 1-3 bulan",
-        "4. Ada gejala penyakit (cirit, muntah, selsema, bersin, kurang aktif, kurang makan)",
-        "5. Ada kucing sakit/mati di rumah dalam 2 minggu sebelum",
-        "6. Kucing ada masalah mulut berbau dan kurang makan",
-        "7. Boleh hadir susulan selepas seminggu pemeriksaan",
-        "8. Boleh sangkarkan kucing dalam jangka masa 1-3 bulan",
-        "9. Ada luka di kawasan badan kucing",
-        "10. Ada sangkar kecil di rumah",
-        "11. Pernah buat rawatan di klinik lain",
-        "12. Kucing boleh disentuh oleh orang lain",
-        "13. Kucing ini garang dan menyerang"
-      ];
+    const soalanTeks = [
+      "1. Adakah kucing baru dibeli/diambil kurang 7 hari?",
+      "2. Adakah kucing baru balik boarding/grooming?",
+      "3. Ada perancangan untuk boarding/grooming dalam masa 1-3 bulan?",
+      "4. Ada gejala penyakit (cirit, muntah, selsema, bersin, kurang aktif, kurang makan)?",
+      "5. Ada kucing sakit/mati di rumah dalam 2 minggu sebelum?",
+      "6. Kucing ada masalah mulut berbau dan kurang makan?",
+      "7. Boleh hadir susulan selepas seminggu pemeriksaan?",
+      "8. Boleh sangkarkan kucing dalam jangka masa 1-3 bulan?",
+      "9. Ada luka di kawasan badan kucing?",
+      "10. Ada sangkar kecil (1 ekor kucing dewasa sahaja) di rumah?",
+      "11. Pernah buat rawatan di klinik lain?",
+      "12. Adakah kucing ini tidak boleh disentuh oleh orang lain?",
+      "13. Adakah kucing ini garang dan menyerang?"
+    ];
 
-      let jumlahSoalan = saringan.length;
+    const labelTeks = {
+      ms: [...soalanTeks],
+      en: [
+        "1. Has the cat been bought/adopted in the last 7 days?",
+        "2. Has the cat just returned from boarding/grooming?",
+        "3. Any plan for boarding/grooming in the next 1-3 months?",
+        "4. Any symptoms (diarrhea, vomiting, flu, sneezing, low energy, low appetite)?",
+        "5. Any sick/dead cat at home within the last 2 weeks?",
+        "6. Does the cat have bad breath and low appetite?",
+        "7. Can attend a follow-up after 1 week?",
+        "8. Can cage the cat for 1-3 months?",
+        "9. Any wounds on the cat's body?",
+        "10. Is there a small cage (for 1 adult cat) at home?",
+        "11. Has the cat been treated at another clinic?",
+        "12. Is the cat untouchable by others?",
+        "13. Is the cat aggressive and attacking?"
+      ],
+      zh: [
+        "1. 猫咪是否在过去7天内被领养或购买？",
+        "2. 猫咪是否刚从寄养/美容回来？",
+        "3. 是否有1-3个月内寄养/美容的计划？",
+        "4. 是否有疾病症状（腹泻、呕吐、感冒、打喷嚏、嗜睡、食欲不振）？",
+        "5. 家中是否有猫咪在过去2周内生病或死亡？",
+        "6. 猫咪是否口臭且食欲差？",
+        "7. 能否在一周后回诊？",
+        "8. 能否将猫咪关笼1-3个月？",
+        "9. 猫咪身体是否有伤口？",
+        "10. 家中是否有小型猫笼（只容纳一只成猫）？",
+        "11. 是否曾在其他诊所就诊？",
+        "12. 猫咪是否无法让他人触碰？",
+        "13. 猫咪是否凶猛并会攻击？"
+      ]
+    };
+
+    function tukarBahasa() {
+      const bahasa = document.getElementById("bahasa").value;
+      document.querySelectorAll(".saringan-label").forEach((label, index) => {
+        label.textContent = labelTeks[bahasa][index];
+      });
+      document.querySelectorAll(".label").forEach(el => {
+        const key = el.dataset.key;
+        if (labelDict[bahasa][key]) el.textContent = labelDict[bahasa][key];
+      });
+    }
+
+    const labelDict = {
+      ms: {
+        ownerInfo: "Maklumat Pemilik",
+        ownerName: "Nama Pemilik:",
+        ownerIC: "No. Kad Pengenalan:",
+        ownerAddress: "Alamat:",
+        ownerPhone: "No. Telefon:",
+        ownerEmail: "Emel:",
+        catInfo: "Maklumat Kucing 🐱",
+        catName: "Nama Kucing:",
+        catAge: "Umur:",
+        catBreed: "Baka:",
+        catWeight: "Berat:",
+        catVaccine: "Status Vaksin:",
+        screening: "Soalan-soalan Saringan",
+        appointment: "Temujanji & Rawatan 🗓️",
+        appointmentDate: "Tarikh Temujanji:",
+        appointmentPurpose: "Tujuan Pemeriksaan:",
+        symptoms: "Gejala:",
+        consent: "Persetujuan",
+        agreement: "Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur."
+      },
+      en: {
+        ownerInfo: "Owner Information",
+        ownerName: "Owner Name:",
+        ownerIC: "ID Number:",
+        ownerAddress: "Address:",
+        ownerPhone: "Phone Number:",
+        ownerEmail: "Email:",
+        catInfo: "Cat Information 🐱",
+        catName: "Cat Name:",
+        catAge: "Age:",
+        catBreed: "Breed:",
+        catWeight: "Weight:",
+        catVaccine: "Vaccination Status:",
+        screening: "Screening Questions",
+        appointment: "Appointment & Treatment 🗓️",
+        appointmentDate: "Appointment Date:",
+        appointmentPurpose: "Purpose of Visit:",
+        symptoms: "Symptoms:",
+        consent: "Consent",
+        agreement: "I agree to proceed with the treatment and will take full responsibility for aftercare."
+      },
+      zh: {
+        ownerInfo: "主人资料",
+        ownerName: "主人的名字:",
+        ownerIC: "身份证号码:",
+        ownerAddress: "地址:",
+        ownerPhone: "电话号码:",
+        ownerEmail: "电邮:",
+        catInfo: "猫咪资料 🐱",
+        catName: "猫咪名字:",
+        catAge: "年龄:",
+        catBreed: "品种:",
+        catWeight: "体重:",
+        catVaccine: "疫苗接种情况:",
+        screening: "筛查问题",
+        appointment: "预约与治疗 🗓️",
+        appointmentDate: "预约日期:",
+        appointmentPurpose: "检查目的:",
+        symptoms: "症状:",
+        consent: "同意书",
+        agreement: "我同意进行治疗，并将完全负责术后的护理。"
+      }
+    };
+
+    window.onload = () => {
+      const container = document.getElementById("soalan-container");
+      soalanTeks.forEach((text, i) => {
+        const label = document.createElement("label");
+        label.className = "saringan-label";
+        const select = document.createElement("select");
+        select.className = "saringan";
+        select.innerHTML = `<option value="0">Sila Pilih</option><option value="1">Ya</option><option value="0">Tidak</option>`;
+        label.appendChild(document.createTextNode(text));
+        label.appendChild(select);
+        container.appendChild(label);
+      });
+    }
+
+    function hantarKeWhatsApp() {
+      const saringan = document.querySelectorAll(".saringan");
       let jumlahYa = 0;
       let sebabTidakLayak = [];
 
@@ -193,11 +237,10 @@
         }
       });
 
-      let skorSaringan = Math.round((jumlahYa / jumlahSoalan) * 100);
+      let skorSaringan = Math.round((jumlahYa / saringan.length) * 100);
       let statusKelayakan = (skorSaringan >= 80) 
         ? "✅ Layak untuk vaksinasi/pemandulan." 
         : "❌ Tidak layak vaksinasi/pemandulan  (skor < 80%).";
-
       let alasan = (sebabTidakLayak.length > 0)
         ? "\n\nSebab tidak layak:\n- " + sebabTidakLayak.join("\n- ")
         : "";
