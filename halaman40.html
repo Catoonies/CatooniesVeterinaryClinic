@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>治疗预约和同意书</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      padding: 20px;
+    }
+    label, input, select, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #FFD700;
+      color: #000;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>治疗预约和同意书 🐾</h2>
+  <form id="whatsappForm">
+    <h3>主人的信息</h3>
+    <label>主人姓名: <input type="text" id="nama_pemilik"></label>
+    <label>身份证号码: <input type="text" id="ic_pemilik"></label>
+    <label>地址: <textarea id="alamat_pemilik"></textarea></label>
+    <label>电话号码: <input type="text" id="telefon_pemilik"></label>
+    <label>电子邮件: <input type="email" id="emel_pemilik"></label>
+
+    <h3>猫咪信息 🐱</h3>
+    <label>猫咪名字: <input type="text" id="nama_kucing"></label>
+    <label>年龄: <input type="text" id="umur_kucing"></label>
+    <label>品种: <input type="text" id="baka_kucing"></label>
+    <label>体重: <input type="text" id="berat_kucing"></label>
+    <label>疫苗接种状态:
+      <select id="vaksin_kucing">
+        <option value="Please Select">请选择</option>
+        <option value="Not Vaccinated">未接种</option>
+        <option value="Booster Vaccine">加强针</option>
+        <option value="Annual Vaccine">年度疫苗</option>
+      </select>
+    </label>
+
+    <h3>疫苗/绝育前筛查 ✅❌</h3>
+    <label>1. 最近是否在7天内购买/领养猫咪？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="1">是</option>
+        <option value="0">否</option>
+      </select>
+    </label>
+    <label>2. 猫咪是否刚从寄养/美容回来？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="1">是</option>
+        <option value="0">否</option>
+      </select>
+    </label>
+    <label>3. 接下来1至3个月内有寄养/美容计划吗？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="1">是</option>
+        <option value="0">否</option>
+      </select>
+    </label>
+    <label>4. 是否有症状（腹泻、呕吐、感冒、打喷嚏、嗜睡、食欲不振）？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="0">是</option>
+        <option value="1">否</option>
+      </select>
+    </label>
+    <label>5. 家中过去两周是否有生病/死亡的猫？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="0">是</option>
+        <option value="1">否</option>
+      </select>
+    </label>
+    <label>6. 是否有口臭或食欲差？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="0">是</option>
+        <option value="1">否</option>
+      </select>
+    </label>
+    <label>7. 是否可以在检查后一周内回来复诊？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="1">是</option>
+        <option value="0">否</option>
+      </select>
+    </label>
+    <label>8. 若有需要，可将猫咪关笼1至3个月？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="1">是</option>
+        <option value="0">否</option>
+      </select>
+    </label>
+    <label>9. 猫咪是否有身体伤口？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="0">是</option>
+        <option value="1">否</option>
+      </select>
+    </label>
+    <label>10. 是否有适合成年猫的笼子？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="1">是</option>
+        <option value="0">否</option>
+      </select>
+    </label>
+    <label>11. 猫咪是否曾在其他诊所接受治疗？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="1">是</option>
+        <option value="0">否</option>
+      </select>
+    </label>
+    <label>12. 猫咪是否可以被他人处理？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="1">是</option>
+        <option value="0">否</option>
+      </select>
+    </label>
+    <label>13. 猫咪是否具有攻击性？
+      <select class="saringan">
+        <option value="0">请选择</option>
+        <option value="0">是</option>
+        <option value="1">否</option>
+      </select>
+    </label>
+
+    <h3>预约与治疗 🗓️</h3>
+    <label>预约日期: <input type="date" id="tarikh_temujanji"></label>
+    <label>就诊目的:
+      <select id="tujuan_pemeriksaan">
+        <option value="Please Select">请选择</option>
+        <option value="Treatment">治疗</option>
+        <option value="Vaccination">疫苗接种</option>
+        <option value="Grooming">美容</option>
+        <option value="Boarding">寄养</option>
+        <option value="Illness">疾病</option>
+      </select>
+    </label>
+    <label>症状说明: <textarea id="gejala"></textarea></label>
+
+    <h3>同意声明</h3>
+    <p>我同意进行治疗，并承担治疗后的护理责任。</p>
+
+    <button type="button" onclick="hantarKeWhatsApp()">提交</button>
+  </form>
+
+  <script>
+    function hantarKeWhatsApp() {
+      let saringan = document.querySelectorAll(".saringan");
+      let soalanTeks = [
+        "1. 最近购买/领养（7天内）",
+        "2. 刚从寄养/美容回来",
+        "3. 未来1-3个月有寄养/美容计划",
+        "4. 有症状（腹泻、呕吐等）",
+        "5. 家中过去两周有生病/死亡的猫",
+        "6. 口臭或食欲差",
+        "7. 一周后可复诊",
+        "8. 可关笼1-3个月",
+        "9. 有身体伤口",
+        "10. 有适合成年猫的笼子",
+        "11. 曾在其他诊所治疗",
+        "12. 可被他人处理",
+        "13. 有攻击性"
+      ];
+
+      let jumlahSoalan = saringan.length;
+      let jumlahYa = 0;
+      let sebabTidakLayak = [];
+
+      saringan.forEach((item, index) => {
+        if (item.value === "1") {
+          jumlahYa++;
+        } else {
+          sebabTidakLayak.push(soalanTeks[index]);
+        }
+      });
+
+      let skorSaringan = Math.round((jumlahYa / jumlahSoalan) * 100);
+      let statusKelayakan = (skorSaringan >= 80) 
+        ? "✅ 有资格接种疫苗/绝育。" 
+        : "❌ 不符合资格（得分低于80%）。";
+
+      let alasan = (sebabTidakLayak.length > 0)
+        ? "\n\n不符合资格的原因:\n- " + sebabTidakLayak.join("\n- ")
+        : "";
+
+      let mesej = `治疗预约和同意书 🐾\n\n` +
+                  `主人姓名: ${document.getElementById("nama_pemilik").value}\n` +
+                  `身份证号码: ${document.getElementById("ic_pemilik").value}\n` +
+                  `地址: ${document.getElementById("alamat_pemilik").value}\n` +
+                  `电话号码: ${document.getElementById("telefon_pemilik").value}\n` +
+                  `电子邮件: ${document.getElementById("emel_pemilik").value}\n\n` +
+                  `猫咪名字: ${document.getElementById("nama_kucing").value}\n` +
+                  `年龄: ${document.getElementById("umur_kucing").value}\n` +
+                  `品种: ${document.getElementById("baka_kucing").value}\n` +
+                  `体重: ${document.getElementById("berat_kucing").value}\n` +
+                  `疫苗接种状态: ${document.getElementById("vaksin_kucing").value}\n\n` +
+                  `预约日期: ${document.getElementById("tarikh_temujanji").value}\n` +
+                  `就诊目的: ${document.getElementById("tujuan_pemeriksaan").value}\n` +
+                  `症状说明: ${document.getElementById("gejala").value}\n\n` +
+                  `筛查得分: ${skorSaringan}%\n` +
+                  `${statusKelayakan}${alasan}\n\n` +
+                  `我同意进行治疗，并承担治疗后的护理责任。`;
+
+      let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
+      window.open(whatsappURL, "_blank");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatment Booking & Consent Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      padding: 20px;
+    }
+    label, input, select, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #FFD700;
+      color: #000;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Treatment Booking & Consent Form 🐾</h2>
+  <form id="whatsappForm">
+    <h3>Owner's Information</h3>
+    <label>Owner's Name: <input type="text" id="nama_pemilik"></label>
+    <label>IC Number: <input type="text" id="ic_pemilik"></label>
+    <label>Address: <textarea id="alamat_pemilik"></textarea></label>
+    <label>Phone Number: <input type="text" id="telefon_pemilik"></label>
+    <label>Email: <input type="email" id="emel_pemilik"></label>
+
+    <h3>Cat's Information 🐱</h3>
+    <label>Cat's Name: <input type="text" id="nama_kucing"></label>
+    <label>Age: <input type="text" id="umur_kucing"></label>
+    <label>Breed: <input type="text" id="baka_kucing"></label>
+    <label>Weight: <input type="text" id="berat_kucing"></label>
+    <label>Vaccination Status:
+      <select id="vaksin_kucing">
+        <option value="Please Select">Please Select</option>
+        <option value="Not Vaccinated">Not Vaccinated</option>
+        <option value="Booster Vaccine">Booster Vaccine</option>
+        <option value="Annual Vaccine">Annual Vaccine</option>
+      </select>
+    </label>
+
+    <h3>Pre-Vaccination/Neutering Screening ✅❌</h3>
+    <label>1. Was the cat recently bought/adopted (within 7 days)?
+      <select class="saringan">
+	  <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>2. Has the cat just returned from boarding/grooming?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>3. Any plans for boarding/grooming within 1-3 months?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>4. Any symptoms (diarrhea, vomiting, flu, sneezing, lethargy, loss of appetite)?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </label>
+    <label>5. Any sick/deceased cats at home in the past 2 weeks?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </label>
+    <label>6. Any mouth odor or poor appetite?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </label>
+    <label>7. Can attend follow-up one week after examination?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>8. Can cage the cat for 1-3 months if needed?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>9. Any wounds on the cat's body?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </label>
+    <label>10. Do you have a small cage (for 1 adult cat)?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>11. Has the cat been treated at another clinic?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>12. Can the cat be handled by others?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>13. Is the cat aggressive or attacks?
+      <select class="saringan">
+	  	  <option value="0">Please Select</option>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </label>
+
+    <h3>Appointment & Treatment 🗓️</h3>
+    <label>Appointment Date: <input type="date" id="tarikh_temujanji"></label>
+    <label>Purpose of Visit:
+      <select id="tujuan_pemeriksaan">
+        <option value="Please Select">Please Select</option>
+        <option value="Treatment">Treatment</option>
+        <option value="Vaccination">Vaccination</option>
+        <option value="Grooming">Grooming</option>
+        <option value="Boarding">Boarding</option>
+        <option value="Illness">Illness</option>
+      </select>
+    </label>
+    <label>Symptoms: <textarea id="gejala"></textarea></label>
+
+    <h3>Consent</h3>
+    <p>I agree to proceed with the treatment and accept full responsibility for post-treatment care.</p>
+
+    <button type="button" onclick="hantarKeWhatsApp()">Submit</button>
+  </form>
+
+  <script>
+    function hantarKeWhatsApp() {
+      let saringan = document.querySelectorAll(".saringan");
+      let soalanTeks = [
+        "1. Recently bought/adopted cat (within 7 days)",
+        "2. Returned from boarding/grooming",
+        "3. Plans for boarding/grooming within 1-3 months",
+        "4. Shows symptoms (diarrhea, vomiting, flu, sneezing, lethargy, loss of appetite)",
+        "5. Sick/dead cat at home within last 2 weeks",
+        "6. Mouth odor and poor appetite",
+        "7. Can attend follow-up a week later",
+        "8. Can cage cat for 1-3 months",
+        "9. Has wounds on body",
+        "10. Has small cage at home",
+        "11. Treated at another clinic",
+        "12. Can be handled by others",
+        "13. Aggressive cat"
+      ];
+
+      let jumlahSoalan = saringan.length;
+      let jumlahYa = 0;
+      let sebabTidakLayak = [];
+
+      saringan.forEach((item, index) => {
+        if (item.value === "1") {
+          jumlahYa++;
+        } else {
+          sebabTidakLayak.push(soalanTeks[index]);
+        }
+      });
+
+      let skorSaringan = Math.round((jumlahYa / jumlahSoalan) * 100);
+      let statusKelayakan = (skorSaringan >= 80) 
+        ? "✅ Eligible for vaccination/neutering." 
+        : "❌ Not eligible (score < 80%).";
+
+      let alasan = (sebabTidakLayak.length > 0)
+        ? "\n\nReasons not eligible:\n- " + sebabTidakLayak.join("\n- ")
+        : "";
+
+      let mesej = `Treatment Booking & Consent Form 🐾\n\n` +
+                  `Owner's Name: ${document.getElementById("nama_pemilik").value}\n` +
+                  `IC Number: ${document.getElementById("ic_pemilik").value}\n` +
+                  `Address: ${document.getElementById("alamat_pemilik").value}\n` +
+                  `Phone Number: ${document.getElementById("telefon_pemilik").value}\n` +
+                  `Email: ${document.getElementById("emel_pemilik").value}\n\n` +
+                  `Cat's Name: ${document.getElementById("nama_kucing").value}\n` +
+                  `Age: ${document.getElementById("umur_kucing").value}\n` +
+                  `Breed: ${document.getElementById("baka_kucing").value}\n` +
+                  `Weight: ${document.getElementById("berat_kucing").value}\n` +
+                  `Vaccination Status: ${document.getElementById("vaksin_kucing").value}\n\n` +
+                  `Appointment Date: ${document.getElementById("tarikh_temujanji").value}\n` +
+                  `Purpose of Visit: ${document.getElementById("tujuan_pemeriksaan").value}\n` +
+                  `Symptoms: ${document.getElementById("gejala").value}\n\n` +
+                  `Screening Score: ${skorSaringan}%\n` +
+                  `${statusKelayakan}${alasan}\n\n` +
+                  `I agree to proceed with the treatment and accept full responsibility for post-treatment care.`;
+
+      let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
+      window.open(whatsappURL, "_blank");
+    }
+  </script>
+</body>
+</html>
