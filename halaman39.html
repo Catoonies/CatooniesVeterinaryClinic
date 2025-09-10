@@ -24,164 +24,179 @@
       cursor: pointer;
     }
   </style>
-</head>
 <section style="background-color: #fef9f5; border-left: 5px solid #fbbf24; padding: 20px; border-radius: 12px; font-family: Arial, sans-serif; color: #333;">
-  <h2 style="font-size: 1.5em; margin-bottom: 15px;">🩺 <strong>Dr. Meow's Screening Area</strong></h2>
+  <h2 style="font-size: 1.5em; margin-bottom: 15px;">🩺 Screening Section <strong>Dr. Meow</strong></h2>
 
   <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 15px;">
-    Why screening is important:
+    Important for several key reasons:
   </p>
 
   <ul style="list-style: none; padding-left: 0;">
     <li style="margin-bottom: 15px;">
-      ✅ <strong>1. Identify Current Health Condition</strong><br>
-      🐱 Screening allows the vet to detect early signs of illness, unusual behavior, or hidden symptoms that owners might miss.<br>
-      💉 This is crucial even for simple visits like vaccination or grooming.
+      ✅ <strong>1. Identify Current Health Condition of the Cat</strong><br>
+      🐱 Screening allows the doctor to assess early signs of illness, unusual behavior, or hidden symptoms that owners may not notice.<br>
+      💉 This is important even if only coming for vaccination or grooming.
     </li>
 
     <li style="margin-bottom: 15px;">
       ✅ <strong>2. Prevent Infection or Risk to Other Cats</strong><br>
-      🤧 If your cat shows signs like sneezing, watery eyes, or weakness, it may pose a risk to other cats at the clinic.<br>
-      🚨 Screening helps with immediate isolation or care if needed.
+      🤧 If symptoms such as sneezing, watery eyes, or weakness are present, your cat may risk infecting other cats in the clinic.<br>
+      🚨 Screening allows for separation or immediate action if needed.
     </li>
 
     <li style="margin-bottom: 15px;">
-      ✅ <strong>3. Early Preparation for Treatment</strong><br>
-      🩻 The vet can decide whether further tests are needed (such as blood work, X-rays, or medications).<br>
-      🕒 It also helps prioritize and schedule treatment based on the cat’s actual health needs.
+      ✅ <strong>3. Preparation for Treatment</strong><br>
+      🩻 The doctor can determine if further treatment is needed (such as blood tests, X-ray, or specific medication).<br>
+      🕒 It also helps the doctor schedule time and prioritize cases according to actual health needs.
     </li>
 
     <li style="margin-bottom: 15px;">
-      ✅ <strong>4. Evaluation Before Any Procedure</strong><br>
-      🐾 For procedures like neutering, vaccination, or boarding — screening ensures your cat is healthy and safe to proceed.
+      ✅ <strong>4. Assessment Before Procedures</strong><br>
+      🐾 If your cat comes for neutering, vaccination, or boarding — prior screening ensures the cat is healthy and safe for the procedure.
     </li>
 
     <li style="margin-bottom: 15px;">
       ✅ <strong>5. Reduce Risk of Complications</strong><br>
-      🩺 Basic checks can detect early issues that, if untreated, could worsen — such as high fever, wounds, dehydration, or anemia.
+      🩺 A basic check can identify early problems that, if untreated, may worsen — e.g. high body temperature, wounds, dehydration, or anemia.
     </li>
   </ul>
 
   <p style="background-color: #fff3cd; padding: 15px; border-radius: 8px; border: 1px solid #ffeeba; font-weight: bold;">
     ✨ <em>In short:</em> <br>
-    Screening is not just a formality. It’s an essential step to protect your cat’s health — and the health of other cats at the clinic.
+    Screening is not just a formality. It is an important step to protect your cat’s health and other cats in the clinic.
   </p>
 </section>
 
-<body>
+
+
   <h2>Treatment Booking & Consent Form 🐾</h2>
   <form id="whatsappForm">
-    <h3>Owner's Information</h3>
-    <label>Owner's Name: <input type="text" id="nama_pemilik"></label>
-    <label>IC Number: <input type="text" id="ic_pemilik"></label>
+    <h3>Owner Information</h3>
+    <label>Owner Name: <input type="text" id="nama_pemilik"></label>
+    <label>ID Number: <input type="text" id="ic_pemilik"></label>
     <label>Address: <textarea id="alamat_pemilik"></textarea></label>
     <label>Phone Number: <input type="text" id="telefon_pemilik"></label>
     <label>Email: <input type="email" id="emel_pemilik"></label>
 
-    <h3>Cat's Information 🐱</h3>
-    <label>Cat's Name: <input type="text" id="nama_kucing"></label>
+    <h3>Cat Information 🐱</h3>
+    <label>Cat Name: <input type="text" id="nama_kucing"></label>
     <label>Age: <input type="text" id="umur_kucing"></label>
     <label>Breed: <input type="text" id="baka_kucing"></label>
     <label>Weight: <input type="text" id="berat_kucing"></label>
+    <label>Color: <input type="text" id="warna_kucing"></label>  
     <label>Vaccination Status:
       <select id="vaksin_kucing">
         <option value="Please Select">Please Select</option>
-        <option value="Not Vaccinated">Not Vaccinated</option>
-        <option value="Booster Vaccine">Booster Vaccine</option>
-        <option value="Annual Vaccine">Annual Vaccine</option>
+        <option value="No Vaccination">No Vaccination</option>
+        <option value="Booster Vaccination">Booster Vaccination</option>
+        <option value="Annual Vaccination">Annual Vaccination</option>
       </select>
     </label>
 
     <h3>Pre-Vaccination/Neutering Screening ✅❌</h3>
-    <label>1. Was the cat recently bought/adopted (within 7 days)?
+    <label>1. Has the cat been under your care for more than 7 days?
       <select class="saringan">
-	  <option value="0">Please Select</option>
+        <option value="1">Please Select</option>
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
     </label>
-    <label>2. Has the cat just returned from boarding/grooming?
+    <label>2. Cat has not been boarded/groomed within the past week?
       <select class="saringan">
-	  	  <option value="0">Please Select</option>
+        <option value="0">Please Select</option>
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
     </label>
-    <label>3. Any plans for boarding/grooming within 1-3 months?
+    <label>3. Cat will not be boarded within 1-3 months after vaccination? 
       <select class="saringan">
-	  	  <option value="0">Please Select</option>
+        <option value="0">Please Select</option>
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
     </label>
-    <label>4. Any symptoms (diarrhea, vomiting, flu, sneezing, lethargy, loss of appetite)?
+    <label>4. Cat has no signs of illness (diarrhea, vomiting, flu, sneezing, less active, poor appetite)?
       <select class="saringan">
-	  	  <option value="0">Please Select</option>
-        <option value="0">Yes</option>
-        <option value="1">No</option>
-      </select>
-    </label>
-    <label>5. Any sick/deceased cats at home in the past 2 weeks?
-      <select class="saringan">
-	  	  <option value="0">Please Select</option>
-        <option value="0">Yes</option>
-        <option value="1">No</option>
-      </select>
-    </label>
-    <label>6. Any mouth odor or poor appetite?
-      <select class="saringan">
-	  	  <option value="0">Please Select</option>
-        <option value="0">Yes</option>
-        <option value="1">No</option>
-      </select>
-    </label>
-    <label>7. Can attend follow-up one week after examination?
-      <select class="saringan">
-	  	  <option value="0">Please Select</option>
+        <option value="0">Please Select</option>
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
     </label>
-    <label>8. Can cage the cat for 1-3 months if needed?
+    <label>5. No cat deaths in the past 2 weeks?
       <select class="saringan">
-	  	  <option value="0">Please Select</option>
+        <option value="0">Please Select</option>
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
     </label>
-    <label>9. Any wounds on the cat's body?
+    <label>6. Cat has no mouth odor issues and still eats normally?
       <select class="saringan">
-	  	  <option value="0">Please Select</option>
-        <option value="0">Yes</option>
-        <option value="1">No</option>
-      </select>
-    </label>
-    <label>10. Do you have a small cage (for 1 adult cat)?
-      <select class="saringan">
-	  	  <option value="0">Please Select</option>
+        <option value="0">Please Select</option>
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
     </label>
-    <label>11. Has the cat been treated at another clinic?
+    <label>7. Can return for follow-up after one week check-up?
       <select class="saringan">
-	  	  <option value="0">Please Select</option>
+        <option value="0">Please Select</option>
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
     </label>
-    <label>12. Can the cat be handled by others?
+    <label>8. Within 1-3 months, can you cage the cat?
       <select class="saringan">
-	  	  <option value="0">Please Select</option>
+        <option value="0">Please Select</option>
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
     </label>
-    <label>13. Is the cat aggressive or attacks?
+    <label>9. No wounds on the cat’s body?
       <select class="saringan">
-	  	  <option value="0">Please Select</option>
-        <option value="0">Yes</option>
-        <option value="1">No</option>
+        <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>10. Do you have a small cage (for 1 adult cat only) at home?
+      <select class="saringan">
+        <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>11. Has the cat ever received treatment at another clinic?
+      <select class="saringan">
+        <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>12. Can this cat be touched by other people?
+      <select class="saringan">
+        <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>13. Is this cat aggressive and attacking?
+      <select class="saringan">
+        <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>14. Can you cage the cat (24 hours without leaving the cage) for 1-3 months after the first booster vaccination?
+      <select class="saringan">
+        <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>15. Can you cage the cat (24 hours without leaving the cage) for 1-4 weeks after the check-up?
+      <select class="saringan">
+        <option value="0">Please Select</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
       </select>
     </label>
 
@@ -200,7 +215,7 @@
     <label>Symptoms: <textarea id="gejala"></textarea></label>
 
     <h3>Consent</h3>
-    <p>I agree to proceed with the treatment and accept full responsibility for post-treatment care.</p>
+    <p>I agree to proceed with the treatment and will take full responsibility for post-procedure care.</p>
 
     <button type="button" onclick="hantarKeWhatsApp()">Submit</button>
   </form>
@@ -209,19 +224,21 @@
     function hantarKeWhatsApp() {
       let saringan = document.querySelectorAll(".saringan");
       let soalanTeks = [
-        "1. Recently bought/adopted cat (within 7 days)",
-        "2. Returned from boarding/grooming",
-        "3. Plans for boarding/grooming within 1-3 months",
-        "4. Shows symptoms (diarrhea, vomiting, flu, sneezing, lethargy, loss of appetite)",
-        "5. Sick/dead cat at home within last 2 weeks",
-        "6. Mouth odor and poor appetite",
-        "7. Can attend follow-up a week later",
-        "8. Can cage cat for 1-3 months",
-        "9. Has wounds on body",
-        "10. Has small cage at home",
-        "11. Treated at another clinic",
-        "12. Can be handled by others",
-        "13. Aggressive cat"
+        "1. This cat was bought/adopted less than 7 days ago",
+        "2. This cat was boarded/groomed within the past week",
+        "3. This cat will be boarded within 1-3 months after vaccination",
+        "4. This cat shows symptoms of illness (diarrhea, vomiting, flu, sneezing, less active, poor appetite)",
+        "5. At the owner’s home, a cat has been sick/died in the past 2 weeks",
+        "6. This cat has mouth odor issues and poor appetite",
+        "7. Owner cannot attend follow-up after one week check-up",
+        "8. Owner cannot cage the cat within 1-3 months",
+        "9. This cat has wounds on its body",
+        "10. Owner does not have a small cage at home",
+        "11. Owner has never sought treatment at another clinic",
+        "12. This cat can be touched by other people",
+        "13. This cat is tame and does not attack",
+        "14. Owner cannot cage (24 hours without leaving) the cat for 1-3 months after the first booster",
+        "15. Owner cannot cage (24 hours without leaving) the cat for 1-4 weeks after the check-up"    
       ];
 
       let jumlahSoalan = saringan.length;
@@ -242,26 +259,27 @@
         : "❌ Not eligible (score < 80%).";
 
       let alasan = (sebabTidakLayak.length > 0)
-        ? "\n\nReasons not eligible:\n- " + sebabTidakLayak.join("\n- ")
+        ? "\n\nReason(s) not eligible:\n- " + sebabTidakLayak.join("\n- ")
         : "";
 
       let mesej = `Treatment Booking & Consent Form 🐾\n\n` +
-                  `Owner's Name: ${document.getElementById("nama_pemilik").value}\n` +
-                  `IC Number: ${document.getElementById("ic_pemilik").value}\n` +
+                  `Owner Name: ${document.getElementById("nama_pemilik").value}\n` +
+                  `ID Number: ${document.getElementById("ic_pemilik").value}\n` +
                   `Address: ${document.getElementById("alamat_pemilik").value}\n` +
-                  `Phone Number: ${document.getElementById("telefon_pemilik").value}\n` +
+                  `Phone: ${document.getElementById("telefon_pemilik").value}\n` +
                   `Email: ${document.getElementById("emel_pemilik").value}\n\n` +
-                  `Cat's Name: ${document.getElementById("nama_kucing").value}\n` +
+                  `Cat Name: ${document.getElementById("nama_kucing").value}\n` +
                   `Age: ${document.getElementById("umur_kucing").value}\n` +
                   `Breed: ${document.getElementById("baka_kucing").value}\n` +
                   `Weight: ${document.getElementById("berat_kucing").value}\n` +
+                  `Color: ${document.getElementById("warna_kucing").value}\n` +
                   `Vaccination Status: ${document.getElementById("vaksin_kucing").value}\n\n` +
                   `Appointment Date: ${document.getElementById("tarikh_temujanji").value}\n` +
-                  `Purpose of Visit: ${document.getElementById("tujuan_pemeriksaan").value}\n` +
+                  `Purpose: ${document.getElementById("tujuan_pemeriksaan").value}\n` +
                   `Symptoms: ${document.getElementById("gejala").value}\n\n` +
                   `Screening Score: ${skorSaringan}%\n` +
                   `${statusKelayakan}${alasan}\n\n` +
-                  `I agree to proceed with the treatment and accept full responsibility for post-treatment care.`;
+                  `I agree to proceed with treatment and will take full responsibility for post-procedure care.`;
 
       let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
       window.open(whatsappURL, "_blank");
