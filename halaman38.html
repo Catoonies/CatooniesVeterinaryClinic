@@ -256,7 +256,7 @@
       let skorSaringan = Math.round((jumlahYa / jumlahSoalan) * 100);
       let statusKelayakan = (skorSaringan >= 80) 
         ? "✅ Layak untuk vaksinasi/pemandulan." 
-        : "❌ Tidak layak (skor < 80%).";
+        : "❌ Tidak layak untuk vaksinasi/pemandulan (skor < 80%).";
 
       let alasan = (sebabTidakLayak.length > 0)
         ? "\n\nSebab tidak layak:\n- " + sebabTidakLayak.join("\n- ")
@@ -287,6 +287,7 @@
   </script>
 </body>
 </html>
+
 
 
 
