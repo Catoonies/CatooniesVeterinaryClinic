@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="ms">
 <head>
   <meta charset="UTF-8">
@@ -25,8 +24,11 @@
       cursor: pointer;
     }
   </style>
+</head>
+<body>
+
 <section style="background-color: #fef9f5; border-left: 5px solid #fbbf24; padding: 20px; border-radius: 12px; font-family: Arial, sans-serif; color: #333;">
-  <h2 style="font-size: 1.5em; margin-bottom: 15px;">🩺 Ruang Saringan <strong>Dr. Meow</strong></h2>
+  <h2 style="font-size: 1.5em; margin-bottom: 15px;">🩺 Bahagian Saringan <strong>Dr. Meow</strong></h2>
 
   <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 15px;">
     Penting atas beberapa sebab utama:
@@ -34,264 +36,255 @@
 
   <ul style="list-style: none; padding-left: 0;">
     <li style="margin-bottom: 15px;">
-      ✅ <strong>1. Kenal Pasti Keadaan Kesihatan Semasa Kucing</strong><br>
-      🐱 Saringan membolehkan doktor menilai tanda-tanda awal penyakit, tingkah laku luar biasa, atau gejala tersembunyi yang mungkin tidak disedari oleh pemilik.<br>
-      💉 Ini penting walaupun hanya datang untuk vaksin atau grooming.
+      ✅ <strong>1. Mengenal Pasti Keadaan Kesihatan Semasa Kucing</strong><br>
+      🐱 Saringan membantu doktor mengesan tanda awal penyakit, tingkah laku luar biasa, atau simptom tersembunyi yang mungkin tidak disedari oleh pemilik.<br>
+      💉 Ini penting walaupun hanya datang untuk vaksinasi atau grooming.
     </li>
 
     <li style="margin-bottom: 15px;">
-      ✅ <strong>2. Elak Jangkitan atau Risiko kepada Kucing Lain</strong><br>
-      🤧 Jika ada simptom seperti bersin, mata berair, atau lemah, kucing anda mungkin berisiko menjangkiti kucing lain di klinik.<br>
-      🚨 Saringan membolehkan pemisahan atau tindakan segera jika perlu.
+      ✅ <strong>2. Mencegah Jangkitan atau Risiko kepada Kucing Lain</strong><br>
+      🤧 Jika terdapat simptom seperti bersin, mata berair, atau lemah, kucing anda mungkin berisiko menjangkiti kucing lain di klinik.<br>
+      🚨 Saringan membolehkan pengasingan atau tindakan segera diambil jika perlu.
     </li>
 
     <li style="margin-bottom: 15px;">
       ✅ <strong>3. Persediaan Awal untuk Rawatan</strong><br>
-      🩻 Doktor boleh tentukan jika rawatan lanjut perlu (seperti ujian darah, X-ray atau ubat tertentu).<br>
-      🕒 Ia juga bantu doktor menjadualkan masa dan keutamaan kes mengikut keperluan kesihatan sebenar.
+      🩻 Doktor boleh menentukan sama ada perlu dilakukan ujian tambahan (darah, X-ray, atau ubat khas).<br>
+      🕒 Ia juga membantu doktor menjadualkan masa dan keutamaan kes berdasarkan keperluan sebenar.
     </li>
 
     <li style="margin-bottom: 15px;">
       ✅ <strong>4. Penilaian Sebelum Prosedur</strong><br>
-      🐾 Jika kucing anda datang untuk pemandulan, vaksin, atau boarding — saringan awal pastikan kucing dalam keadaan sihat dan selamat untuk prosedur tersebut.
+      🐾 Jika kucing datang untuk dimandulkan, vaksinasi, atau ditinggalkan di boarding — saringan awal memastikan ia cukup sihat dan selamat untuk prosedur.
     </li>
 
     <li style="margin-bottom: 15px;">
       ✅ <strong>5. Mengurangkan Risiko Komplikasi</strong><br>
-      🩺 Pemeriksaan asas boleh kenal pasti masalah awal yang jika tak dirawat boleh jadi lebih serius — contohnya suhu badan tinggi, luka, dehidrasi atau anemia.
+      🩺 Pemeriksaan asas dapat mengesan masalah awal seperti demam tinggi, luka, dehidrasi, atau anemia sebelum menjadi lebih teruk.
     </li>
   </ul>
 
   <p style="background-color: #fff3cd; padding: 15px; border-radius: 8px; border: 1px solid #ffeeba; font-weight: bold;">
-    ✨ <em>Ringkasnya:</em> <br>
-    Saringan bukan sekadar formaliti. Ia adalah langkah penting untuk melindungi kesihatan kucing anda dan juga kucing lain di klinik.
+    ✨ <em>Kesimpulannya:</em><br>
+    Saringan bukan sekadar formaliti. Ia adalah langkah penting untuk melindungi kesihatan kucing anda — serta kucing lain di klinik.
   </p>
 </section>
 
+<h2>Borang Tempahan & Persetujuan Rawatan 🐾</h2>
+<form id="whatsappForm">
+  <h3>Maklumat Pemilik</h3>
+  <label>Nama Pemilik: <input type="text" id="nama_pemilik"></label>
+  <label>No. Kad Pengenalan: <input type="text" id="ic_pemilik"></label>
+  <label>Alamat: <textarea id="alamat_pemilik"></textarea></label>
+  <label>No. Telefon: <input type="text" id="telefon_pemilik"></label>
+  <label>Emel: <input type="email" id="emel_pemilik"></label>
 
+  <h3>Maklumat Kucing 🐱</h3>
+  <label>Nama Kucing: <input type="text" id="nama_kucing"></label>
+  <label>Umur: <input type="text" id="umur_kucing"></label>
+  <label>Baka: <input type="text" id="baka_kucing"></label>
+  <label>Berat: <input type="text" id="berat_kucing"></label>
+  <label>Warna: <input type="text" id="warna_kucing"></label>
+  <label>Status Vaksinasi:
+    <select id="vaksin_kucing">
+      <option value="Sila Pilih">Sila Pilih</option>
+      <option value="Tiada Vaksin">Tiada Vaksin</option>
+      <option value="Vaksin Booster">Vaksin Booster</option>
+      <option value="Vaksin Tahunan">Vaksin Tahunan</option>
+    </select>
+  </label>
 
-  <h2>Borang Tempahan & Persetujuan Rawatan 🐾</h2>
-  <form id="whatsappForm">
-    <h3>Maklumat Pemilik</h3>
-    <label>Nama Pemilik: <input type="text" id="nama_pemilik"></label>
-    <label>No. Kad Pengenalan: <input type="text" id="ic_pemilik"></label>
-    <label>Alamat: <textarea id="alamat_pemilik"></textarea></label>
-    <label>No. Telefon: <input type="text" id="telefon_pemilik"></label>
-    <label>Emel: <input type="email" id="emel_pemilik"></label>
+  <h3>Saringan Pra-Vaksinasi / Pra-Pemandulan ✅❌</h3>
+  <label>1. Kucing telah dijaga lebih 7 hari?
+    <select class="saringan">
+      <option value="1">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>2. Kucing tidak pernah dihantar boarding/grooming dalam tempoh seminggu?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>3. Kucing tidak akan dihantar boarding dalam tempoh 1–3 bulan selepas vaksinasi?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>4. Kucing tidak menunjukkan simptom sakit (cirit, muntah, selesema, bersin, lemah, tiada selera makan)?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>5. Tiada kematian kucing di rumah dalam tempoh 2 minggu lepas?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>6. Kucing tiada bau mulut atau masalah makan?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>7. Pemilik boleh hadir semula untuk susulan dalam masa seminggu selepas pemeriksaan?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>8. Kucing boleh dikurung (1–3 bulan) selepas rawatan/vaksinasi?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>9. Kucing tiada luka pada badan?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>10. Ada sangkar kecil (untuk seekor kucing dewasa) di rumah?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>11. Kucing tidak pernah dirawat di klinik lain sebelum ini?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>12. Kucing boleh disentuh oleh orang lain?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>13. Kucing ini agresif dan menyerang?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>14. Kucing boleh dikurung (24 jam) selama 1–3 bulan selepas vaksin pertama/booster?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
+  <label>15. Kucing boleh dikurung (24 jam) selama 1–4 minggu selepas pemeriksaan?
+    <select class="saringan">
+      <option value="0">Sila Pilih</option>
+      <option value="1">Ya</option>
+      <option value="0">Tidak</option>
+    </select>
+  </label>
 
-    <h3>Maklumat Kucing 🐱</h3>
-    <label>Nama Kucing: <input type="text" id="nama_kucing"></label>
-    <label>Umur: <input type="text" id="umur_kucing"></label>
-    <label>Baka: <input type="text" id="baka_kucing"></label>
-    <label>Berat: <input type="text" id="berat_kucing"></label>
-    <label>Warna Kucing: <input type="text" id="warna_kucing"></label>  
-    <label>Status Vaksin:
-      <select id="vaksin_kucing">
-        <option value="Sila Pilih">Sila Pilih</option>
-        <option value="Tiada Vaksin">Tiada Vaksin</option>
-        <option value="Vaksin Booster">Vaksin Booster</option>
-        <option value="Vaksin Tahunan">Vaksin Tahunan</option>
-      </select>
-    </label>
+  <h3>Temujanji & Rawatan 🗓️</h3>
+  <label>Tarikh Temujanji: <input type="date" id="tarikh_temujanji"></label>
+  <label>Tujuan Lawatan:
+    <select id="tujuan_pemeriksaan">
+      <option value="Sila Pilih">Sila Pilih</option>
+      <option value="Rawatan">Rawatan</option>
+      <option value="Vaksinasi">Vaksinasi</option>
+      <option value="Grooming">Grooming</option>
+      <option value="Boarding">Boarding</option>
+      <option value="Sakit">Sakit</option>
+    </select>
+  </label>
+  <label>Gejala: <textarea id="gejala"></textarea></label>
 
-    <h3>Saringan Sebelum Vaksinasi/Pemandulan ✅❌</h3>
-    <label>1. Adakah kucing sudah lama di jaga (lebih 7 hari)?
-      <select class="saringan">
-	          <option value="1">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>2. Kucing tidak pernah boarding/ grooming dalam 1 minggu ini?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>3. Kucing tidak akan diboardingkan dalam jangka masa 1-3 bulan selepas vaksinasi? 
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>4. Kucing tiada gejala penyakit  (cirit, muntah, selsema, bersin, kurang aktif, kurang makan) ?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>5. Dalam 2 minggu ini, tiada kematian kucing?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>6. Kucing tiada masalah mulut berbau dan kurang makan?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>7. Selepas seminggu pemeriksaan, boleh tak hadir susulan?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>8. Dalam jangka masa 1-3 bulan, boleh tak sangkarkan kucing?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>9. Di kawasan badan kucing, tiada luka ?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>10. Ada sangkar kecil (1 ekor kucing dewasa sahaja) di rumah?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>11. Pernah buat rawatan di klinik lain?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="0">Ya</option>
-        <option value="1">Tidak</option>
-      </select>
-    </label>
-    <label>12. Adakah kucing ini boleh disentuh oleh orang lain?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>13. Adakah kucing ini garang dan menyerang?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <label>14. Boleh sangkarkan (24jam tanpa keluar sangkar) kucing selama 1-3 bulan selepas vaksin booster pertama?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-	      <label>15. Boleh sangkarkan (24jam tanpa keluar sangkar) kucing selama 1-4 minggu selepas pemeriksaan?
-      <select class="saringan">
-	   <option value="0">Sila Pilih</option>
-        <option value="1">Ya</option>
-        <option value="0">Tidak</option>
-      </select>
-    </label>
-    <h3>Temujanji & Rawatan 🗓️</h3>
-    <label>Tarikh Temujanji: <input type="date" id="tarikh_temujanji"></label>
-    <label>Tujuan Pemeriksaan:
-      <select id="tujuan_pemeriksaan">
-        <option value="Sila Pilih">Sila Pilih</option>
-        <option value="Rawatan">Rawatan</option>
-        <option value="Vaksin">Vaksin</option>
-        <option value="Grooming">Grooming</option>
-        <option value="Boarding">Boarding</option>
-        <option value="Sakit">Sakit</option>
-      </select>
-    </label>
-    <label>Gejala: <textarea id="gejala"></textarea></label>
+  <h3>Persetujuan</h3>
+  <p>Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
 
-    <h3>Persetujuan</h3>
-    <p>Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.</p>
+  <button type="button" onclick="hantarKeWhatsApp()">Hantar</button>
+</form>
 
-    <button type="button" onclick="hantarKeWhatsApp()">Hantar</button>
-  </form>
+<script>
+  function hantarKeWhatsApp() {
+    let saringan = document.querySelectorAll(".saringan");
+    let questionText = [
+      "1. Kucing baru dijaga/dibeli kurang 7 hari",
+      "2. Kucing baru dihantar boarding/grooming dalam tempoh seminggu",
+      "3. Kucing akan dihantar boarding dalam masa 1–3 bulan selepas vaksinasi",
+      "4. Kucing menunjukkan simptom sakit (cirit, muntah, selesema, bersin, lemah, tiada selera makan)",
+      "5. Terdapat kucing sakit/mati di rumah dalam 2 minggu lepas",
+      "6. Kucing berbau mulut dan tiada selera makan",
+      "7. Pemilik tidak boleh hadir susulan selepas seminggu",
+      "8. Pemilik tidak boleh kurung kucing 1–3 bulan",
+      "9. Kucing ada luka pada badan",
+      "10. Tiada sangkar kecil di rumah",
+      "11. Pernah dirawat di klinik lain sebelum ini",
+      "12. Kucing tidak boleh disentuh orang lain",
+      "13. Kucing tidak agresif dan tidak menyerang",
+      "14. Pemilik tidak boleh kurung kucing (24 jam) 1–3 bulan selepas booster pertama",
+      "15. Pemilik tidak boleh kurung kucing (24 jam) 1–4 minggu selepas pemeriksaan"
+    ];
 
-  <script>
-    function hantarKeWhatsApp() {
-      let saringan = document.querySelectorAll(".saringan");
-      let soalanTeks = [
-        "1. Kucing ini baru dibeli/diambil kurang 7 hari",
-        "2. Kucing ini pernah boarding/ grooming dalam 1 minggu ini",
-        "3. Kucing ini akan diboardingkan dalam jangka masa 1-3 bulan selepas vaksinasi ",
-        "4. Kucing ini ada gejala penyakit (cirit, muntah, selsema, bersin, kurang aktif, kurang makan)",
-        "5. Di rumah pemilik ada kucing sakit/mati di rumah dalam 2 minggu sebelum",
-        "6. Kucing ada masalah mulut berbau dan kurang makan",
-        "7. Pemilik tidak boleh hadir susulan selepas seminggu pemeriksaan",
-        "8. Pemilik tidak boleh sangkarkan kucing dalam jangka masa 1-3 bulan",
-        "9. Ada luka di kawasan badan kucing ini",
-        "10. Pemilik tiada sangkar kecil di rumah",
-        "11. Pemilik tidak pernah buat rawatan di klinik lain",
-        "12. Kucing ini  tidak boleh disentuh oleh orang lain",
-        "13. Kucing ini manja dan tidak menyerang",
-	"14. Pemilik tidak Boleh sangkarkan (24jam tanpa keluar sangkar) kucing selama 1-3 bulan selepas vaksin booster pertama",
-	"15. Pemilik tidak Boleh sangkarkan (24jam tanpa keluar sangkar) kucing selama 1-4 minggu selepas pemeriksaan"    
-      ];
+    let total = saringan.length;
+    let totalYes = 0;
+    let notEligibleReasons = [];
 
-      let jumlahSoalan = saringan.length;
-      let jumlahYa = 0;
-      let sebabTidakLayak = [];
+    saringan.forEach((item, index) => {
+      if (item.value === "1") {
+        totalYes++;
+      } else {
+        notEligibleReasons.push(questionText[index]);
+      }
+    });
 
-      saringan.forEach((item, index) => {
-        if (item.value === "1") {
-          jumlahYa++;
-        } else {
-          sebabTidakLayak.push(soalanTeks[index]);
-        }
-      });
+    let screeningScore = Math.round((totalYes / total) * 100);
+    let eligibilityStatus = (screeningScore >= 80)
+      ? "✅ Layak untuk vaksinasi/pemandulan."
+      : "❌ Tidak layak untuk vaksinasi/pemandulan (markah < 80%).";
 
-      let skorSaringan = Math.round((jumlahYa / jumlahSoalan) * 100);
-      let statusKelayakan = (skorSaringan >= 80) 
-        ? "✅ Layak untuk vaksinasi/pemandulan." 
-        : "❌ Tidak layak untuk vaksinasi/pemandulan (skor < 80%).";
+    let reason = (notEligibleReasons.length > 0)
+      ? "\n\nSebab tidak layak:\n- " + notEligibleReasons.join("\n- ")
+      : "";
 
-      let alasan = (sebabTidakLayak.length > 0)
-        ? "\n\nSebab tidak layak:\n- " + sebabTidakLayak.join("\n- ")
-        : "";
+    let message = `Borang Tempahan & Persetujuan Rawatan 🐾\n\n` +
+      `Nama Pemilik: ${document.getElementById("nama_pemilik").value}\n` +
+      `No. IC: ${document.getElementById("ic_pemilik").value}\n` +
+      `Alamat: ${document.getElementById("alamat_pemilik").value}\n` +
+      `Telefon: ${document.getElementById("telefon_pemilik").value}\n` +
+      `Emel: ${document.getElementById("emel_pemilik").value}\n\n` +
+      `Nama Kucing: ${document.getElementById("nama_kucing").value}\n` +
+      `Umur: ${document.getElementById("umur_kucing").value}\n` +
+      `Baka: ${document.getElementById("baka_kucing").value}\n` +
+      `Berat: ${document.getElementById("berat_kucing").value}\n` +
+      `Warna: ${document.getElementById("warna_kucing").value}\n` +
+      `Status Vaksinasi: ${document.getElementById("vaksin_kucing").value}\n\n` +
+      `Tarikh Temujanji: ${document.getElementById("tarikh_temujanji").value}\n` +
+      `Tujuan: ${document.getElementById("tujuan_pemeriksaan").value}\n` +
+      `Gejala: ${document.getElementById("gejala").value}\n\n` +
+      `Markah Saringan: ${screeningScore}%\n` +
+      `${eligibilityStatus}${reason}\n\n` +
+      `Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.`;
 
-      let mesej = `Borang Tempahan & Persetujuan Rawatan 🐾\n\n` +
-                  `Nama Pemilik: ${document.getElementById("nama_pemilik").value}\n` +
-                  `No. Kad Pengenalan: ${document.getElementById("ic_pemilik").value}\n` +
-                  `Alamat: ${document.getElementById("alamat_pemilik").value}\n` +
-                  `No. Telefon: ${document.getElementById("telefon_pemilik").value}\n` +
-                  `Emel: ${document.getElementById("emel_pemilik").value}\n\n` +
-                  `Nama Kucing: ${document.getElementById("nama_kucing").value}\n` +
-                  `Umur: ${document.getElementById("umur_kucing").value}\n` +
-                  `Baka: ${document.getElementById("baka_kucing").value}\n` +
-                  `Berat: ${document.getElementById("berat_kucing").value}\n` +
-	          `Warna kucing: ${document.getElementById("warna_kucing").value}\n` +
-                  `Status Vaksin: ${document.getElementById("vaksin_kucing").value}\n\n` +
-                  `Tarikh Temujanji: ${document.getElementById("tarikh_temujanji").value}\n` +
-                  `Tujuan Pemeriksaan: ${document.getElementById("tujuan_pemeriksaan").value}\n` +
-                  `Gejala: ${document.getElementById("gejala").value}\n\n` +
-                  `Skor Saringan: ${skorSaringan}%\n` +
-                  `${statusKelayakan}${alasan}\n\n` +
-                  `Saya bersetuju untuk meneruskan rawatan dan akan bertanggungjawab sepenuhnya terhadap penjagaan selepas prosedur.`;
-
-      let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(mesej)}`;
-      window.open(whatsappURL, "_blank");
-    }
-  </script>
+    let whatsappURL = `https://wa.me/60182624047?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+  }
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
